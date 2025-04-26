@@ -1,6 +1,9 @@
 import random
 import pandas as pd
 from datetime import datetime, timedelta
+import pytz
+import requests
+
 
 class AttendeeDataGenerator:
 
@@ -8,13 +11,17 @@ class AttendeeDataGenerator:
     SEED = 42
 
     # Total number of attendees to generate
-    TOTAL_POINTS = 100
+    TOTAL_POINTS = 10
 
     # Proportion of attendees from Brabant region
     BRABANT_PROPORTION = 0.75
 
     # Maximum number of attendees in a carpool group
     MAX_CARPOOL_SIZE = 5
+
+    # Set return location to fixed event coordinates
+    EVENT_LAT = 51.49987310839164
+    EVENT_LNG = 5.43323252389715
 
     # Proportions of transport modes for departure and return trips
     DEPARTURE_TRANSPORT_MODE_PROPORTIONS = {
@@ -23,7 +30,6 @@ class AttendeeDataGenerator:
         "carpool": 0.3
     }
 
-    # Proportions of transport modes for return trips
     RETURN_TRANSPORT_MODE_PROPORTIONS = {
         "public transport": 0.3,
         "bike": 0.2,
@@ -61,7 +67,6 @@ class AttendeeDataGenerator:
         "max_lng": 7.22
     }
 
-    # Geographical bounds for the Brabant region
     MAIN_REGION_BOUNDS = {
         "min_lat": 51.25,
         "max_lat": 51.75,
@@ -69,16 +74,19 @@ class AttendeeDataGenerator:
         "max_lng": 5.75
     }
 
-    # Constructor to initialize the random seed and dataframe   
+    DIRECT_MODES = ["WALK", "BICYCLE", "CAR"]
+
+    TRANSIT_MODES = [
+        "BUS", "RAIL", "TRAM", "SUBWAY"
+    ]
+
     def __init__(self):
         random.seed(self.SEED)
         self.df_attendees = None
 
-    # Method to parse time strings into datetime objects
     def parse_time(self, hm_str):
         return datetime.strptime(hm_str, "%H:%M")
 
-    # Method to generate random coordinates within given bounds
     def generate_random_coords(self, min_lat, max_lat, min_lng, max_lng, count):
         return [
             {
@@ -88,25 +96,40 @@ class AttendeeDataGenerator:
             for _ in range(count)
         ]
 
-    # Method to generate random times based on defined windows and proportions
     def generate_times(self, windows, total_count):
+
+        tz = pytz.timezone("Europe/Amsterdam")
+        date_prefix = datetime(2025, 5, 17)  # Festival date
         times = []
+
         for window in windows:
             count = int(total_count * window["proportion"])
             start = self.parse_time(window["start"])
             end = self.parse_time(window["end"])
             if end <= start:
                 end += timedelta(days=1)
+
             for _ in range(count):
                 delta = end - start
                 minutes = random.randint(0, int(delta.total_seconds() / 60))
-                times.append((start + timedelta(minutes=minutes)).strftime("%H:%M"))
+                time_obj = start + timedelta(minutes=minutes)
+
+                # Combine with date prefix
+                local_dt = datetime.combine(date_prefix.date(), time_obj.time())
+                local_dt = tz.localize(local_dt, is_dst=True)  # Correct for DST
+
+                # Output ISO-8601
+                formatted_time = local_dt.strftime("%Y-%m-%dT%H:%M:%S%z")
+                times.append(formatted_time)
+
         while len(times) < total_count:
             times.append(random.choice(times))
+
         random.shuffle(times)
         return times[:total_count]
 
-    # Method to assign transport modes based on defined proportions and total count
+
+
     def assign_transport_modes(self, proportions, total_count):
         modes = []
         for mode, prop in proportions.items():
@@ -115,8 +138,32 @@ class AttendeeDataGenerator:
             modes.append(random.choice(list(proportions.keys())))
         random.shuffle(modes)
         return modes[:total_count]
+    
+    def assign_transit_modes_based_on_direct(self, direct_modes):
+        transit_choices = []
+        for direct_mode in direct_modes:
+            if direct_mode == "WALK":
+                # WALK → all transit modes
+                transit_choices.append(",".join(self.TRANSIT_MODES))
+            elif direct_mode == "BICYCLE":
+                # BICYCLE → only RAIL
+                transit_choices.append("RAIL")
+            elif direct_mode == "CAR":
+                # CAR → no transit
+                transit_choices.append("")
+            else:
+                # fallback (shouldn't happen)
+                transit_choices.append(",".join(self.TRANSIT_MODES))
+        return transit_choices
 
-    # Method to sample carpool group sizes based on defined probabilities
+    def map_departure_mode_to_direct(self, mode):
+        mapping = {
+            "public transport": "WALK",
+            "bike": "BICYCLE",
+            "carpool": "CAR"
+        }
+        return mapping.get(mode, "WALK")
+
     def sample_carpool_group_sizes(self, total_carpoolers):
         sizes = []
         while total_carpoolers > 0:
@@ -141,12 +188,7 @@ class AttendeeDataGenerator:
         index = 0
         for size in group_sizes:
             group = carpool_df.iloc[index:index+size].copy()
-            if (id_column_prefix == "departure"):
-                carpool_id = f"{'D'}{carpool_id_counter}"
-            else:
-                carpool_id = f"{'R'}{carpool_id_counter}"
-        
-            # Assign same random coordinates to group
+            carpool_id = f"{'D' if id_column_prefix == 'departure' else 'R'}{carpool_id_counter}"
             coord = self.generate_random_coords(**self.MAIN_REGION_BOUNDS, count=1)[0]
             group[f"{id_column_prefix}_carpool_id"] = carpool_id
             group[f"{id_column_prefix}_lat"] = coord["latitude"]
@@ -156,22 +198,19 @@ class AttendeeDataGenerator:
             index += size
             carpool_id_counter += 1
 
-        carpool_df_updated = pd.concat(carpool_info)
+        if carpool_info:
+            carpool_df_updated = pd.concat(carpool_info)
+            df = df.merge(
+                carpool_df_updated[["attendee_id", f"{id_column_prefix}_lat", f"{id_column_prefix}_lng", f"{id_column_prefix}_carpool_id"]],
+                on="attendee_id", how="left"
+            )
 
-        df = df.merge(
-            carpool_df_updated[["attendee_id", f"{id_column_prefix}_lat", f"{id_column_prefix}_lng", f"{id_column_prefix}_carpool_id"]],
-            on="attendee_id", how="left"
-        )
-
-        # Fill non-carpoolers with default values
         df[f"{id_column_prefix}_carpool_id"] = df[f"{id_column_prefix}_carpool_id"].fillna("N/A")
         df[f"{id_column_prefix}_lat"] = df[f"{id_column_prefix}_lat"].fillna(df["latitude"])
         df[f"{id_column_prefix}_lng"] = df[f"{id_column_prefix}_lng"].fillna(df["longitude"])
 
         return df
 
-
-    # Method to generate the entire dataset
     def generate(self):
         brabant_count = int(self.TOTAL_POINTS * self.BRABANT_PROPORTION)
         other_count = self.TOTAL_POINTS - brabant_count
@@ -185,28 +224,40 @@ class AttendeeDataGenerator:
         df["attendee_id"] = [f"A{i:05d}" for i in range(1, self.TOTAL_POINTS + 1)]
         df["departure_time"] = self.generate_times(self.DEPARTURE_TIME_WINDOWS, self.TOTAL_POINTS)
         df["return_time"] = self.generate_times(self.RETURN_TIME_WINDOWS, self.TOTAL_POINTS)
-        df["departure_mode"] = self.assign_transport_modes(self.DEPARTURE_TRANSPORT_MODE_PROPORTIONS, self.TOTAL_POINTS)
-        df["return_mode"] = self.assign_transport_modes(self.DEPARTURE_TRANSPORT_MODE_PROPORTIONS, self.TOTAL_POINTS)
 
-        df = self.assign_carpool_groups(df, mode_column="departure_mode", id_column_prefix="departure")
-        df = self.assign_carpool_groups(df, mode_column="return_mode", id_column_prefix="return")
+        raw_departure_modes = self.assign_transport_modes(self.DEPARTURE_TRANSPORT_MODE_PROPORTIONS, self.TOTAL_POINTS)
+        raw_return_modes = self.assign_transport_modes(self.RETURN_TRANSPORT_MODE_PROPORTIONS, self.TOTAL_POINTS)
 
+        df["departure_raw_mode"] = raw_departure_modes
+        df["return_raw_mode"] = raw_return_modes
+
+        df["departure_mode"] = df["departure_raw_mode"].map(self.map_departure_mode_to_direct)
+        df["return_mode"] = df["return_raw_mode"].map(self.map_departure_mode_to_direct)
+
+        df["departure_transit"] = self.assign_transit_modes_based_on_direct(df["departure_mode"])
+        df["return_transit"] = self.assign_transit_modes_based_on_direct(df["return_mode"])
+
+        df = self.assign_carpool_groups(df, mode_column="departure_raw_mode", id_column_prefix="departure")
+        df = self.assign_carpool_groups(df, mode_column="return_raw_mode", id_column_prefix="return")
+
+        df["return_lat"] = self.EVENT_LAT
+        df["return_lng"] = self.EVENT_LNG
 
         ordered_cols = [
             "attendee_id",
-            "departure_time", "departure_mode", "departure_lat", "departure_lng", "departure_carpool_id",
-            "return_time", "return_mode", "return_lat", "return_lng", "return_carpool_id"
+            "departure_time", "departure_mode", "departure_transit", "departure_lat", "departure_lng", "departure_carpool_id",
+            "return_time", "return_mode", "return_transit", "return_lat", "return_lng", "return_carpool_id"
         ]
 
         self.df_attendees = df[ordered_cols]
 
-    # Method to get the generated dataframe
     def get_dataframe(self):
         if self.df_attendees is None:
             raise ValueError("Data not generated yet. Call .generate() first.")
         return self.df_attendees
+    
+generator = AttendeeDataGenerator()
+generator.generate()
+df_attendees = generator.get_dataframe()
+print(df_attendees.head())
 
-# Example usage
-# generator = AttendeeDataGenerator()
-# generator.generate()
-# print(generator.get_dataframe())
