@@ -1,1 +1,5 @@
 FirstOrderSimulation/otp-server/
+FirstOrderSimulation/cache
+FirstOrderSimulation/venv
+FirstOrderSimulation/__pycache__
+FirstOrderSimulation/generated_data
