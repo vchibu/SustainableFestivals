@@ -102,7 +102,6 @@ class OTPTripPlannerClient:
 
                 # Assemble final result in correct column order
                 ordered_trip_data = {
-                    "identifier": identifier,
                     "attendee_id": attendee_id,
                     "direction": direction
                 }
@@ -114,7 +113,6 @@ class OTPTripPlannerClient:
 
                 ordered_trip_data["total_duration"] = total_duration_minutes
                 ordered_trip_data["total_length"] = total_distance_km
-                ordered_trip_data["total_carbon_footprint"] = 0
 
                 self.results.append(ordered_trip_data)
 
@@ -199,7 +197,7 @@ class OTPTripPlannerClient:
             for i in range(1, max_legs + 1)
             for field in ["mode", "length", "duration"]
         ]
-        summary_cols = ["total_duration", "total_length", "total_carbon_footprint"]
+        summary_cols = ["total_duration", "total_length"]
         all_columns = base_cols + leg_cols + summary_cols
 
         # Split and reindex
