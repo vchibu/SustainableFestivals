@@ -87,7 +87,7 @@ class SimpleAttendeeDataGenerator:
             transit_modes = [self.TRANSIT_MODES[1], self.TRANSIT_MODES[3]]  # Only SUBWAY and TRAIN for BIKE
         else:
             transit_modes = [] # No transit modes for CAR
-        return self.TRANSIT_MODES
+        return transit_modes
 
     def sample_coords(self, bounds, count):
         coords = []

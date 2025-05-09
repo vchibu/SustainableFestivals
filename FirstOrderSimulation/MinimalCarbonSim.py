@@ -77,17 +77,9 @@ try:
     dep_emissions = carbon_calculator.process_multi_leg_trips(dep_results)
     ret_emissions = carbon_calculator.process_multi_leg_trips(ret_results)
 
-    # Save the emissions data to CSV files
-    dep_emissions.to_csv("generated_data/departure_trips.csv", index=False)
-    ret_emissions.to_csv("generated_data/return_trips.csv", index=False)
-
     # Identify the lowest carbon options for each attendee's departure and return trips
     lowest_carbon_dep = carbon_calculator.select_lowest_carbon_options(dep_emissions)
     lowest_carbon_ret = carbon_calculator.select_lowest_carbon_options(ret_emissions)
-
-    # Save the lowest carbon options to CSV files
-    lowest_carbon_dep.to_csv("generated_data/lowest_carbon_departure_options.csv", index=False)
-    lowest_carbon_ret.to_csv("generated_data/lowest_carbon_return_options.csv", index=False)
 
     # Perform transportation analysis using the lowest carbon options
     analysis = StatisticalAnalysis(lowest_carbon_dep, lowest_carbon_ret)

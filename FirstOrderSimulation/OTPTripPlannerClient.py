@@ -33,7 +33,7 @@ class OTPTripPlannerClient:
             destination: {{ location: {{ coordinate: {{ latitude: {destination_lat}, longitude: {destination_lng} }} }} }}
             dateTime: {{ earliestDeparture: \"{time}\" }}
             modes: {{ {modes_block} }}
-            first: 1
+            first: 5
           ) {{
             edges {{
               node {{
@@ -68,7 +68,7 @@ class OTPTripPlannerClient:
 
             fmt = "%Y-%m-%dT%H:%M:%S%z"
 
-            for edge in data["data"]["planConnection"]["edges"]:
+            for edge_index, edge in enumerate(data["data"]["planConnection"]["edges"], 1):
                 attendee_id, direction = "unknown", "unknown"
                 if identifier and "_" in identifier:
                     parts = identifier.split("_")
@@ -100,10 +100,11 @@ class OTPTripPlannerClient:
                     leg_data[f"leg{i}_duration"] = duration_minutes
                     leg_count = i
 
-                # Assemble final result in correct column order
+                # Assemble final result with edge index (trip_option)
                 ordered_trip_data = {
                     "attendee_id": attendee_id,
-                    "direction": direction
+                    "direction": direction,
+                    "trip_option": edge_index
                 }
 
                 for i in range(1, leg_count + 1):
@@ -191,7 +192,7 @@ class OTPTripPlannerClient:
             for row in self.results
         ])
 
-        base_cols = ["identifier", "attendee_id", "direction"]
+        base_cols = ["attendee_id", "direction", "trip_option"]
         leg_cols = [
             f"leg{i}_{field}"
             for i in range(1, max_legs + 1)

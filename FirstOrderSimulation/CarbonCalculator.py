@@ -62,6 +62,7 @@ class CarbonCalculator:
     def select_lowest_carbon_options(self, df):
         """
         For each attendee, select the trip option with the lowest carbon footprint.
+        If multiple options have the same footprint, select the one with the shortest total duration.
         
         Parameters:
         df (DataFrame): DataFrame with calculated carbon footprints
@@ -71,9 +72,13 @@ class CarbonCalculator:
         """
         if 'calculated_total_carbon_footprint' not in df.columns:
             df = self.process_multi_leg_trips(df)
-            
-        # Group by attendee_id and find the option with the lowest carbon footprint
-        lowest_carbon_options = df.loc[df.groupby('attendee_id')['calculated_total_carbon_footprint'].idxmin()]
-        
+
+        # Sort first by carbon footprint, then by total duration
+        df_sorted = df.sort_values(by=['attendee_id', 'calculated_total_carbon_footprint', 'total_duration'])
+
+        # Drop duplicates, keeping the first (lowest carbon, then shortest duration)
+        lowest_carbon_options = df_sorted.drop_duplicates(subset=['attendee_id'], keep='first')
+
         return lowest_carbon_options
+
         
