@@ -209,8 +209,6 @@ class StatisticalAnalysis:
             metrics['departure'][f'direct_mode_{mode}_proportion'] = dep_count / len(self.departure_df)
             metrics['return'][f'direct_mode_{mode}_count'] = ret_count
             metrics['return'][f'direct_mode_{mode}_proportion'] = ret_count / len(self.return_df)
-            metrics['combined'][f'direct_mode_{mode}_count'] = combined_count
-            metrics['combined'][f'direct_mode_{mode}_proportion'] = combined_count / self.total_attendees
 
     
     def _compute_transit_mode_metrics(self, metrics):
@@ -292,13 +290,17 @@ class StatisticalAnalysis:
                 print(f"Average legs per attendee: {cat_metrics['avg_legs_per_attendee']:.2f}")
             
             # Direct mode distribution
-            print("\n----- DIRECT MODE DISTRIBUTION -----")
-            for mode in ['WALK', 'BICYCLE', 'CAR']:
-                if f'direct_mode_{mode}_count' in cat_metrics:
-                    count = cat_metrics[f'direct_mode_{mode}_count']
-                    proportion = cat_metrics[f'direct_mode_{mode}_proportion'] * 100
-                    print(f"{mode}: {count} attendees ({proportion:.1f}%)")
-            
+            if category != 'combined':
+                print("\n----- DIRECT MODE DISTRIBUTION -----")
+                for mode in ['WALK', 'BICYCLE', 'CAR']:
+                    if f'direct_mode_{mode}_count' in cat_metrics:
+                        count = cat_metrics[f'direct_mode_{mode}_count']
+                        if f'direct_mode_{mode}_proportion' in cat_metrics:
+                            proportion = cat_metrics[f'direct_mode_{mode}_proportion'] * 100
+                            print(f"{mode}: {count} attendees ({proportion:.1f}%)")
+                        else:
+                            print(f"{mode}: {count} attendees")
+                
             # Transit mode usage
             print("\n----- TRANSIT MODE USAGE -----")
             for mode in ['TRAM', 'SUBWAY', 'BUS', 'RAIL']:
