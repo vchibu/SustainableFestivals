@@ -1,8 +1,6 @@
 import requests
 from datetime import datetime
-import csv
 import pandas as pd
-import random
 
 
 class OTPTripPlannerClient:
@@ -178,8 +176,8 @@ class OTPTripPlannerClient:
         ret_df = df[df["direction"] == "ret"].reset_index(drop=True)
         return dep_df, ret_df
 
-    def save_results_split_by_direction(self, departure_file="generated_data/departure_trips.csv",
-                                        return_file="generated_data/return_trips.csv"):
+    def save_results_split_by_direction(self, departure_file="Data/GeneratedInitialTrips/departure_trips.csv",
+                                        return_file="Data/GeneratedInitialTrips/return_trips.csv"):
         if not self.results:
             print("⚠️ No trip results to save.")
             return

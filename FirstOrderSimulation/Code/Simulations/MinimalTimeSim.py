@@ -1,7 +1,9 @@
-from SimpleDataGenerator import SimpleAttendeeDataGenerator
-from OTPTripPlannerClient import OTPTripPlannerClient
-from CarbonCalculator import CarbonCalculator
-from StatisticalAnalysis import StatisticalAnalysis
+from Code.DataGeneration.SimpleDataGenerator import SimpleAttendeeDataGenerator
+from Code.DataGeneration.OTPTripPlannerClient import OTPTripPlannerClient
+from Code.Calculators.CarbonCalculator import CarbonCalculator
+from Code.Analysis.StatisticalAnalysis import StatisticalAnalysis
+from Code.Calculators.TimeCalculator import TimeCalculator
+from Code.Calculators.CostCalculator import CostCalculator
 
 # Initialize the trip planner client
 planner = OTPTripPlannerClient()
@@ -22,6 +24,12 @@ direct_modes = generator.get_direct_modes()
 
 # Initialize the carbon calculator for emissions calculations
 carbon_calculator = CarbonCalculator()
+
+# Initialize the time calculator for time-based analysis
+time_calculator = TimeCalculator()
+
+#Initialize the cost calculator for cost-based analysis
+cost_calculator = CostCalculator()
 
 # Loop through all attendee journeys
 for idx in departure_df.index:
@@ -77,17 +85,26 @@ try:
     dep_emissions = carbon_calculator.process_multi_leg_trips(dep_results)
     ret_emissions = carbon_calculator.process_multi_leg_trips(ret_results)
 
-    # Identify the lowest carbon options for each attendee's departure and return trips
-    lowest_carbon_dep = carbon_calculator.select_lowest_carbon_options(dep_emissions)
-    lowest_carbon_ret = carbon_calculator.select_lowest_carbon_options(ret_emissions)
+    # Calculate costs for each leg of the departure and return trips
+    dep_costs = cost_calculator.process_multi_leg_trips(dep_emissions)
+    ret_costs = cost_calculator.process_multi_leg_trips(ret_emissions)
 
-    # Perform transportation analysis using the lowest carbon options
-    analysis = StatisticalAnalysis(lowest_carbon_dep, lowest_carbon_ret)
+    # Identify the lowest time options for each attendee's departure and return trips
+    lowest_time_dep = time_calculator.select_lowest_time_options(dep_costs)
+    lowest_time_ret = time_calculator.select_lowest_time_options(ret_costs)
+
+    # Download the lowest time options to CSV files
+    lowest_time_dep.to_csv("Data/ChosenTrips/lowest_time_departure.csv", index=False)
+    lowest_time_ret.to_csv("Data/ChosenTrips/lowest_time_return.csv", index=False)
+
+    # Perform transportation analysis using the lowest time options
+    analysis = StatisticalAnalysis(lowest_time_dep, lowest_time_ret)
 
     # Analyze the data with all options: compute metrics, save to CSV, and print summary
     metrics = analysis.analyze(
-        output_file='generated_data/lowest_carbon_statistics.csv',
-        print_summary=True
+        output_csv="Data/FinalStatistics/CSVs/min_time_metrics.csv",  # Optional: also save as CSV
+        output_md="Data/FinalStatistics/MDs/min_time_report.md",     # Save as Markdown
+        print_summary=False                   # Optional: print summary to console
     )
 
 # Handle the case where the required CSV files are not found

@@ -5,7 +5,7 @@ import pandas as pd
 
 class SimpleAttendeeDataGenerator:
     SEED = 42
-    TOTAL_ATTENDEES = 10
+    TOTAL_ATTENDEES = 100
     BRABANT_PROPORTION = 0.75
 
     EVENT_LAT = 51.49987310839164
