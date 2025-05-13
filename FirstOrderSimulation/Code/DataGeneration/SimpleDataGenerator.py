@@ -6,7 +6,18 @@ import pandas as pd
 class SimpleAttendeeDataGenerator:
     SEED = 42
     TOTAL_ATTENDEES = 100
-    BRABANT_PROPORTION = 0.75
+
+    EINDHOVEN_PROPORTION = 0.21
+    BEST_PROPORTION = 0.06
+    HELMOND_PROPORTION = 0.05
+    TILBURG_PROPORTION = 0.04
+    VELDHOVEN_PROPORTION = 0.04
+    DEN_BOSCH_PROPORTION = 0.03
+    GELDROP_PROPORTION = 0.03
+    NUENEN_PROPORTION = 0.02
+    VALKENSWAARD_PROPORTION = 0.02
+    BREDA_BOUNDS_PROPORTION = 0.02
+    REST_PROPORTION = 48
 
     EVENT_LAT = 51.49987310839164
     EVENT_LNG = 5.43323252389715
@@ -29,18 +40,37 @@ class SimpleAttendeeDataGenerator:
         {"start": "02:00", "end": "05:00", "proportion": 0.2}
     ]
 
-    MAIN_REGION_BOUNDS = {
-        "min_lat": 51.25,
-        "max_lat": 51.75,
-        "min_lng": 4.25,
-        "max_lng": 5.75
+    NETHERLANDS_BOUNDS = {
+        "min_lat": 50.75,        
+        "max_lat": 53.50,        
+        "min_lng": 3.35,        
+        "max_lng": 7.22 
     }
 
-    NETHERLANDS_BOUNDS = {
-        "min_lat": 50.75,
-        "max_lat": 53.55,
-        "min_lng": 3.36,
-        "max_lng": 7.22
+    CITY_BOUNDS = {
+        "EINDHOVEN": {        "min_lat": 51.40,        "max_lat": 51.50,        "min_lng": 5.40,        "max_lng": 5.55,  },
+        "BEST": {        "min_lat": 51.48,        "max_lat": 51.52,        "min_lng": 5.35,        "max_lng": 5.45    }, 
+        "HELMOND": {        "min_lat": 51.43,        "max_lat": 51.49,        "min_lng": 5.60,        "max_lng": 5.72    },
+        "TILBURG": {        "min_lat": 51.52,        "max_lat": 51.62,        "min_lng": 5.00,        "max_lng": 5.15    },
+        "VELDHOVEN": {        "min_lat": 51.39,        "max_lat": 51.44,        "min_lng": 5.37,        "max_lng": 5.47    },
+        "DEN_BOSCH": {        "min_lat": 51.65,        "max_lat": 51.73,        "min_lng": 5.25,        "max_lng": 5.35    },
+        "GELDROP": {        "min_lat": 51.40,        "max_lat": 51.44,        "min_lng": 5.55,        "max_lng": 5.61    },
+        "NUENEN": {        "min_lat": 51.44,        "max_lat": 51.48,        "min_lng": 5.55,        "max_lng": 5.61    }, 
+        "VALKENSWAARD": {        "min_lat": 51.32,        "max_lat": 51.38,        "min_lng": 5.55,        "max_lng": 5.65    },
+        "BREDA": {        "min_lat": 51.55,        "max_lat": 51.62,        "min_lng": 4.70,        "max_lng": 4.85    },
+    }
+
+    CITY_PROPORTIONS = {    
+        "EINDHOVEN": 0.21,
+        "BEST": 0.06,    
+        "HELMOND": 0.05,    
+        "TILBURG": 0.04,    
+        "VELDHOVEN": 0.04,    
+        "DEN_BOSCH": 0.03,    
+        "GELDROP": 0.03,    
+        "NUENEN": 0.02,    
+        "VALKENSWAARD": 0.02,    
+        "BREDA": 0.02,    
     }
 
     def __init__(self, otp_client=None):
@@ -91,7 +121,6 @@ class SimpleAttendeeDataGenerator:
 
     def sample_coords(self, bounds, count):
         coords = []
-        attempts = 0
         while len(coords) < count:
             lat = random.uniform(bounds["min_lat"], bounds["max_lat"])
             lng = random.uniform(bounds["min_lng"], bounds["max_lng"])
@@ -109,19 +138,29 @@ class SimpleAttendeeDataGenerator:
         return coords
 
 
-    def generate_coords(self, brabant_count, other_count):
-        coords = self.sample_coords(self.MAIN_REGION_BOUNDS, brabant_count)
-        coords += self.sample_coords(self.NETHERLANDS_BOUNDS, other_count)
+    def generate_coords(self, counts):
+        coords = []
+        for location in counts:
+            if location == "OTHER":
+                coords += self.sample_coords(self.NETHERLANDS_BOUNDS, counts[location])
+            else:
+                coords += self.sample_coords(self.CITY_BOUNDS[location], counts[location])
         random.shuffle(coords)
         return coords
 
     def generate(self):
-        brabant_count = int(self.TOTAL_ATTENDEES * self.BRABANT_PROPORTION)
-        other_count = self.TOTAL_ATTENDEES - brabant_count
+
+        counts = {}
+        for i in range(len(self.CITY_BOUNDS)):
+            city = list(self.CITY_BOUNDS.keys())[i]
+            proportion = self.CITY_PROPORTIONS[city]
+            count = int(self.TOTAL_ATTENDEES * proportion)
+            counts[city] = count
+        counts["OTHER"] = self.TOTAL_ATTENDEES - sum(counts.values())
 
         departure_times = self.generate_times(self.DEPARTURE_TIME_WINDOWS, self.TOTAL_ATTENDEES)
         return_times = self.generate_times(self.RETURN_TIME_WINDOWS, self.TOTAL_ATTENDEES)
-        coords = self.generate_coords(brabant_count, other_count)
+        coords = self.generate_coords(counts)
 
         self.attendees = []
         for i in range(self.TOTAL_ATTENDEES):

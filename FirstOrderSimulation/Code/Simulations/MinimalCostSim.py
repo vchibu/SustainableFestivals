@@ -84,9 +84,7 @@ try:
     # Calculate costs for each leg of the departure and return trips
     dep_costs = cost_calculator.process_multi_leg_trips(dep_emissions)
     ret_costs = cost_calculator.process_multi_leg_trips(ret_emissions)
-
-    print(dep_costs)
-
+    
     # Identify the lowest cost options for each trip
     lowest_cost_dep = cost_calculator.select_lowest_cost_options(dep_costs)
     lowest_cost_ret = cost_calculator.select_lowest_cost_options(ret_costs)
