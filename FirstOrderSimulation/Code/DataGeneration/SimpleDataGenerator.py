@@ -2,6 +2,7 @@ import random
 from datetime import datetime, timedelta
 import pytz
 import pandas as pd
+import os
 
 class SimpleAttendeeDataGenerator:
     SEED = 42
@@ -175,10 +176,15 @@ class SimpleAttendeeDataGenerator:
             })
 
         return self.attendees
-    
+
     def get_dataframe(self):
+
         if not self.attendees:
             self.generate()
+        
+        if not self.attendees:
+            print("No attendees to process. Aborting.")
+            return pd.DataFrame()  # Return empty DataFrame safely
 
         journey_rows = []
         for att in self.attendees:
@@ -202,11 +208,17 @@ class SimpleAttendeeDataGenerator:
                 "departure_time": att["return_time"]
             })
 
-        return pd.DataFrame(journey_rows)
+        df = pd.DataFrame(journey_rows)
+
+        self.save_to_csv(df, "../../Data/AttendeeData/attendee_data.csv")
+
+        return df
 
 
-    def save_to_csv(self, filepath):
-        if not self.attendees:
-            self.generate()
-        df = pd.DataFrame(self.attendees)
-        df.to_csv(filepath, index=False)
+    def save_to_csv(self, df, relative_filepath):
+        import os
+        script_dir = os.path.dirname(__file__)
+        abs_path = os.path.join(script_dir, relative_filepath)
+
+        os.makedirs(os.path.dirname(abs_path), exist_ok=True)
+        df.to_csv(abs_path, index=False)
