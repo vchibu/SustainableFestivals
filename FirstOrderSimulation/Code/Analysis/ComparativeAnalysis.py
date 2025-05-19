@@ -1,756 +1,409 @@
-import pandas as pd
-import matplotlib.pyplot as plt
 import os
+import pandas as pd
+import glob
 import numpy as np
-from io import StringIO
+from typing import Dict, List, Tuple, Any, Optional
+
+
+def find_project_root():
+    """Find the project root directory by looking for characteristic files/directories."""
+    current_dir = os.path.abspath(os.path.dirname(__file__))
+    
+    # Look for project root indicators
+    while current_dir != os.path.dirname(current_dir):  # Not at filesystem root
+        # Check for typical project root indicators
+        if (os.path.exists(os.path.join(current_dir, "Data")) and 
+            os.path.exists(os.path.join(current_dir, "Code")) and
+            os.path.exists(os.path.join(current_dir, "README.md"))):
+            return current_dir
+        current_dir = os.path.dirname(current_dir)
+    
+    # If not found, try current working directory
+    cwd = os.getcwd()
+    if (os.path.exists(os.path.join(cwd, "Data")) and 
+        os.path.exists(os.path.join(cwd, "Code"))):
+        return cwd
+    
+    # Last resort: use the directory two levels up from this file
+    return os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
+# Find project root and set paths
+PROJECT_ROOT = find_project_root()
+INPUT_DIRECTORY = os.path.join(PROJECT_ROOT, "Data", "FinalStatistics", "CSVs")
+OUTPUT_DIRECTORY = os.path.join(PROJECT_ROOT, "Data", "ComparativeStatistics")
+
 
 class ComparativeAnalysis:
     """
-    A class that compares different final statistics for different simulations.
+    A class for comparative analysis of CSV files containing festival sustainability metrics.
+    
+    This class reads all CSV files in a specified directory with a specific structure,
+    compares the metrics across files, and generates summary reports in both CSV and Markdown
+    formats.
     """
     
-    def __init__(self, custom_priorities=None):
+    def __init__(self, directory_path: str = None):
         """
-        Initialize the ComparativeAnalysis class.
+        Initialize the ComparativeAnalysis with the path to the directory containing CSV files.
         
-        Parameters:
-        -----------
-        custom_priorities : dict, optional
-            Dictionary mapping custom priority keys to display names
-            (e.g., {"bruh": "Custom Bruh Optimization"})
+        Args:
+            directory_path: Path to the directory containing the CSV files to analyze.
+                          If None, uses the default INPUT_DIRECTORY.
         """
-        self.data = {}
-        self.priorities = {}  # Dictionary to store the optimization priority for each simulation
-        self.report = ""
-        self.metrics_to_compare = [
-            "total_carbon_footprint", 
-            "avg_carbon_footprint",
-            "total_cost", 
-            "avg_cost",
-            "total_travel_time", 
-            "avg_travel_time",
-            "total_legs", 
-            "avg_legs_per_attendee"
-        ]
-        self.metric_display_names = {
-            "total_carbon_footprint": "Total Carbon Footprint (g CO2)",
-            "avg_carbon_footprint": "Average Carbon Footprint per Attendee (g CO2)",
-            "total_cost": "Total Cost ($)",
-            "avg_cost": "Average Cost per Attendee ($)",
-            "total_travel_time": "Total Travel Time (minutes)",
-            "avg_travel_time": "Average Travel Time per Attendee (minutes)",
-            "total_legs": "Total Number of Trip Legs",
-            "avg_legs_per_attendee": "Average Legs per Attendee"
-        }
-        # Default priority display names
-        self.priority_display_names = {
-            "carbon": "Lowest Carbon Footprint",
-            "cost": "Lowest Cost",
-            "time": "Shortest Travel Time",
-            "legs": "Fewest Trip Legs"
-        }
+        if directory_path is None:
+            directory_path = INPUT_DIRECTORY
+            
+        self.directory_path = os.path.abspath(directory_path)
+        self.csv_files = []
+        self.data_frames = {}
+        self.metrics = []
+        self.categories = []  # Expected to contain ['departure', 'return', 'combined']
+        self.comparative_results = {}
         
-        # Add custom priorities if provided
-        if custom_priorities:
-            self.priority_display_names.update(custom_priorities)
+        print(f"Looking for CSV files in: {self.directory_path}")
+        self.load_csv_files()
         
-    def load_data_files(self, file_priorities):
+    def load_csv_files(self) -> None:
         """
-        Load data from CSV files into pandas DataFrames with their optimization priorities.
-        
-        Parameters:
-        -----------
-        file_priorities : dict
-            Dictionary mapping file paths to their optimization priorities
-            (e.g., {"path/to/file1.csv": "carbon", "path/to/file2.csv": "cost"})
-            Valid priorities: "carbon", "cost", "time", "legs"
+        Load all CSV files from the specified directory and process them into DataFrames.
         """
-        for file_path, priority in file_priorities.items():
-            if not os.path.exists(file_path):
-                print(f"File {file_path} not found.")
+        # Check if directory exists
+        if not os.path.exists(self.directory_path):
+            raise FileNotFoundError(f"Directory does not exist: {self.directory_path}")
+        
+        # Find all CSV files in the directory
+        self.csv_files = glob.glob(os.path.join(self.directory_path, "*.csv"))
+        
+        if not self.csv_files:
+            # List what files are actually in the directory
+            files_in_dir = os.listdir(self.directory_path)
+            raise FileNotFoundError(
+                f"No CSV files found in {self.directory_path}\n"
+                f"Files found in directory: {files_in_dir}"
+            )
+            
+        print(f"Found {len(self.csv_files)} CSV files:")
+        for file_path in self.csv_files:
+            print(f"  - {os.path.basename(file_path)}")
+            
+        # Read each CSV file and store as DataFrame
+        for file_path in self.csv_files:
+            file_name = os.path.basename(file_path).replace('.csv', '')
+            try:
+                df = pd.read_csv(file_path)
+                self.data_frames[file_name] = df
+                print(f"  Loaded {file_name}: {len(df)} rows, {len(df.columns)} columns")
+            except Exception as e:
+                print(f"  Error loading {file_name}: {e}")
                 continue
                 
-            file_name = os.path.basename(file_path).replace('.csv', '')
-            self.data[file_name] = pd.read_csv(file_path)
-            self.priorities[file_name] = priority
+        # Extract unique metrics and categories from the first successfully loaded file
+        if self.data_frames:
+            sample_df = next(iter(self.data_frames.values()))
+            self.metrics = sample_df['Metric'].unique().tolist()
+            self.categories = sample_df['Category'].unique().tolist()
+            print(f"Found metrics: {self.metrics}")
+            print(f"Found categories: {self.categories}")
+        else:
+            raise RuntimeError("No CSV files could be loaded successfully")
         
-        return self
-    
-    def read_csv_string(self, csv_string_priorities):
+    def analyze_metrics(self) -> Dict[str, Dict[str, Any]]:
         """
-        Read CSV data from strings with their optimization priorities.
+        Analyze metrics across all CSV files to find min, max, avg, etc.
         
-        Parameters:
-        -----------
-        csv_string_priorities : dict
-            Dictionary mapping names to tuples of (csv_string, priority)
-            (e.g., {"simulation1": (csv_string1, "carbon"), "simulation2": (csv_string2, "cost")})
-        """
-        for name, (csv_string, priority) in csv_string_priorities.items():
-            self.data[name] = pd.read_csv(StringIO(csv_string))
-            self.priorities[name] = priority
-        return self
-    
-    def _get_metric_value(self, df, category, metric):
-        """
-        Get the value of a specific metric in a specific category from a DataFrame.
-        
-        Parameters:
-        -----------
-        df : pandas.DataFrame
-            DataFrame containing the data
-        category : str
-            Category to filter by
-        metric : str
-            Metric to get the value of
-            
         Returns:
-        --------
-        float
-            Value of the metric
+            Dictionary containing analysis results for each metric
         """
-        value = df[(df['Category'] == category) & (df['Metric'] == metric)]['Value'].values
-        if len(value) > 0:
-            return value[0]
-        return None
-    
-    def _get_simulation_label(self, sim_name):
-        """
-        Get a formatted label for a simulation including its optimization priority.
+        results = {}
         
-        Parameters:
-        -----------
-        sim_name : str
-            The name of the simulation
+        # For each metric
+        for metric in self.metrics:
+            metric_data = {}
+            values_by_file = {}
             
-        Returns:
-        --------
-        str
-            Formatted simulation label
-        """
-        priority = self.priorities.get(sim_name, "Unknown")
-        # If it's a custom priority not in our display names, use the priority itself capitalized
-        priority_display = self.priority_display_names.get(priority, priority.capitalize())
-        return f"{sim_name} ({priority_display})"
-    
-    def generate_comparison_table(self, categories=None):
-        """
-        Generate a comparison table of metrics across different simulations.
-        
-        Parameters:
-        -----------
-        categories : list
-            List of categories to include in the comparison
-            
-        Returns:
-        --------
-        str
-            Markdown table comparing metrics
-        """
-        if not self.data:
-            return "No data loaded."
-            
-        if not categories:
-            # Try to infer categories from the data
-            first_data_key = list(self.data.keys())[0]
-            categories = self.data[first_data_key]['Category'].unique().tolist()
-        
-        comparison_tables = []
-        
-        for category in categories:
-            table = f"### {category.capitalize()} Metrics\n\n"
-            table += "| Metric | " + " | ".join([self._get_simulation_label(k) for k in self.data.keys()]) + " |\n"
-            table += "| ------ | " + " | ".join(["------" for _ in self.data.keys()]) + " |\n"
-            
-            for metric in self.metrics_to_compare:
-                display_name = self.metric_display_names.get(metric, metric)
-                table += f"| {display_name} | "
+            # Extract values for this metric from each file
+            for file_name, df in self.data_frames.items():
+                metric_rows = df[df['Metric'] == metric]
                 
-                metric_values = []
-                for data_key in self.data.keys():
-                    value = self._get_metric_value(self.data[data_key], category, metric)
-                    formatted_value = f"{value:.2f}" if value is not None else "N/A"
-                    table += f"{formatted_value} | "
-                    if value is not None:
-                        metric_values.append((data_key, value))
-                
-                # Highlight the best value if possible
-                if len(metric_values) > 0 and any(["carbon" in metric or "cost" in metric or "time" in metric or "legs" in metric for metric in [m[0] for m in metric_values]]):
-                    best_sim, best_value = min(metric_values, key=lambda x: x[1])
-                    table = table.replace(f"| {best_value:.2f} |", f"| **{best_value:.2f}** |")
-                
-                table += "\n"
-            
-            comparison_tables.append(table)
-        
-        return "\n\n".join(comparison_tables)
-    
-    def generate_mode_comparison(self, categories=None):
-        """
-        Generate a comparison of transportation modes across different simulations.
-        
-        Parameters:
-        -----------
-        categories : list
-            List of categories to include in the comparison
-            
-        Returns:
-        --------
-        str
-            Markdown text with mode comparisons
-        """
-        if not self.data:
-            return "No data loaded."
-            
-        if not categories:
-            # Try to infer categories from the data
-            first_data_key = list(self.data.keys())[0]
-            categories = self.data[first_data_key]['Category'].unique().tolist()
-        
-        mode_comparison = []
-        
-        # Direct modes
-        direct_modes = ["WALK", "BICYCLE", "CAR"]
-        
-        for category in categories:
-            comparison = f"### {category.capitalize()} Transportation Mode Analysis\n\n"
-            comparison += "#### Direct Modes\n\n"
-            
-            # Table for direct modes
-            comparison += "| Mode | " + " | ".join([self._get_simulation_label(k) for k in self.data.keys()]) + " |\n"
-            comparison += "| ---- | " + " | ".join(["----" for _ in self.data.keys()]) + " |\n"
-            
-            for mode in direct_modes:
-                comparison += f"| {mode} | "
-                
-                for data_key in self.data.keys():
-                    count = self._get_metric_value(self.data[data_key], category, f"direct_mode_{mode}_count")
-                    proportion = self._get_metric_value(self.data[data_key], category, f"direct_mode_{mode}_proportion")
+                for _, row in metric_rows.iterrows():
+                    category = row['Category']
+                    value = row['Value']
                     
-                    if count is not None and proportion is not None:
-                        comparison += f"{int(count)} ({proportion:.1%}) | "
-                    else:
-                        comparison += "N/A | "
-                
-                comparison += "\n"
-            
-            # Transit modes
-            transit_modes = ["TRAM", "SUBWAY", "BUS", "RAIL"]
-            
-            comparison += "\n#### Transit Modes\n\n"
-            comparison += "| Mode | " + " | ".join([self._get_simulation_label(k) for k in self.data.keys()]) + " |\n"
-            comparison += "| ---- | " + " | ".join(["----" for _ in self.data.keys()]) + " |\n"
-            
-            for mode in transit_modes:
-                comparison += f"| {mode} | "
-                
-                for data_key in self.data.keys():
-                    count = self._get_metric_value(self.data[data_key], category, f"transit_mode_{mode}_count")
-                    proportion = self._get_metric_value(self.data[data_key], category, f"transit_mode_{mode}_proportion")
+                    key = f"{category}_{metric}"
+                    if key not in metric_data:
+                        metric_data[key] = []
                     
-                    if count is not None and proportion is not None:
-                        comparison += f"{int(count)} ({proportion:.1%}) | "
-                    else:
-                        comparison += "N/A | "
-                
-                comparison += "\n"
+                    metric_data[key].append((file_name, value))
+                    
+                    # Also store by file for easier access
+                    if file_name not in values_by_file:
+                        values_by_file[file_name] = {}
+                    values_by_file[file_name][category] = value
             
-            mode_comparison.append(comparison)
-        
-        return "\n\n".join(mode_comparison)
+            # Analyze each category for this metric
+            metric_results = {}
+            for category in self.categories:
+                key = f"{category}_{metric}"
+                if key in metric_data:
+                    data = metric_data[key]
+                    values = [item[1] for item in data]
+                    
+                    if values:
+                        min_value = min(values)
+                        max_value = max(values)
+                        avg_value = sum(values) / len(values)
+                        std_dev = np.std(values) if len(values) > 1 else 0
+                        
+                        min_file = next(item[0] for item in data if item[1] == min_value)
+                        max_file = next(item[0] for item in data if item[1] == max_value)
+                        
+                        metric_results[category] = {
+                            'min': min_value,
+                            'min_file': min_file,
+                            'max': max_value,
+                            'max_file': max_file,
+                            'avg': avg_value,
+                            'std_dev': std_dev,
+                            'values_by_file': {file: values_by_file.get(file, {}).get(category, None) 
+                                              for file in self.data_frames.keys()}
+                        }
+            
+            results[metric] = metric_results
+            
+        self.comparative_results = results
+        return results
     
-    def generate_comparative_charts(self, output_dir=None):
+    def generate_csv_report(self, output_path: str) -> None:
         """
-        Generate comparative charts for the metrics.
+        Generate a CSV report with the comparative analysis results.
+        The CSV is organized by category (departure, return, combined).
         
-        Parameters:
-        -----------
-        output_dir : str
-            Directory to save the charts to
-            
-        Returns:
-        --------
-        str
-            Markdown text with embedded charts
+        Args:
+            output_path: Path where the CSV report will be saved
         """
-        if not self.data:
-            return "No data loaded."
+        if not self.comparative_results:
+            self.analyze_metrics()
             
-        # Create charts directory if it doesn't exist
-        if output_dir and not os.path.exists(output_dir):
-            os.makedirs(output_dir)
-            
-        charts_md = "## Comparative Charts\n\n"
+        # Create separate DataFrames for each category
+        category_dfs = {}
         
-        # Identify all categories present in the data
-        categories = set()
-        for data_key in self.data.keys():
-            categories.update(self.data[data_key]['Category'].unique())
-        categories = list(categories)
+        # Ensure we process categories in a specific order
+        ordered_categories = sorted(self.categories, 
+                                   key=lambda x: (0 if x == 'departure' else 
+                                                 1 if x == 'return' else 
+                                                 2 if x == 'combined' else 3))
         
-        # For each category, create a chart comparing key metrics
-        for category in categories:
-            # Extract data for specified metrics in this category
-            chart_data = {}
+        for category in ordered_categories:
+            rows = []
             
-            for metric in self.metrics_to_compare:
-                metric_values = []
-                
-                for data_key in self.data.keys():
-                    value = self._get_metric_value(self.data[data_key], category, metric)
-                    if value is not None:
-                        metric_values.append(value)
-                    else:
-                        metric_values.append(0)  # Use 0 for missing values
-                
-                chart_data[metric] = metric_values
-            
-            # Create DataFrames for plotting
-            plot_data = pd.DataFrame(chart_data, index=[self._get_simulation_label(k) for k in self.data.keys()])
-            
-            # Generate individual charts for each metric
-            for metric in self.metrics_to_compare:
-                plt.figure(figsize=(12, 7))
-                
-                # Create bars with colors based on simulation priorities
-                bars = plot_data[metric].plot(kind='bar', color=[self._get_priority_color(self.priorities[k]) for k in self.data.keys()])
-                
-                plt.title(f"{category.capitalize()} - {self.metric_display_names.get(metric, metric)}")
-                plt.ylabel(self.metric_display_names.get(metric, metric))
-                plt.xlabel("Simulation (Optimization Priority)")
-                plt.grid(axis='y', linestyle='--', alpha=0.7)
-                plt.xticks(rotation=45, ha='right')
-                
-                # Add value labels on top of each bar
-                for i, v in enumerate(plot_data[metric]):
-                    plt.text(i, v * 1.01, f'{v:.1f}', ha='center', fontsize=9)
-                
-                # Add a legend for priority colors
-                unique_priorities = list(set(self.priorities.values()))
-                legend_handles = [plt.Rectangle((0,0),1,1, color=self._get_priority_color(p)) for p in unique_priorities]
-                legend_labels = [self.priority_display_names.get(p, p.capitalize()) for p in unique_priorities]
-                plt.legend(legend_handles, legend_labels, title="Optimization Priority")
-                
-                plt.tight_layout()
-                
-                # Save chart if output directory is specified
-                if output_dir:
-                    chart_path = os.path.join(output_dir, f"{category}_{metric}.png")
-                    plt.savefig(chart_path)
-                    charts_md += f"![{category.capitalize()} - {metric}]({chart_path})\n\n"
-                
-                plt.close()
-            
-            # Generate transportation mode comparison charts
-            direct_modes = ["WALK", "BICYCLE", "CAR"]
-            transit_modes = ["TRAM", "SUBWAY", "BUS", "RAIL"]
-            
-            # Direct modes chart
-            direct_mode_data = {}
-            
-            for mode in direct_modes:
-                mode_values = []
-                
-                for data_key in self.data.keys():
-                    value = self._get_metric_value(self.data[data_key], category, f"direct_mode_{mode}_proportion")
-                    if value is not None:
-                        mode_values.append(value)
-                    else:
-                        mode_values.append(0)
-                
-                direct_mode_data[mode] = mode_values
-            
-            direct_mode_df = pd.DataFrame(direct_mode_data, index=[self._get_simulation_label(k) for k in self.data.keys()])
-            
-            plt.figure(figsize=(14, 8))
-            direct_mode_df.plot(kind='bar', stacked=True, colormap='tab10')
-            plt.title(f"{category.capitalize()} - Direct Transportation Modes")
-            plt.ylabel("Proportion")
-            plt.xlabel("Simulation (Optimization Priority)")
-            plt.grid(axis='y', linestyle='--', alpha=0.7)
-            plt.xticks(rotation=45, ha='right')
-            plt.legend(title="Mode")
-            plt.tight_layout()
-            
-            if output_dir:
-                chart_path = os.path.join(output_dir, f"{category}_direct_modes.png")
-                plt.savefig(chart_path)
-                charts_md += f"![{category.capitalize()} - Direct Modes]({chart_path})\n\n"
-            
-            plt.close()
-            
-            # Transit modes chart
-            transit_mode_data = {}
-            
-            for mode in transit_modes:
-                mode_values = []
-                
-                for data_key in self.data.keys():
-                    value = self._get_metric_value(self.data[data_key], category, f"transit_mode_{mode}_proportion")
-                    if value is not None:
-                        mode_values.append(value)
-                    else:
-                        mode_values.append(0)
-                
-                transit_mode_data[mode] = mode_values
-            
-            transit_mode_df = pd.DataFrame(transit_mode_data, index=[self._get_simulation_label(k) for k in self.data.keys()])
-            
-            plt.figure(figsize=(14, 8))
-            transit_mode_df.plot(kind='bar', stacked=True, colormap='Paired')
-            plt.title(f"{category.capitalize()} - Transit Transportation Modes")
-            plt.ylabel("Proportion")
-            plt.xlabel("Simulation (Optimization Priority)")
-            plt.grid(axis='y', linestyle='--', alpha=0.7)
-            plt.xticks(rotation=45, ha='right')
-            plt.legend(title="Mode")
-            plt.tight_layout()
-            
-            if output_dir:
-                chart_path = os.path.join(output_dir, f"{category}_transit_modes.png")
-                plt.savefig(chart_path)
-                charts_md += f"![{category.capitalize()} - Transit Modes]({chart_path})\n\n"
-            
-            plt.close()
-        
-        return charts_md
-    
-    def _get_priority_color(self, priority):
-        """
-        Get color based on optimization priority.
-        
-        Parameters:
-        -----------
-        priority : str
-            Optimization priority
-            
-        Returns:
-        --------
-        str
-            Color hex code
-        """
-        # Base priority colors
-        priority_colors = {
-            "carbon": "#2ca02c",  # Green for carbon optimization
-            "cost": "#1f77b4",    # Blue for cost optimization
-            "time": "#ff7f0e",    # Orange for time optimization
-            "legs": "#9467bd"     # Purple for legs optimization
-        }
-        
-        # If it's a standard priority, return its color
-        if priority in priority_colors:
-            return priority_colors[priority]
-        
-        # For custom priorities, generate a deterministic color based on the string
-        if priority:
-            # Simple hash function to generate colors based on the string
-            hash_val = sum(ord(c) for c in priority)
-            # Generate a hue between 0 and 1 based on the hash
-            hue = (hash_val % 100) / 100.0
-            
-            # Convert HSV to RGB (simplified approach)
-            h = hue * 6
-            i = int(h)
-            f = h - i
-            q = 1 - f
-            t = f
-            i = i % 6
-            
-            r, g, b = 0, 0, 0
-            if i == 0: r, g, b = 1, t, 0
-            elif i == 1: r, g, b = q, 1, 0
-            elif i == 2: r, g, b = 0, 1, t
-            elif i == 3: r, g, b = 0, q, 1
-            elif i == 4: r, g, b = t, 0, 1
-            elif i == 5: r, g, b = 1, 0, q
-            
-            # Convert to hex
-            return f"#{int(r*255):02x}{int(g*255):02x}{int(b*255):02x}"
-        
-        return "#7f7f7f"  # Gray for unknown/empty
-        
-    def generate_key_findings(self):
-        """
-        Generate key findings from the comparison.
-        
-        Returns:
-        --------
-        str
-            Markdown text with key findings
-        """
-        if not self.data:
-            return "No data loaded."
-            
-        findings = "## Key Findings\n\n"
-        
-        # Extract categories
-        categories = set()
-        for data_key in self.data.keys():
-            categories.update(self.data[data_key]['Category'].unique())
-        categories = list(categories)
-        
-        # Define key metrics to analyze
-        key_metrics = [
-            "total_carbon_footprint",
-            "avg_carbon_footprint",
-            "total_cost",
-            "avg_cost",
-            "total_travel_time",
-            "avg_travel_time"
-        ]
-        
-        # For each category and metric, find the best (lowest) simulation
-        for category in categories:
-            findings += f"### {category.capitalize()} Analysis\n\n"
-            
-            for metric in key_metrics:
-                findings += f"#### {self.metric_display_names.get(metric, metric)}\n\n"
-                
-                metric_values = {}
-                
-                for data_key in self.data.keys():
-                    value = self._get_metric_value(self.data[data_key], category, metric)
-                    if value is not None:
-                        metric_values[data_key] = value
-                
-                if metric_values:
-                    best_sim = min(metric_values, key=metric_values.get)
-                    worst_sim = max(metric_values, key=metric_values.get)
+            for metric in self.metrics:
+                if metric in self.comparative_results and category in self.comparative_results[metric]:
+                    results = self.comparative_results[metric][category]
                     
-                    best_priority = self.priorities.get(best_sim, "Unknown")
-                    worst_priority = self.priorities.get(worst_sim, "Unknown")
+                    row = {
+                        'Metric': metric,
+                        'Min_Value': results['min'],
+                        'Min_File': results['min_file'],
+                        'Max_Value': results['max'],
+                        'Max_File': results['max_file'],
+                        'Average': results['avg'],
+                        'Std_Dev': results['std_dev']
+                    }
                     
-                    findings += f"- Best simulation: **{best_sim}** (Priority: {self.priority_display_names.get(best_priority, best_priority.capitalize())}) with value {metric_values[best_sim]:.2f}\n"
-                    findings += f"- Worst simulation: **{worst_sim}** (Priority: {self.priority_display_names.get(worst_priority, worst_priority.capitalize())}) with value {metric_values[worst_sim]:.2f}\n"
-                    
-                    # Calculate percentage difference
-                    pct_diff = ((metric_values[worst_sim] - metric_values[best_sim]) / metric_values[best_sim]) * 100
-                    findings += f"- Percentage difference: **{pct_diff:.2f}%**\n\n"
-                    
-                    # Check if the optimization priority matches the metric
-                    metric_type = None
-                    if "carbon" in metric:
-                        metric_type = "carbon"
-                    elif "cost" in metric:
-                        metric_type = "cost"
-                    elif "time" in metric:
-                        metric_type = "time"
-                    elif "legs" in metric:
-                        metric_type = "legs"
-                    
-                    if metric_type and metric_type == best_priority:
-                        findings += f"- **Note**: The simulation optimized for {self.priority_display_names.get(best_priority)} indeed achieved the best result for this metric.\n\n"
-                    elif metric_type:
-                        # Find the simulation with the matching priority
-                        matching_sims = [k for k, v in self.priorities.items() if v == metric_type]
-                        if matching_sims and matching_sims[0] in metric_values:
-                            matching_value = metric_values[matching_sims[0]]
-                            matching_rank = sorted(metric_values.values()).index(matching_value) + 1
-                            findings += f"- **Note**: The simulation optimized for {self.priority_display_names.get(metric_type)} ranked #{matching_rank} for this metric.\n\n"
-                else:
-                    findings += "- No data available for this metric\n\n"
+                    # Add values for each file
+                    for file_name, value in results['values_by_file'].items():
+                        row[f"{file_name}"] = value if value is not None else "N/A"
+                        
+                    rows.append(row)
             
-            # Analyze transportation modes
-            findings += "#### Transportation Mode Analysis\n\n"
-            
-            for data_key in self.data.keys():
-                priority = self.priorities.get(data_key, "Unknown")
-                findings += f"**{data_key}** (Priority: {self.priority_display_names.get(priority, priority.capitalize())}):\n"
-                
-                # Direct modes
-                direct_modes = {}
-                for mode in ["WALK", "BICYCLE", "CAR"]:
-                    proportion = self._get_metric_value(self.data[data_key], category, f"direct_mode_{mode}_proportion")
-                    if proportion is not None:
-                        direct_modes[mode] = proportion
-                
-                if direct_modes:
-                    predominant_mode = max(direct_modes, key=direct_modes.get)
-                    findings += f"- Predominant direct mode: **{predominant_mode}** ({direct_modes[predominant_mode]:.1%})\n"
-                
-                # Transit modes
-                transit_modes = {}
-                for mode in ["TRAM", "SUBWAY", "BUS", "RAIL"]:
-                    proportion = self._get_metric_value(self.data[data_key], category, f"transit_mode_{mode}_proportion")
-                    if proportion is not None and proportion > 0:
-                        transit_modes[mode] = proportion
-                
-                if transit_modes:
-                    predominant_transit = max(transit_modes, key=transit_modes.get)
-                    findings += f"- Predominant transit mode: **{predominant_transit}** ({transit_modes[predominant_transit]:.1%})\n"
-                else:
-                    findings += "- No significant transit usage\n"
-                
-                findings += "\n"
+            if rows:
+                category_dfs[category] = pd.DataFrame(rows)
         
-        return findings
-    
-    def generate_recommendations(self):
-        """
-        Generate recommendations based on the analysis.
-        
-        Returns:
-        --------
-        str
-            Markdown text with recommendations
-        """
-        if not self.data:
-            return "No data loaded."
+        # Write each category to a separate sheet in the Excel file or separate CSVs
+        if output_path.endswith('.xlsx'):
+            with pd.ExcelWriter(output_path) as writer:
+                for category, df in category_dfs.items():
+                    df.to_excel(writer, sheet_name=category, index=False)
+            print(f"Excel report with separate sheets saved to {output_path}")
+        else:
+            # Create a single CSV with category as a column
+            all_rows = []
+            for category in ordered_categories:
+                if category in category_dfs:
+                    df = category_dfs[category]
+                    for _, row in df.iterrows():
+                        csv_row = {'Category': category}
+                        csv_row.update(row)
+                        all_rows.append(csv_row)
             
-        recommendations = "## Recommendations\n\n"
-        
-        # Extract categories
-        categories = set()
-        for data_key in self.data.keys():
-            categories.update(self.data[data_key]['Category'].unique())
-        categories = list(categories)
-        
-        # Define metrics to consider for recommendations
-        metrics = {
-            "carbon": "total_carbon_footprint",
-            "cost": "total_cost",
-            "time": "total_travel_time",
-            "legs": "avg_legs_per_attendee"
-        }
-        
-        # For each optimization target, recommend the best simulation
-        for target, metric in metrics.items():
-            recommendations += f"### For {self.priority_display_names.get(target, target.capitalize())} Optimization\n\n"
-            
-            best_sim = None
-            best_value = float('inf')
-            
-            for data_key in self.data.keys():
-                for category in categories:
-                    value = self._get_metric_value(self.data[data_key], category, metric)
-                    if value is not None and value < best_value:
-                        best_value = value
-                        best_sim = data_key
-            
-            if best_sim:
-                priority = self.priorities.get(best_sim, "Unknown")
-                recommendations += f"- **Recommended simulation: {best_sim}** (Priority: {self.priority_display_names.get(priority, priority.capitalize())})\n"
-                recommendations += f"- {self.metric_display_names.get(metric, metric)}: {best_value:.2f}\n\n"
-                
-                # Check if the recommendation matches the actual priority
-                if priority == target:
-                    recommendations += f"- **Note**: This matches the simulation's optimization priority.\n\n"
-                else:
-                    recommendations += f"- **Note**: Interestingly, a simulation with a different optimization priority ({self.priority_display_names.get(priority, priority.capitalize())}) performed best for this metric.\n\n"
-                
-                # Add supporting data
-                recommendations += "Supporting metrics:\n\n"
-                
-                for category in categories:
-                    for m in self.metrics_to_compare:
-                        if m != metric:
-                            value = self._get_metric_value(self.data[best_sim], category, m)
-                            if value is not None:
-                                recommendations += f"- {category.capitalize()} {self.metric_display_names.get(m, m)}: {value:.2f}\n"
-                
-                recommendations += "\n"
+            # Create combined DataFrame and save to CSV
+            if all_rows:
+                combined_df = pd.DataFrame(all_rows)
+                # Reorder columns to put Category first
+                cols = combined_df.columns.tolist()
+                cols.remove('Category')
+                cols = ['Category'] + cols
+                combined_df = combined_df[cols]
+                combined_df.to_csv(output_path, index=False)
+                print(f"CSV report saved to {output_path}")
             else:
-                recommendations += "- No recommendation available due to insufficient data\n\n"
+                print("No data to write to CSV")
         
-        # Add general recommendations
-        recommendations += "### General Recommendations\n\n"
-        recommendations += "1. **Balance optimization targets**: Consider the trade-offs between carbon footprint, cost, and travel time.\n"
-        recommendations += "2. **Mode selection**: Promote sustainable transportation modes while maintaining reasonable travel times.\n"
-        recommendations += "3. **Further analysis**: Conduct sensitivity analysis to understand the impact of different parameters.\n"
-        recommendations += "4. **User experience**: Consider user preferences and comfort in addition to quantitative metrics.\n"
+        # Also generate individual CSVs per category if needed
+        base_path = os.path.splitext(output_path)[0]
+        for category, df in category_dfs.items():
+            category_path = f"{base_path}_{category}.csv"
+            df.to_csv(category_path, index=False)
+            print(f"{category.capitalize()} CSV report saved to {category_path}")
         
-        # Add priority-specific recommendations
-        recommendations += "\n### Priority-Specific Recommendations\n\n"
-        
-        recommendations += "**Carbon Footprint Reduction**:\n"
-        recommendations += "- Encourage use of public transit and cycling for shorter distances.\n"
-        recommendations += "- Consider carbon offset programs for unavoidable high-emission journeys.\n\n"
-        
-        recommendations += "**Cost Optimization**:\n"
-        recommendations += "- Look for group discounts on public transit where available.\n"
-        recommendations += "- Consider carpooling options to share costs among attendees.\n\n"
-        
-        recommendations += "**Time Efficiency**:\n"
-        recommendations += "- Prioritize direct connections and minimize transfers.\n"
-        recommendations += "- Consider dedicated transportation services for larger groups.\n\n"
-        
-        recommendations += "**Trip Simplicity (Fewer Legs)**:\n"
-        recommendations += "- Balance the number of legs with other factors like cost and carbon footprint.\n"
-        recommendations += "- Consider the cognitive load of complex itineraries on attendees.\n"
-        
-        return recommendations
-    
-    def generate_full_report(self, output_dir=None):
+    def generate_markdown_report(self, output_path: str) -> None:
         """
-        Generate a full comparative analysis report.
+        Generate a Markdown report with the comparative analysis results,
+        clearly organizing metrics by category (departure, return, combined).
         
-        Parameters:
-        -----------
-        output_dir : str
-            Directory to save charts to
-            
-        Returns:
-        --------
-        str
-            Markdown report with the full analysis
+        Args:
+            output_path: Path where the Markdown report will be saved
         """
-        if not self.data:
-            return "# Comparative Analysis Report\n\nNo data loaded."
-        
-        report = "# Comparative Analysis Report\n\n"
-        report += "## Overview\n\n"
-        report += f"This report compares {len(self.data)} different simulation scenarios:\n\n"
-        
-        for data_key in self.data.keys():
-            priority = self.priorities.get(data_key, "Unknown")
-            report += f"- **{data_key}** (Optimization Priority: {self.priority_display_names.get(priority, priority.capitalize())})\n"
-        
-        report += "\n"
-        
-        # Extract categories
-        categories = set()
-        for data_key in self.data.keys():
-            categories.update(self.data[data_key]['Category'].unique())
-        categories = list(categories)
-        
-        # Generate comparison table
-        report += "## Metric Comparison\n\n"
-        report += self.generate_comparison_table(categories)
-        report += "\n\n"
-        
-        # Generate mode comparison
-        report += "## Transportation Mode Comparison\n\n"
-        report += self.generate_mode_comparison(categories)
-        report += "\n\n"
-        
-        # Generate key findings
-        report += self.generate_key_findings()
-        report += "\n\n"
-        
-        # Generate recommendations
-        report += self.generate_recommendations()
-        report += "\n\n"
-        
-        # Generate charts
-        charts_md = self.generate_comparative_charts(output_dir)
-        report += charts_md
-        
-        self.report = report
-        return report
-    
-    def save_report(self, output_path):
-        """
-        Save the generated report to a file.
-        
-        Parameters:
-        -----------
-        output_path : str
-            Path to save the report to
-        """
-        if not self.report:
-            self.generate_full_report()
+        if not self.comparative_results:
+            self.analyze_metrics()
             
         with open(output_path, 'w') as f:
-            f.write(self.report)
+            f.write("# Comparative Analysis of Festival Sustainability Metrics\n\n")
+            
+            f.write("## Summary of Analyzed Files\n\n")
+            f.write("The following files were analyzed:\n\n")
+            
+            for file_name in self.data_frames.keys():
+                f.write(f"- {file_name}\n")
+            
+            f.write("\n## Metrics Comparison by Category\n\n")
+            
+            # Ensure we process categories in a specific order (departure, return, combined)
+            ordered_categories = sorted(self.categories, 
+                                       key=lambda x: (0 if x == 'departure' else 
+                                                     1 if x == 'return' else 
+                                                     2 if x == 'combined' else 3))
+            
+            # Organize by category first (departure, return, combined)
+            for category in ordered_categories:
+                f.write(f"## {category.upper()} CATEGORY\n\n")
+                
+                # Group metrics by type (carbon, cost, time, etc.)
+                metric_groups = self._group_related_metrics(category)
+                
+                for group_name, metrics_in_group in metric_groups.items():
+                    f.write(f"### {group_name}\n\n")
+                    
+                    for metric in metrics_in_group:
+                        if metric in self.comparative_results and category in self.comparative_results[metric]:
+                            results = self.comparative_results[metric][category]
+                            
+                            # Format metric name for better readability
+                            display_metric = metric.replace('_', ' ')
+                            
+                            f.write(f"#### {display_metric}\n\n")
+                            f.write(f"- **Minimum**: {results['min']:.2f} ({results['min_file']})\n")
+                            f.write(f"- **Maximum**: {results['max']:.2f} ({results['max_file']})\n")
+                            f.write(f"- **Average**: {results['avg']:.2f}\n")
+                            f.write(f"- **Standard Deviation**: {results['std_dev']:.2f}\n\n")
+                            
+                            f.write("Values by file:\n\n")
+                            f.write("| File | Value |\n")
+                            f.write("|------|-------|\n")
+                            
+                            # Sort files by value for better comparison
+                            sorted_files = sorted(
+                                [(file, value) for file, value in results['values_by_file'].items() if value is not None],
+                                key=lambda x: x[1]
+                            )
+                            
+                            for file_name, value in sorted_files:
+                                f.write(f"| {file_name} | {value:.2f} |\n")
+                                
+                            # Add missing files as N/A
+                            for file_name, value in results['values_by_file'].items():
+                                if value is None:
+                                    f.write(f"| {file_name} | N/A |\n")
+                                    
+                            f.write("\n")
+            
+            print(f"Markdown report saved to {output_path}")
+    
+    def _group_related_metrics(self, category: str) -> Dict[str, List[str]]:
+        """
+        Group related metrics together for better organization in the report.
         
-        print(f"Report saved to {output_path}")
+        Args:
+            category: The category to group metrics for
+            
+        Returns:
+            Dictionary mapping group names to lists of metrics
+        """
+        # Filter metrics that appear in this category
+        relevant_metrics = []
+        for metric in self.metrics:
+            if metric in self.comparative_results and category in self.comparative_results[metric]:
+                relevant_metrics.append(metric)
+        
+        # Define groups based on common prefixes or themes
+        groups = {
+            "Carbon Footprint Metrics": [],
+            "Cost Metrics": [],
+            "Travel Time Metrics": [],
+            "Travel Legs Metrics": [],
+            "Transport Mode Metrics": [],
+            "Other Metrics": []
+        }
+        
+        for metric in relevant_metrics:
+            if "carbon" in metric:
+                groups["Carbon Footprint Metrics"].append(metric)
+            elif "cost" in metric:
+                groups["Cost Metrics"].append(metric)
+            elif "time" in metric:
+                groups["Travel Time Metrics"].append(metric)
+            elif "leg" in metric:
+                groups["Travel Legs Metrics"].append(metric)
+            elif "mode" in metric or any(mode in metric for mode in ["WALK", "BICYCLE", "CAR", "TRAM", "SUBWAY", "BUS", "RAIL"]):
+                groups["Transport Mode Metrics"].append(metric)
+            else:
+                groups["Other Metrics"].append(metric)
+        
+        # Remove empty groups
+        return {k: v for k, v in groups.items() if v}
+    
+    def run_analysis(self, csv_output_path: str, md_output_path: str) -> Dict[str, Dict[str, Any]]:
+        """
+        Run the complete analysis workflow and generate both CSV and Markdown reports.
+        
+        Args:
+            csv_output_path: Path where the CSV report will be saved
+            md_output_path: Path where the Markdown report will be saved
+            
+        Returns:
+            Dictionary containing analysis results
+        """
+        print(f"Starting analysis of {len(self.csv_files)} CSV files from {self.directory_path}")
+        
+        results = self.analyze_metrics()
+        self.generate_csv_report(csv_output_path)
+        self.generate_markdown_report(md_output_path)
+        
+        print("Analysis complete!")
+        return results
+
+
+# Example usage
+if __name__ == "__main__":
+    # Create output directory if it doesn't exist
+    os.makedirs(OUTPUT_DIRECTORY, exist_ok=True)
+    
+    # Initialize the analyzer with the default path
+    analyzer = ComparativeAnalysis()
+    
+    # Run the complete analysis
+    analyzer.run_analysis(
+        csv_output_path=os.path.join(OUTPUT_DIRECTORY, "comparative_analysis.csv"),
+        md_output_path=os.path.join(OUTPUT_DIRECTORY, "comparative_analysis.md")
+    )

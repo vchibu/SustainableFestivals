@@ -1,7 +1,7 @@
 Category,Metric,Value
-departure,total_carbon_footprint,844529.5475199999
-departure,avg_carbon_footprint,8530.60149010101
-departure,total_cost,2007.9902625
+departure,total_carbon_footprint,844529.54752
+departure,avg_carbon_footprint,8530.601490101011
+departure,total_cost,2007.9902625000002
 departure,avg_cost,20.282729924242425
 departure,total_travel_time,12236.45
 departure,avg_travel_time,123.60050505050506
@@ -21,8 +21,8 @@ departure,transit_mode_BUS_count,19.0
 departure,transit_mode_BUS_proportion,0.1919191919191919
 departure,transit_mode_RAIL_count,19.0
 departure,transit_mode_RAIL_proportion,0.1919191919191919
-return,total_carbon_footprint,933863.9865599999
-return,avg_carbon_footprint,9627.463778969071
+return,total_carbon_footprint,933863.9865600001
+return,avg_carbon_footprint,9627.463778969073
 return,total_cost,2134.633306
 return,avg_cost,22.006528927835053
 return,total_travel_time,11558.066666666668
@@ -43,8 +43,8 @@ return,transit_mode_BUS_count,7.0
 return,transit_mode_BUS_proportion,0.07216494845360824
 return,transit_mode_RAIL_count,7.0
 return,transit_mode_RAIL_proportion,0.07216494845360824
-combined,total_carbon_footprint,1778393.5340799997
-combined,avg_carbon_per_attendee,17963.571051313127
+combined,total_carbon_footprint,1778393.5340800001
+combined,avg_carbon_per_attendee,17963.571051313134
 combined,total_cost,4142.6235685
 combined,avg_cost_per_attendee,41.84468251010101
 combined,total_travel_time,23794.51666666667

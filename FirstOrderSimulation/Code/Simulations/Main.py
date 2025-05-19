@@ -4,6 +4,9 @@ from Code.Simulations.Simulation import (
     LegSimulation, 
     TimeSimulation
 )
+from Code.Analysis.ComparativeAnalysis import ComparativeAnalysis
+
+import os
 
 def run_all_simulations(print_summary=True, gen_data=True, gen_trips=True, gen_opt_trips=True):
     """Run all four simulation types and return their metrics."""
@@ -58,8 +61,19 @@ def run_single_simulation(sim_type, csv_filename=None, md_filename=None, print_s
     
     return metrics
 
-if __name__ == "__main__":
-    # Example 1: Run all simulations
-    metrics = run_all_simulations(print_summary=False, gen_data=False, gen_trips=False, gen_opt_trips=True)
 
-    print("\nAll simulations completed successfully!")
+# Example usage
+if __name__ == "__main__":
+    # Initialize the analyzer (it will find the CSV directory automatically)
+    analyzer = ComparativeAnalysis()
+    
+    # Create output directory if it doesn't exist
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_dir = os.path.join(script_dir, "..", "..", "Data", "ComparativeStatistics")
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Run the complete analysis
+    analyzer.run_analysis(
+        csv_output_path=os.path.join(output_dir, "comparative_analysis.csv"),
+        md_output_path=os.path.join(output_dir, "comparative_analysis.md")
+    )
