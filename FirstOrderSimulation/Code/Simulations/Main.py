@@ -66,7 +66,7 @@ def run_single_simulation(sim_type, csv_filename=None, md_filename=None, print_s
 if __name__ == "__main__":
 
     # Run all simulations
-    all_results = run_all_simulations(print_summary=False, gen_data=False, gen_trips=False, gen_opt_trips=True)
+    all_results = run_all_simulations(print_summary=False, gen_data=True, gen_trips=True, gen_opt_trips=True)
 
     # Initialize the analyzer (it will find the CSV directory automatically)
     analyzer = ComparativeAnalysis()

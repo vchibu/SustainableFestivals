@@ -64,6 +64,38 @@ class BaseTransportationSimulation:
                 # Build the modes block for the trip planner query
                 modes_block = self.planner.build_modes_block(direct_mode, transit_modes)
 
+                if direct_mode == "BICYCLE":
+                    # For walking, we only need the origin and destination coordinates
+                    modes_block_alt = self.planner.build_modes_block("WALK", transit_modes)
+
+                    # Build the departure trip query
+                    q_dep_alt = self.planner.build_query(
+                        origin_lat=self.departure_df.loc[idx, "origin_lat"],
+                        origin_lng=self.departure_df.loc[idx, "origin_lng"],
+                        destination_lat=self.departure_df.loc[idx, "destination_lat"],
+                        destination_lng=self.departure_df.loc[idx, "destination_lng"],
+                        time=self.departure_df.loc[idx, "departure_time"],
+                        modes_block=modes_block_alt,
+                        dep_or_ret=True
+                    )
+
+                    # Build the return trip query
+                    q_ret_alt = self.planner.build_query(
+                        origin_lat=self.return_df.loc[idx, "origin_lat"],
+                        origin_lng=self.return_df.loc[idx, "origin_lng"],
+                        destination_lat=self.return_df.loc[idx, "destination_lat"],
+                        destination_lng=self.return_df.loc[idx, "destination_lng"],
+                        time=self.return_df.loc[idx, "departure_time"],
+                        modes_block=modes_block_alt,
+                        dep_or_ret=False
+                    )
+
+                    # Send and process the departure query
+                    self.planner.send_and_process_query(q_dep_alt, trip_label="Departure", identifier=f"{attendee_id}_dep_{direct_mode}")
+
+                    # Send and process the return query
+                    self.planner.send_and_process_query(q_ret_alt, trip_label="Return", identifier=f"{attendee_id}_ret_{direct_mode}")
+
                 # Build the departure trip query
                 q_dep = self.planner.build_query(
                     origin_lat=self.departure_df.loc[idx, "origin_lat"],
