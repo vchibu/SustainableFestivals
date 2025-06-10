@@ -30,15 +30,16 @@ class SimpleAttendeeDataGenerator:
     ]
 
     DEPARTURE_TIME_WINDOWS = [
-        {"start": "16:00", "end": "18:00", "proportion": 0.2},
-        {"start": "18:00", "end": "21:00", "proportion": 0.5},
-        {"start": "21:00", "end": "00:00", "proportion": 0.3}
+        {"start": "13:00", "end": "14:00", "proportion": 0.05},  # early birds
+        {"start": "14:00", "end": "16:30", "proportion": 0.55},  # main inflow
+        {"start": "16:30", "end": "18:30", "proportion": 0.25},  # moderate inflow
+        {"start": "18:30", "end": "21:30", "proportion": 0.15}   # last arrivals
     ]
 
     RETURN_TIME_WINDOWS = [
-        {"start": "22:00", "end": "23:59", "proportion": 0.5},
-        {"start": "00:00", "end": "02:00", "proportion": 0.3},
-        {"start": "02:00", "end": "05:00", "proportion": 0.2}
+        {"start": "22:00", "end": "23:00", "proportion": 0.10},   # early leavers
+        {"start": "23:00", "end": "00:30", "proportion": 0.70},   # main outflow
+        {"start": "00:30", "end": "01:30", "proportion": 0.20}    # slow exit & lingerers
     ]
 
     NETHERLANDS_BOUNDS = {
@@ -47,6 +48,14 @@ class SimpleAttendeeDataGenerator:
         "min_lng": 3.35,        
         "max_lng": 7.22 
     }
+
+    NOORD_BRABANT_BOUNDS = {
+        "min_lat": 51.30,
+        "max_lat": 51.75,
+        "min_lng": 4.20,
+        "max_lng": 6.00
+    }
+
 
     CITY_BOUNDS = {
         "EINDHOVEN": {        "min_lat": 51.40,        "max_lat": 51.50,        "min_lng": 5.40,        "max_lng": 5.55,  },
@@ -119,23 +128,27 @@ class SimpleAttendeeDataGenerator:
         else:
             transit_modes = [] # No transit modes for CAR
         return transit_modes
+    
+    def is_in_noord_brabant(self, lat, lng):
+        nb = self.NOORD_BRABANT_BOUNDS
+        return nb["min_lat"] <= lat <= nb["max_lat"] and nb["min_lng"] <= lng <= nb["max_lng"]
 
-    def sample_coords(self, bounds, count):
+
+    def sample_coords(self, bounds, count, exclude_noord_brabant=False):
         coords = []
         while len(coords) < count:
             lat = random.uniform(bounds["min_lat"], bounds["max_lat"])
             lng = random.uniform(bounds["min_lng"], bounds["max_lng"])
 
+            if exclude_noord_brabant and self.is_in_noord_brabant(lat, lng):
+                continue  # skip this point
+
             if self.otp_client:
                 snapped_lat, snapped_lng, valid_points = self.otp_client.snap_point_to_road(lat, lng)
-                if valid_points:  # snapping succeeded
+                if valid_points:
                     coords.append({"latitude": snapped_lat, "longitude": snapped_lng})
-                    print(f"✅ Snapped point ({lat}, {lng}) to ({snapped_lat}, {snapped_lng})")
-                else:
-                    print(f"❌ Discarded unsnappable point ({lat}, {lng})")
             else:
                 coords.append({"latitude": lat, "longitude": lng})
-
         return coords
 
 
@@ -143,7 +156,7 @@ class SimpleAttendeeDataGenerator:
         coords = []
         for location in counts:
             if location == "OTHER":
-                coords += self.sample_coords(self.NETHERLANDS_BOUNDS, counts[location])
+                coords += self.sample_coords(self.NETHERLANDS_BOUNDS, counts[location], exclude_noord_brabant=(location == "OTHER"))
             else:
                 coords += self.sample_coords(self.CITY_BOUNDS[location], counts[location])
         random.shuffle(coords)

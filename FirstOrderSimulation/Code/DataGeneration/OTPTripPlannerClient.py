@@ -23,39 +23,74 @@ class OTPTripPlannerClient:
 
         return " ".join(parts)
 
-    def build_query(self, origin_lat, origin_lng, destination_lat, destination_lng, time, modes_block):
-        return f"""
-        {{
-          planConnection(
-            origin: {{ location: {{ coordinate: {{ latitude: {origin_lat}, longitude: {origin_lng} }} }} }}
-            destination: {{ location: {{ coordinate: {{ latitude: {destination_lat}, longitude: {destination_lng} }} }} }}
-            dateTime: {{ earliestDeparture: \"{time}\" }}
-            modes: {{ {modes_block} }}
-            first: 5
-          ) {{
-            edges {{
-              node {{
-                legs {{
-                  mode
-                  distance
-                  from {{
-                    name
-                    departure {{ scheduledTime }}
-                  }}
-                  to {{
-                    name
-                    arrival {{ scheduledTime }}
-                  }}
-                  route {{
-                    shortName
-                    longName
-                  }}
+    def build_query(self, origin_lat, origin_lng, destination_lat, destination_lng, time, modes_block, dep_or_ret):
+        if dep_or_ret:
+            return f"""
+            {{
+            planConnection(
+                origin: {{ location: {{ coordinate: {{ latitude: {origin_lat}, longitude: {origin_lng} }} }} }}
+                destination: {{ location: {{ coordinate: {{ latitude: {destination_lat}, longitude: {destination_lng} }} }} }}
+                dateTime: {{ latestArrival: \"{time}\" }}
+                modes: {{ {modes_block} }}
+                first: 5
+            ) {{
+                edges {{
+                node {{
+                    legs {{
+                    mode
+                    distance
+                    from {{
+                        name
+                        departure {{ scheduledTime }}
+                    }}
+                    to {{
+                        name
+                        arrival {{ scheduledTime }}
+                    }}
+                    route {{
+                        shortName
+                        longName
+                    }}
+                    }}
                 }}
-              }}
+                }}
             }}
-          }}
-        }}
-        """
+            }}
+            """
+        else:
+            return f"""
+            {{
+            planConnection(
+                origin: {{ location: {{ coordinate: {{ latitude: {origin_lat}, longitude: {origin_lng} }} }} }}
+                destination: {{ location: {{ coordinate: {{ latitude: {destination_lat}, longitude: {destination_lng} }} }} }}
+                dateTime: {{ earliestDeparture: \"{time}\" }}
+                modes: {{ {modes_block} }}
+                first: 5
+            ) {{
+                edges {{
+                node {{
+                    legs {{
+                    mode
+                    distance
+                    from {{
+                        name
+                        departure {{ scheduledTime }}
+                    }}
+                    to {{
+                        name
+                        arrival {{ scheduledTime }}
+                    }}
+                    route {{
+                        shortName
+                        longName
+                    }}
+                    }}
+                }}
+                }}
+            }}
+            }}
+            """
+            
 
     def send_and_process_query(self, query, trip_label=None, identifier=None):
         response = requests.post(self.url, json={"query": query}, headers=self.headers)

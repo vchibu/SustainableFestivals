@@ -71,7 +71,8 @@ class BaseTransportationSimulation:
                     destination_lat=self.departure_df.loc[idx, "destination_lat"],
                     destination_lng=self.departure_df.loc[idx, "destination_lng"],
                     time=self.departure_df.loc[idx, "departure_time"],
-                    modes_block=modes_block
+                    modes_block=modes_block,
+                    dep_or_ret=True
                 )
 
                 # Build the return trip query
@@ -81,7 +82,8 @@ class BaseTransportationSimulation:
                     destination_lat=self.return_df.loc[idx, "destination_lat"],
                     destination_lng=self.return_df.loc[idx, "destination_lng"],
                     time=self.return_df.loc[idx, "departure_time"],
-                    modes_block=modes_block
+                    modes_block=modes_block,
+                    dep_or_ret=False
                 )
 
                 # Send and process the departure query
