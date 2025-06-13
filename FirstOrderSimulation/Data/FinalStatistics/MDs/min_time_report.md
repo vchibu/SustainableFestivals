@@ -1,6 +1,6 @@
 # Transportation Analysis Results
 
-Total number of attendees: 98
+Total number of attendees: 97
 
 ## Departure Trip Metrics
 
@@ -8,37 +8,37 @@ Total number of attendees: 98
 
 | Metric | Value |
 |--------|-------|
-| Total carbon footprint | 1286448.79 units |
-| Average carbon footprint | 13262.36 units |
+| Total carbon footprint | 1212556.95 units |
+| Average carbon footprint | 12500.59 units |
 
 ### Cost
 
 | Metric | Value |
 |--------|-------|
-| Total cost | 2892.32 |
-| Average cost | 29.82 |
+| Total cost | 2769.70 |
+| Average cost | 28.55 |
 
 ### Travel Time
 
 | Metric | Value |
 |--------|-------|
-| Total travel time | 5401.93 minutes |
-| Average travel time | 55.69 minutes |
+| Total travel time | 5847.22 minutes |
+| Average travel time | 60.28 minutes |
 
 ### Journey Complexity
 
 | Metric | Value |
 |--------|-------|
-| Total journey legs | 130 |
-| Average legs per attendee | 1.34 |
+| Total journey legs | 159 |
+| Average legs per attendee | 1.64 |
 
 ### Direct Mode Distribution
 
 | Mode | Count | Percentage |
 |------|-------|------------|
-| WALK | 4 | 4.1% |
+| WALK | 7 | 7.2% |
 | BICYCLE | 2 | 2.1% |
-| CAR | 91 | 93.8% |
+| CAR | 88 | 90.7% |
 
 ### Transit Mode Usage
 
@@ -46,8 +46,8 @@ Total number of attendees: 98
 |------|-------|------------|
 | TRAM | 0 | 0.0% |
 | SUBWAY | 0 | 0.0% |
-| BUS | 4 | 4.1% |
-| RAIL | 4 | 4.1% |
+| BUS | 7 | 7.2% |
+| RAIL | 7 | 7.2% |
 
 ## Return Trip Metrics
 
@@ -55,37 +55,37 @@ Total number of attendees: 98
 
 | Metric | Value |
 |--------|-------|
-| Total carbon footprint | 1306279.29 units |
-| Average carbon footprint | 13607.08 units |
+| Total carbon footprint | 1245447.51 units |
+| Average carbon footprint | 13109.97 units |
 
 ### Cost
 
 | Metric | Value |
 |--------|-------|
-| Total cost | 2906.06 |
-| Average cost | 30.27 |
+| Total cost | 2783.47 |
+| Average cost | 29.30 |
 
 ### Travel Time
 
 | Metric | Value |
 |--------|-------|
-| Total travel time | 4942.23 minutes |
-| Average travel time | 51.48 minutes |
+| Total travel time | 4933.58 minutes |
+| Average travel time | 51.93 minutes |
 
 ### Journey Complexity
 
 | Metric | Value |
 |--------|-------|
-| Total journey legs | 106 |
-| Average legs per attendee | 1.10 |
+| Total journey legs | 115 |
+| Average legs per attendee | 1.21 |
 
 ### Direct Mode Distribution
 
 | Mode | Count | Percentage |
 |------|-------|------------|
-| WALK | 1 | 1.0% |
+| WALK | 2 | 2.1% |
 | BICYCLE | 2 | 2.1% |
-| CAR | 93 | 96.9% |
+| CAR | 91 | 95.8% |
 
 ### Transit Mode Usage
 
@@ -93,8 +93,8 @@ Total number of attendees: 98
 |------|-------|------------|
 | TRAM | 0 | 0.0% |
 | SUBWAY | 0 | 0.0% |
-| BUS | 1 | 1.0% |
-| RAIL | 1 | 1.0% |
+| BUS | 2 | 2.1% |
+| RAIL | 2 | 2.1% |
 
 ## Combined Trip Metrics
 
@@ -102,37 +102,37 @@ Total number of attendees: 98
 
 | Metric | Value |
 |--------|-------|
-| Total carbon footprint | 2592728.08 units |
-| Average carbon per attendee | 26729.16 units |
+| Total carbon footprint | 2458004.46 units |
+| Average carbon per attendee | 25340.25 units |
 
 ### Cost
 
 | Metric | Value |
 |--------|-------|
-| Total cost | 5798.38 |
-| Average cost per attendee | 59.78 |
+| Total cost | 5553.17 |
+| Average cost per attendee | 57.25 |
 
 ### Travel Time
 
 | Metric | Value |
 |--------|-------|
-| Total travel time | 10344.17 minutes |
-| Average travel time per attendee | 106.64 minutes |
+| Total travel time | 10780.80 minutes |
+| Average travel time per attendee | 111.14 minutes |
 
 ### Journey Complexity
 
 | Metric | Value |
 |--------|-------|
-| Total journey legs | 236 |
-| Average legs per attendee | 2.43 |
+| Total journey legs | 274 |
+| Average legs per attendee | 2.82 |
 
 ### Direct Mode Distribution
 
 | Mode | Count | Percentage |
 |------|-------|------------|
-| WALK | 4 | 4.1% |
-| BICYCLE | 2 | 2.0% |
-| CAR | 93 | 94.9% |
+| WALK | 7 | 7.2% |
+| BICYCLE | 2 | 2.1% |
+| CAR | 92 | 94.8% |
 
 ### Transit Mode Usage
 
@@ -140,11 +140,11 @@ Total number of attendees: 98
 |------|-------|------------|
 | TRAM | 0 | 0.0% |
 | SUBWAY | 0 | 0.0% |
-| BUS | 4 | 4.1% |
-| RAIL | 4 | 4.1% |
+| BUS | 7 | 7.2% |
+| RAIL | 7 | 7.2% |
 
 ## Summary and Recommendations
 
 This analysis provides insights into attendee transportation patterns for the festival. Based on the data, recommendations can be made for improving sustainability, cost-efficiency, and overall transportation experience in future events.
 
-*Report generated on: 2025-06-10 16:50:47*
+*Report generated on: 2025-06-13 18:16:05*

@@ -2,7 +2,6 @@ import random
 from datetime import datetime, timedelta
 import pytz
 import pandas as pd
-import os
 
 class SimpleAttendeeDataGenerator:
     SEED = 42
