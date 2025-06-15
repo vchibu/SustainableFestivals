@@ -4,13 +4,13 @@ import re
 class CarbonCalculator:
 
     emissions_factors = {
-        "CAR": 192.0,  # gCO2/km
-        "BUS": 105.0,
-        "RAIL": 41.0,
-        "WALK": 0.0,
-        "BICYCLE": 0.0,
-        "SUBWAY": 70.0,
-        "TRAM": 56.0
+        "CAR": 191,  # gCO2/km
+        "BUS": 92,  # gCO2/km
+        "RAIL": 3,  # gCO2/km
+        "WALK": 0, # gCO2/km
+        "BICYCLE": 0, # gCO2/km
+        "SUBWAY": 56, # gCO2/km
+        "TRAM": 56 # gCO2/km
     }
 
     def compute_trip_emission(self, mode: str, distance_km: float) -> float:

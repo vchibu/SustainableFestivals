@@ -11,6 +11,7 @@ from Code.DataGeneration.attendee_generator import SimpleAttendeeDataGenerator
 from Code.DataGeneration.otp_client import OTPTripPlannerClient
 from Code.Calculators.carbon_calculator import CarbonCalculator
 from Code.Calculators.cost_calculator import CostCalculator
+from Code.Calculators.leg_calculator import LegCalculator
 from Code.StatisticalAnalysis.statistical_analysis import StatisticalAnalysis
 
 class BaseTransportationSimulation:
@@ -22,10 +23,17 @@ class BaseTransportationSimulation:
         self.generator = SimpleAttendeeDataGenerator(self.planner)
         self.carbon_calculator = CarbonCalculator()
         self.cost_calculator = CostCalculator()
+        self.leg_calculator = LegCalculator()
         self.dep_results = None
         self.ret_results = None
+        self.dep_emissions = None
+        self.ret_emissions = None
+        self.dep_leg = None
+        self.ret_leg = None
         self.dep_costs = None
         self.ret_costs = None
+        self.dep_final = None
+        self.ret_final = None
         self.metrics = None
         
     def _load_attendee_data_from_file(self):
@@ -155,11 +163,25 @@ class BaseTransportationSimulation:
         
         self.dep_results = pd.read_csv(dep_path)
         self.ret_results = pd.read_csv(ret_path)
-    
+
+    def _calculate_leg_count(self):
+        """
+        Calculate the number of valid legs for each row and add 'leg_count' column.
+        A leg is valid if mode, length, and duration are all non-null.
+
+        Parameters:
+        df (DataFrame): DataFrame including leg columns.
+
+        Returns:
+        DataFrame: DataFrame with added 'leg_count' column.
+        """
+        self.dep_leg = self.leg_calculator._calculate_leg_count(self.dep_results)
+        self.ret_leg = self.leg_calculator._calculate_leg_count(self.ret_results)
+        
     def _calculate_emissions(self):
         """Calculate carbon emissions for departure and return trips."""
-        self.dep_emissions = self.carbon_calculator.process_multi_leg_trips(self.dep_results)
-        self.ret_emissions = self.carbon_calculator.process_multi_leg_trips(self.ret_results)
+        self.dep_emissions = self.carbon_calculator.process_multi_leg_trips(self.dep_leg)
+        self.ret_emissions = self.carbon_calculator.process_multi_leg_trips(self.ret_leg)
     
     def _calculate_costs(self):
         """Calculate costs for departure and return trips."""
@@ -175,11 +197,17 @@ class BaseTransportationSimulation:
             else:
                 self._load_trip_results_from_files()
 
+            # Calculate the number of legs for each trip
+            self._calculate_leg_count()
+
             # Calculate carbon emissions
             self._calculate_emissions()
 
             # Calculate costs
             self._calculate_costs()
+
+            self.dep_final = self.dep_costs.copy()
+            self.ret_final = self.ret_costs.copy()
             
             return True
             

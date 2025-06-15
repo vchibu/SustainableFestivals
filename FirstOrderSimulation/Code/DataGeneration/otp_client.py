@@ -4,7 +4,7 @@ from typing import List, Dict, Optional, Tuple, Any
 from .query_builder import GraphQLQueryBuilder
 from .processors import TripDataProcessor, BicycleConverter
 from .validators import TripValidator
-from .data_manager import DataFrameManager
+from .dataframe_manager import DataFrameManager
 
 class OTPTripPlannerClient:
     """Main client for OpenTripPlanner API interactions."""

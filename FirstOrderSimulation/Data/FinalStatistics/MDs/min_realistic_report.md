@@ -8,37 +8,37 @@ Total number of attendees: 98
 
 | Metric | Value |
 |--------|-------|
-| Total carbon footprint | 1060551.98 units |
-| Average carbon footprint | 10821.96 units |
+| Total carbon footprint | 1108707.16 units |
+| Average carbon footprint | 11313.34 units |
 
 ### Cost
 
 | Metric | Value |
 |--------|-------|
-| Total cost | 1471.99 |
-| Average cost | 15.02 |
+| Total cost | 1596.15 |
+| Average cost | 16.29 |
 
 ### Travel Time
 
 | Metric | Value |
 |--------|-------|
-| Total travel time | 10942.25 minutes |
-| Average travel time | 111.66 minutes |
+| Total travel time | 9285.43 minutes |
+| Average travel time | 94.75 minutes |
 
 ### Journey Complexity
 
 | Metric | Value |
 |--------|-------|
-| Total journey legs | 126 |
-| Average legs per attendee | 1.29 |
+| Total journey legs | 138 |
+| Average legs per attendee | 1.41 |
 
 ### Direct Mode Distribution
 
 | Mode | Count | Percentage |
 |------|-------|------------|
-| WALK | 36 | 36.7% |
-| BICYCLE | 25 | 25.5% |
-| CAR | 37 | 37.8% |
+| WALK | 26 | 26.5% |
+| BICYCLE | 16 | 16.3% |
+| CAR | 56 | 57.1% |
 
 ### Transit Mode Usage
 
@@ -46,8 +46,8 @@ Total number of attendees: 98
 |------|-------|------------|
 | TRAM | 0 | 0.0% |
 | SUBWAY | 0 | 0.0% |
-| BUS | 3 | 3.1% |
-| RAIL | 3 | 3.1% |
+| BUS | 7 | 7.1% |
+| RAIL | 5 | 5.1% |
 
 ## Return Trip Metrics
 
@@ -55,37 +55,37 @@ Total number of attendees: 98
 
 | Metric | Value |
 |--------|-------|
-| Total carbon footprint | 1062750.35 units |
-| Average carbon footprint | 11070.32 units |
+| Total carbon footprint | 1142061.15 units |
+| Average carbon footprint | 11896.47 units |
 
 ### Cost
 
 | Metric | Value |
 |--------|-------|
-| Total cost | 1349.06 |
-| Average cost | 14.05 |
+| Total cost | 1444.61 |
+| Average cost | 15.05 |
 
 ### Travel Time
 
 | Metric | Value |
 |--------|-------|
-| Total travel time | 10329.30 minutes |
-| Average travel time | 107.60 minutes |
+| Total travel time | 8716.35 minutes |
+| Average travel time | 90.80 minutes |
 
 ### Journey Complexity
 
 | Metric | Value |
 |--------|-------|
-| Total journey legs | 108 |
-| Average legs per attendee | 1.12 |
+| Total journey legs | 106 |
+| Average legs per attendee | 1.10 |
 
 ### Direct Mode Distribution
 
 | Mode | Count | Percentage |
 |------|-------|------------|
-| WALK | 33 | 34.4% |
-| BICYCLE | 26 | 27.1% |
-| CAR | 37 | 38.5% |
+| WALK | 22 | 22.9% |
+| BICYCLE | 16 | 16.7% |
+| CAR | 58 | 60.4% |
 
 ### Transit Mode Usage
 
@@ -102,37 +102,37 @@ Total number of attendees: 98
 
 | Metric | Value |
 |--------|-------|
-| Total carbon footprint | 2123302.33 units |
-| Average carbon per attendee | 21666.35 units |
+| Total carbon footprint | 2250768.31 units |
+| Average carbon per attendee | 22967.02 units |
 
 ### Cost
 
 | Metric | Value |
 |--------|-------|
-| Total cost | 2821.05 |
-| Average cost per attendee | 28.79 |
+| Total cost | 3040.77 |
+| Average cost per attendee | 31.03 |
 
 ### Travel Time
 
 | Metric | Value |
 |--------|-------|
-| Total travel time | 21271.55 minutes |
-| Average travel time per attendee | 217.06 minutes |
+| Total travel time | 18001.78 minutes |
+| Average travel time per attendee | 183.69 minutes |
 
 ### Journey Complexity
 
 | Metric | Value |
 |--------|-------|
-| Total journey legs | 234 |
-| Average legs per attendee | 2.39 |
+| Total journey legs | 244 |
+| Average legs per attendee | 2.49 |
 
 ### Direct Mode Distribution
 
 | Mode | Count | Percentage |
 |------|-------|------------|
-| WALK | 36 | 36.7% |
-| BICYCLE | 26 | 26.5% |
-| CAR | 38 | 38.8% |
+| WALK | 26 | 26.5% |
+| BICYCLE | 16 | 16.3% |
+| CAR | 59 | 60.2% |
 
 ### Transit Mode Usage
 
@@ -140,11 +140,11 @@ Total number of attendees: 98
 |------|-------|------------|
 | TRAM | 0 | 0.0% |
 | SUBWAY | 0 | 0.0% |
-| BUS | 3 | 3.1% |
-| RAIL | 3 | 3.1% |
+| BUS | 7 | 7.1% |
+| RAIL | 5 | 5.1% |
 
 ## Summary and Recommendations
 
 This analysis provides insights into attendee transportation patterns for the festival. Based on the data, recommendations can be made for improving sustainability, cost-efficiency, and overall transportation experience in future events.
 
-*Report generated on: 2025-06-15 19:03:57*
+*Report generated on: 2025-06-15 19:04:00*

@@ -4,14 +4,15 @@ import re
 class CostCalculator:
 
     cost_factors = {
-        "CAR": 0.425,  # euros/km
-        "BUS": 0.2,
-        "RAIL": 0.15,
-        "WALK": 0.0,
-        "BICYCLE": 0.0,
-        "SUBWAY": 0.2,
-        "TRAM": 0.2
+        "CAR": 0.23,      # euros/km (standard tax-free reimbursement rate)
+        "BUS": 0.19,    # euros/km (OV-chipkaart usage, adult fare per km)
+        "RAIL": 0.26,     # euros/km (NS base + per km, typical for mid-range trips)
+        "WALK": 0.00,     # euros/km (no cost)
+        "BICYCLE": 0,  # euros/km (maintenance, depreciation)
+        "SUBWAY": 0.19,  # euros/km (GVB metro fare same as bus/tram)
+        "TRAM": 0.19     # euros/km (same fare model as bus/subway)
     }
+
 
     def compute_trip_cost(self, mode: str, distance_km: float) -> float:
         """Compute costs in euros for a single trip."""
