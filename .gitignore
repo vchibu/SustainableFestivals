@@ -1,9 +1,2 @@
-FirstOrderSimulation/otp-server/
-FirstOrderSimulation/cache
+OTP-Server
 FirstOrderSimulation/Environment
-FirstOrderSimulation/__pycache__
-FirstOrderSimulation/generated_data
-FirstOrderSimulation/Code/Analysis/__pycache__
-FirstOrderSimulation/Code/Calculators/__pycache__
-FirstOrderSimulation/Code/DataGeneration/__pycache__
-FirstOrderSimulation/Code/Simulations/__pycache__

@@ -73,6 +73,11 @@ class TripRequeryAnalyzer:
         results_df.sort_values(by="attendee_id").to_csv(self.output_dir / "RequeriedTrips" / "QueriedTripsWithDetails.csv", index=False)
         print("✅ Saved all OTP trip results to QueriedTripsWithDetails.csv")
 
+        generic_roads = {
+            "road", "track", "path", "bike path", "parking aisle", "service road", 
+            "underpass", "ramp", "steps", "link", "platform", "sidewalk", "open area"
+        }
+
         road_counter = Counter()
         hour_counter = {}
         attendee_road_rows = []
@@ -88,19 +93,21 @@ class TripRequeryAnalyzer:
                 if pd.isna(row.get(road_col)) or pd.isna(row.get(time_col)):
                     continue
 
-                time_str = str(row[time_col])
                 try:
-                    dt = pd.to_datetime(time_str)
+                    dt = pd.to_datetime(row[time_col])
                     hour = f"{dt.strftime('%H')}:00–{(dt + pd.Timedelta(hours=1)).strftime('%H')}:00"
                 except Exception:
                     continue
 
                 roads = [r.strip() for r in str(row[road_col]).split(',') if r.strip()]
                 for road in roads:
-                    road_counter[road] += 1
-                    if road not in hour_counter:
-                        hour_counter[road] = Counter()
-                    hour_counter[road][hour] += 1
+                    if road.lower() in generic_roads:
+                        continue
+                    key = (road, direction)
+                    road_counter[key] += 1
+                    if key not in hour_counter:
+                        hour_counter[key] = Counter()
+                    hour_counter[key][hour] += 1
                     roads_used.add(road)
 
             if roads_used:
@@ -114,28 +121,20 @@ class TripRequeryAnalyzer:
         attendee_road_df = pd.DataFrame(attendee_road_rows)
         attendee_road_df.sort_values(by=["attendee_id", "direction"]).to_csv(self.output_dir / "AttendeeUsage" / "AttendeeRoadUsage.csv", index=False)
 
-        # Save aggregate with hourly usage
+        # Aggregate with hourly usage per direction
         all_hours = sorted({h for counts in hour_counter.values() for h in counts})
         rows = []
-        for road, total in road_counter.items():
-            row = {"road": road, "total_uses": total}
+        for (road, direction), total in road_counter.items():
+            row = {"road": road, "direction": direction, "total_uses": total}
             for hour in all_hours:
-                row[hour] = hour_counter[road].get(hour, 0)
+                row[hour] = hour_counter[(road, direction)].get(hour, 0)
             rows.append(row)
 
-        # Filter out overly generic road names
-        generic_roads = {
-            "road", "track", "path", "bike path", "parking aisle", "service road", 
-            "underpass", "ramp", "steps", "link", "platform", "sidewalk", "open area"
-        }
-
         road_usage_df = pd.DataFrame(rows)
-        road_usage_df = road_usage_df[~road_usage_df["road"].str.lower().isin(generic_roads)]
-        road_usage_df.sort_values(by="total_uses", ascending=False).to_csv(
-            self.output_dir / "MostUsed" / "MostUsedRoads.csv", index=False
-        )
+        road_usage_df.sort_values(by=["road", "direction"]).to_csv(self.output_dir / "MostUsed" / "MostUsedRoads.csv", index=False)
 
         print("✅ Saved road usage to AttendeeRoadUsage.csv and MostUsedRoads.csv")
+
 
     def analyze_transit_usage(self):
         csv_path = self.output_dir / "RequeriedTrips" / "QueriedTripsWithDetails.csv"
@@ -174,10 +173,11 @@ class TripRequeryAnalyzer:
                 except Exception:
                     continue
 
-                transit_counter[route] += 1
-                if route not in hour_counter:
-                    hour_counter[route] = Counter()
-                hour_counter[route][hour] += 1
+                key = (route, direction)
+                transit_counter[key] += 1
+                if key not in hour_counter:
+                    hour_counter[key] = Counter()
+                hour_counter[key][hour] += 1
                 routes_used.add(route)
 
             if routes_used:
@@ -191,19 +191,20 @@ class TripRequeryAnalyzer:
         attendee_df = pd.DataFrame(attendee_transit_rows)
         attendee_df.sort_values(by=["attendee_id", "direction"]).to_csv(self.output_dir / "AttendeeUsage" / "AttendeePublicTransportUsed.csv", index=False)
 
-        # Save aggregate with hourly usage
+        # Aggregate with hourly usage per direction
         all_hours = sorted({h for counts in hour_counter.values() for h in counts})
         rows = []
-        for route, total in transit_counter.items():
-            row = {"route_name": route, "total_uses": total}
+        for (route, direction), total in transit_counter.items():
+            row = {"route_name": route, "direction": direction, "total_uses": total}
             for hour in all_hours:
-                row[hour] = hour_counter[route].get(hour, 0)
+                row[hour] = hour_counter[(route, direction)].get(hour, 0)
             rows.append(row)
 
         transit_df = pd.DataFrame(rows)
-        transit_df.sort_values(by="total_uses", ascending=False).to_csv(self.output_dir / "MostUsed" / "MostUsedPublicTransport.csv", index=False)
+        transit_df.sort_values(by=["route_name", "direction"]).to_csv(self.output_dir / "MostUsed" / "MostUsedPublicTransport.csv", index=False)
 
         print("✅ Saved transit usage to AttendeePublicTransportUsed.csv and MostUsedPublicTransport.csv")
+
 
     def run_full_trip_requery_and_analysis(self):
         self.trips_dep_df = self.classify_modes(self.trips_dep_df)
