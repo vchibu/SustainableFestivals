@@ -1,0 +1,8 @@
+attendee_id,direction,routes_used
+A00026,departure,"['Best Station - Eindhoven Station 9', 'Dedemsvaart - Zwolle 301', 'Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity']"
+A00033,departure,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9']"
+A00033,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9']"
+A00034,return,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Leeuwarden <-> Harlingen Haven ST37200 Stoptrein RS2', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A00076,departure,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dokkum - Holwert - Leeuwarden 60', 'Dordrecht <-> Venlo IC3500 Intercity']"
+A00076,return,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dokkum - Holwert - Leeuwarden 60', 'Dordrecht <-> Venlo IC3500 Intercity']"
+A00100,departure,"['Bontebok - Heerenveen Busstation 6231', 'Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"

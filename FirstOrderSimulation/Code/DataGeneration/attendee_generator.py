@@ -5,7 +5,7 @@ import pandas as pd
 
 class SimpleAttendeeDataGenerator:
     SEED = 42
-    TOTAL_ATTENDEES = 100
+    TOTAL_ATTENDEES = 20000
 
     EINDHOVEN_PROPORTION = 0.21
     BEST_PROPORTION = 0.06
