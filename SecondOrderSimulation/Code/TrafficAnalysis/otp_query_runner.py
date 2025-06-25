@@ -131,7 +131,7 @@ class TripRequeryAnalyzer:
             rows.append(row)
 
         road_usage_df = pd.DataFrame(rows)
-        road_usage_df.sort_values(by=["road", "direction"]).to_csv(self.output_dir / "MostUsed" / "MostUsedRoads.csv", index=False)
+        road_usage_df.sort_values(by="total_uses", ascending=False).to_csv(self.output_dir / "MostUsed" / "MostUsedRoads.csv", index=False)
 
         print("✅ Saved road usage to AttendeeRoadUsage.csv and MostUsedRoads.csv")
 
@@ -201,7 +201,7 @@ class TripRequeryAnalyzer:
             rows.append(row)
 
         transit_df = pd.DataFrame(rows)
-        transit_df.sort_values(by=["route_name", "direction"]).to_csv(self.output_dir / "MostUsed" / "MostUsedPublicTransport.csv", index=False)
+        transit_df.sort_values(by="total_uses", ascending=False).to_csv(self.output_dir / "MostUsed" / "MostUsedPublicTransport.csv", index=False)
 
         print("✅ Saved transit usage to AttendeePublicTransportUsed.csv and MostUsedPublicTransport.csv")
 
