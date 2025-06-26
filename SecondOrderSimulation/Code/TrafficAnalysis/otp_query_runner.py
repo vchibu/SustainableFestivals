@@ -46,7 +46,11 @@ class TripRequeryAnalyzer:
         for _, row in df.iterrows():
             attendee_id = row["attendee_id"]
             identifier = f"{attendee_id}_{label}"
-            od_match = self.od_df[self.od_df["attendee_id"] == attendee_id]
+            od_match = self.od_df[
+                (self.od_df["attendee_id"] == attendee_id) &
+                (self.od_df["direction"] == label)
+            ]
+
 
             if od_match.empty:
                 print(f"⚠️ No OD match for {identifier}")
@@ -100,9 +104,8 @@ class TripRequeryAnalyzer:
                     continue
 
                 roads = [r.strip() for r in str(row[road_col]).split(',') if r.strip()]
-                for road in roads:
-                    if road.lower() in generic_roads:
-                        continue
+                unique_roads = set(r for r in roads if r.lower() not in generic_roads)
+                for road in unique_roads:
                     key = (road, direction)
                     road_counter[key] += 1
                     if key not in hour_counter:
@@ -189,6 +192,9 @@ class TripRequeryAnalyzer:
 
         # Save per-attendee transit usage
         attendee_df = pd.DataFrame(attendee_transit_rows)
+        if attendee_df.empty:
+            print("⚠️ No transit usage found — skipping transit CSVs.")
+            return
         attendee_df.sort_values(by=["attendee_id", "direction"]).to_csv(self.output_dir / "AttendeeUsage" / "AttendeePublicTransportUsed.csv", index=False)
 
         # Aggregate with hourly usage per direction
