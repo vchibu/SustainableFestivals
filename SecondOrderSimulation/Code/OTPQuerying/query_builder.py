@@ -26,8 +26,8 @@ class GraphQLQueryBuilder:
 
     @staticmethod
     def build_trip_query(origin_lat: float, origin_lng: float, 
-                        destination_lat: float, destination_lng: float,
-                        time: str, modes_block: str, is_arrival_time: bool = False) -> str:
+                        destination_lat: float, destination_lng: float, time: str,
+                        modes_block: str, is_arrival_time: bool = False, first: int = 1) -> str:
         """Build a complete trip planning query."""
         time_field = "latestArrival" if is_arrival_time else "earliestDeparture"
         
@@ -38,7 +38,7 @@ class GraphQLQueryBuilder:
             destination: {{ location: {{ coordinate: {{ latitude: {destination_lat}, longitude: {destination_lng} }} }} }}
             dateTime: {{ {time_field}: \"{time}\" }}
             modes: {{ {modes_block} }}
-            first: 1
+            first: {first}
         ) {{
             edges {{
             node {{

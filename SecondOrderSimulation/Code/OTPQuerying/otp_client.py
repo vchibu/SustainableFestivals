@@ -27,20 +27,28 @@ class OTPTripPlannerClient:
         return self.query_builder.build_modes_block(direct_mode, transit_modes)
 
     def build_query(self, origin_lat: float, origin_lng: float, 
-                   destination_lat: float, destination_lng: float,
-                   time: str, modes_block: str, dep_or_ret: bool) -> str:
+                    destination_lat: float, destination_lng: float,
+                    time: str, modes_block: str, dep_or_ret: bool,
+                    first: int = 1) -> str:
         """Build a trip planning query."""
         return self.query_builder.build_trip_query(
             origin_lat, origin_lng, destination_lat, destination_lng,
-            time, modes_block, is_arrival_time=dep_or_ret
+            time, modes_block, is_arrival_time=dep_or_ret, first=first
         )
+
 
     def process_walk_trip(self, trip_data: Dict[str, Any]) -> Optional[Dict[str, Any]]:
         """Convert walking legs to bicycle legs in a trip."""
         return self.bicycle_converter.convert_walk_legs_to_bicycle(trip_data)
 
-    def send_and_process_query(self, query: str, trip_label: Optional[str] = None, 
-                              identifier: Optional[str] = None) -> None:
+    def send_and_process_query(
+        self,
+        query: str,
+        trip_label: Optional[str] = None,
+        identifier: Optional[str] = None,
+        target_trip_option: Optional[int] = None
+        ) -> None:
+
         """Send a query to the OTP API and process the results."""
         try:
             response = requests.post(self.url, json={"query": query}, headers=self.headers)
@@ -49,28 +57,37 @@ class OTPTripPlannerClient:
             if "errors" in data:
                 raise Exception(data["errors"])
 
-            self._process_response_data(data, identifier)
+            self._process_response_data(data, identifier, target_trip_option)
             
         except Exception as e:
             print(f"❌ Error during {trip_label or 'trip'}: {e}")
             print("Text:", response.text[:500])
 
-    def _process_response_data(self, data: Dict[str, Any], identifier: Optional[str]) -> None:
-        """Process the response data from OTP API."""
+    def _process_response_data(
+        self,
+        data: Dict[str, Any],
+        identifier: Optional[str],
+        target_trip_option: Optional[int] = None,
+        ) -> None:
+
+        """Process the response data from the OTP API."""
         edges = data["data"]["planConnection"]["edges"]
-        
+
         for edge_index, edge in enumerate(edges, 1):
+            if target_trip_option is not None and edge_index != target_trip_option:
+                continue
+
             trip_data = self.trip_processor.process_trip_edge(edge, edge_index, identifier)
-            
             should_append, needs_conversion = TripValidator.should_process_trip(trip_data, identifier)
-            
+
             if needs_conversion:
                 trip_data = self.process_walk_trip(trip_data)
                 if trip_data is None:
                     should_append = False
 
             if should_append:
-                self.results.append(trip_data)
+                self.results.append(trip_data)  
+
 
     def snap_point_to_road(self, lat: float, lng: float, mode: str = "CAR") -> Tuple[float, float, bool]:
         """Snap a point to the road network."""

@@ -46,14 +46,27 @@ class TripRequeryAnalyzer:
         for _, row in df.iterrows():
             attendee_id = row["attendee_id"]
             identifier = f"{attendee_id}_{label}"
-            od_match = self.od_df[
-                (self.od_df["attendee_id"] == attendee_id) &
-                (self.od_df["direction"] == label)
-            ]
-
+            od_match = self.od_df[self.od_df["attendee_id"] == attendee_id]
 
             if od_match.empty:
                 print(f"⚠️ No OD match for {identifier}")
+                continue
+
+            # Get trip_option from realistic trips (departure or return)
+            trip_row_source = self.trips_dep_df if label == "departure" else self.trips_ret_df
+            trip_match = trip_row_source[
+                (trip_row_source["attendee_id"] == attendee_id) &
+                (trip_row_source[f"has_{mode.lower()}_leg"])
+            ]
+
+            if trip_match.empty:
+                print(f"⚠️ No trip_option found for {identifier}")
+                continue
+
+            try:
+                trip_option = int(trip_match.iloc[0]["trip_option"])
+            except Exception as e:
+                print(f"⚠️ Invalid trip_option for {identifier}: {e}")
                 continue
 
             od = od_match.iloc[0]
@@ -66,11 +79,19 @@ class TripRequeryAnalyzer:
                 destination_lng=od["destination_lng"],
                 time=od["departure_time"],
                 modes_block=modes_block,
-                dep_or_ret=False
+                dep_or_ret=False,
+                first=trip_option  
             )
 
-            print(f"🛰️ Querying {mode} trip: {identifier}")
-            self.otp.send_and_process_query(query, trip_label=f"{mode}_{label}", identifier=identifier)
+            print(f"🛰️ Querying {mode} trip: {identifier} (trip option {trip_option})")
+
+            self.otp.send_and_process_query(
+                query,
+                trip_label=f"{mode}_{label}",
+                identifier=identifier,
+                target_trip_option=trip_option
+            )
+
 
     def analyze_road_usage(self):
         results_df = self.otp.get_results_dataframe()
@@ -193,7 +214,17 @@ class TripRequeryAnalyzer:
         # Save per-attendee transit usage
         attendee_df = pd.DataFrame(attendee_transit_rows)
         if attendee_df.empty:
-            print("⚠️ No transit usage found — skipping transit CSVs.")
+            print("⚠️ No transit usage found — writing empty CSVs.")
+
+            (self.output_dir / "AttendeeUsage").mkdir(parents=True, exist_ok=True)
+            (self.output_dir / "MostUsed").mkdir(parents=True, exist_ok=True)
+
+            pd.DataFrame(columns=["attendee_id", "direction", "routes_used"]).to_csv(
+                self.output_dir / "AttendeeUsage" / "AttendeePublicTransportUsed.csv", index=False
+            )
+            pd.DataFrame(columns=["route_name", "direction", "total_uses"]).to_csv(
+                self.output_dir / "MostUsed" / "MostUsedPublicTransport.csv", index=False
+            )
             return
         attendee_df.sort_values(by=["attendee_id", "direction"]).to_csv(self.output_dir / "AttendeeUsage" / "AttendeePublicTransportUsed.csv", index=False)
 
