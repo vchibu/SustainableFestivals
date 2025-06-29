@@ -1,67 +1,73 @@
-route_name,direction,total_uses,13:00–14:00,14:00–15:00,15:00–16:00,16:00–17:00,17:00–18:00,18:00–19:00,19:00–20:00,20:00–21:00,21:00–22:00,22:00–23:00
-Dordrecht <-> Venlo IC3500 Intercity,departure,14,0,0,1,0,1,5,4,2,1,0
-Son - Ekkersrijt - Eindhoven Station 406,departure,13,0,0,2,6,2,0,3,0,0,0
-Best Station - Eindhoven Station 9,departure,12,0,0,0,1,0,0,1,3,6,1
-Son - Ekkersrijt - Eindhoven Station 406,return,6,0,0,2,2,0,0,2,0,0,0
-Den Haag Centraal <-> Groningen IC500 Intercity,departure,5,0,0,0,1,0,1,3,0,0,0
-Den Haag Centraal <-> Leeuwarden IC600 Intercity,departure,5,0,0,0,0,3,2,0,0,0,0
-Geldrop Coevering - Eindhoven Station 324,return,3,0,0,1,0,0,2,0,0,0,0
-Schiphol Airport <-> Leeuwarden IC800 Intercity,departure,3,0,0,0,1,1,1,0,0,0,0
-'s-Hertogenbosch <-> Deurne SPR4400 Sprinter,departure,3,0,0,0,0,0,0,0,2,1,0
-Best Station - Eindhoven Station 9,return,3,0,0,0,0,0,0,1,0,1,1
-Dordrecht <-> Venlo IC3500 Intercity,return,2,0,0,0,0,0,0,1,1,0,0
-Den Haag Centraal <-> Leeuwarden IC600 Intercity,return,2,0,0,0,0,0,2,0,0,0,0
-Bolsward - Workum - Balk - Sneek 44,departure,2,0,0,1,1,0,0,0,0,0,0
-lijn D,departure,2,0,0,0,0,0,2,0,0,0,0
-Makkum - Bolsward - Sneek - Heerenveen 390,departure,2,0,0,1,1,0,0,0,0,0,0
-Bergeijk - Veldhoven - Eindhoven Station 18,return,2,0,0,0,2,0,0,0,0,0,0
-Eindhoven Achtse Barrier - Station 405,departure,2,0,0,0,0,0,0,0,1,1,0
-Zwolle <-> Roosendaal IC3600 Intercity,departure,2,0,0,0,1,0,1,0,0,0,0
-Geldrop Coevering - Eindhoven Station 324,departure,2,0,0,1,1,0,0,0,0,0,0
-Hoogeveen - Hardenberg 30,departure,1,0,0,0,0,0,1,0,0,0,0
-Enkhuizen <-> Heerlen IC3900 Intercity,departure,1,0,0,1,0,0,0,0,0,0,0
-Heerlen via Simpelveld - Vaals 43,departure,1,0,1,0,0,0,0,0,0,0,0
-Zwolle <-> Emmen S3800 Sneltrein RE20,departure,1,0,0,0,0,0,1,0,0,0,0
-Groningen <-> Leeuwarden ST37400 Stoptrein RS1,departure,1,0,0,0,0,0,1,0,0,0,0
-Harderwijk - Zeewolde 144,departure,1,0,0,0,1,0,0,0,0,0,0
-Surhuisterveen - Groningen 39,departure,1,0,0,0,0,0,1,0,0,0,0
-Utrecht Centraal <-> Zwolle SPR5600 Sprinter,departure,1,0,0,0,0,1,0,0,0,0,0
-Uden - Gerwen - Eindhoven Station 322,departure,1,0,0,0,0,0,0,1,0,0,0
-Dordrecht CS - Rotterdam Zuidplein 166,departure,1,0,0,0,0,1,0,0,0,0,0
-Zuid-Beijerland - Heinenoord Busstation 164,departure,1,0,0,0,0,1,0,0,0,0,0
-Gulpen via Epen en Drielandenpunt - Vaals 149,departure,1,1,0,0,0,0,0,0,0,0,0
-Tzum - Franeker Station 8082,departure,1,0,0,0,0,1,0,0,0,0,0
-Mamelis via Vijlen - Vaals 59,departure,1,0,1,0,0,0,0,0,0,0,0
-Leeuwarden <-> Harlingen Haven ST37200 Stoptrein RS2,departure,1,0,0,0,0,1,0,0,0,0,0
-Dokkum - Leeuwarden - Bolsward 355,departure,1,0,0,0,0,1,0,0,0,0,0
-Lichtaard - Dokkum Busstation 7101,departure,1,0,0,0,0,1,0,0,0,0,0
-Tilburg Universiteit <-> Weert SPR6400 Sprinter,departure,1,0,0,0,0,0,0,1,0,0,0
-Breda <-> Amersfoort Schothorst ICD1800 Intercity direct,departure,1,0,0,0,0,0,1,0,0,0,0
-Den Helder <-> Nijmegen IC3000 Intercity,departure,1,0,0,0,0,0,0,0,1,0,0
-Arnhem Centraal <-> Dordrecht SPR6600 Sprinter,departure,1,0,0,0,0,0,0,0,1,0,0
-Arnhem Centraal <-> Winterswijk ST30900 Stoptrein RS32,departure,1,0,0,0,0,0,0,1,0,0,0
-Vorden - Doetinchem 51,departure,1,0,0,0,0,0,1,0,0,0,0
-Assen - Leek 83,departure,1,0,0,0,1,0,0,0,0,0,0
-Enkhuizen <-> Maastricht IC2900 Intercity,departure,1,0,0,0,0,0,0,0,0,1,0
-Beijum - Roden 4,departure,1,0,0,0,1,0,0,0,0,0,0
-Zwolle <-> Groningen SPR6100 Sprinter,departure,1,0,0,0,0,1,0,0,0,0,0
-Veldhoven MMC - Eindhoven Station 7,return,1,0,0,0,1,0,0,0,0,0,0
-R'dam Kralingse Zoom - Papendrecht - Utrecht 388,departure,1,0,0,1,0,0,0,0,0,0,0
-Lemmer - Sintjohannesga - Heerenveen 48,return,1,0,0,1,0,0,0,0,0,0,0
-Emmeloord - Heerenveen - Groningen 315,return,1,0,0,1,0,0,0,0,0,0,0
-Steenwijk - Lelystad 214,return,1,0,0,0,1,0,0,0,0,0,0
-Rotterdam Centraal <-> Lelystad Centrum ICD2400 Intercity direct,return,1,0,0,0,1,0,0,0,0,0,0
-Den Haag Centraal <-> Nijmegen IC3100 Intercity,return,1,0,0,0,0,1,0,0,0,0,0
-Enkhuizen <-> Maastricht IC2900 Intercity,return,1,0,0,0,0,0,1,0,0,0,0
-Lemmer - Sintjohannesga - Heerenveen 48,departure,1,0,0,1,0,0,0,0,0,0,0
-St-Annaparochie - Stiens - Leeuwarden 72,departure,1,0,0,0,1,0,0,0,0,0,0
-Wijchen <-> Zutphen SPR7600 Sprinter,departure,1,0,0,0,1,0,0,0,0,0,0
-Renesse - Spijkenisse Metro Centrum 104,departure,1,0,0,0,0,1,0,0,0,0,0
-Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity,departure,1,0,0,0,0,0,0,1,0,0,0
-Veldhoven Abdijlaan - Eindhoven Station 15,return,1,0,0,1,0,0,0,0,0,0,0
-Reusel - Eersel - Eindhoven Station 319,departure,1,0,0,1,0,0,0,0,0,0,0
-Eindhoven Airport - Eindhoven Station 401,departure,1,0,0,1,0,0,0,0,0,0,0
-Bergeijk - Veldhoven - Eindhoven Station 18,departure,1,0,0,0,1,0,0,0,0,0,0
-Zernike - HS - Martini - Eelde 9,departure,1,0,0,1,0,0,0,0,0,0,0
-Zwartsluis - Oldemarkt 70,departure,1,0,0,0,1,0,0,0,0,0,0
-Gersloot - Heerenveen Busstation 6661,return,1,0,0,0,0,1,0,0,0,0,0
+route_name,direction,total_uses,00:00–01:00,01:00–02:00,03:00–04:00,08:00–09:00,09:00–10:00,10:00–11:00,11:00–12:00,12:00–13:00,13:00–14:00,14:00–15:00,15:00–16:00,16:00–17:00,17:00–18:00,18:00–19:00,19:00–20:00,20:00–21:00,23:00–00:00
+Son - Ekkersrijt - Eindhoven Station 406,departure,41,0,0,0,0,0,0,0,2,9,14,8,2,3,2,1,0,0
+Dordrecht <-> Venlo IC3500 Intercity,departure,37,0,0,0,0,0,0,2,9,11,6,3,2,1,2,1,0,0
+Den Haag Centraal <-> Leeuwarden IC600 Intercity,departure,17,0,0,0,0,0,1,6,5,3,1,0,0,1,0,0,0,0
+Den Haag Centraal <-> Groningen IC500 Intercity,departure,14,0,0,0,0,1,2,3,1,2,1,1,2,0,1,0,0,0
+Best Station - Eindhoven Station 9,departure,9,0,0,0,0,0,0,0,1,0,2,1,1,1,1,0,2,0
+Zwolle <-> Groningen SPR6100 Sprinter,departure,6,0,0,0,0,0,1,1,2,1,0,0,1,0,0,0,0,0
+Schiphol Airport <-> Leeuwarden IC800 Intercity,departure,5,0,0,0,0,0,1,1,1,0,1,0,0,1,0,0,0,0
+Enkhuizen <-> Maastricht IC2900 Intercity,departure,4,0,0,0,0,0,1,0,0,0,1,0,1,1,0,0,0,0
+Den Haag Centraal <-> Enschede IC1700 Intercity,departure,3,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0,0
+Zwolle <-> Emmen ST8000 Stoptrein RS20,departure,2,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity,departure,2,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0
+lijn D,departure,2,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0
+Beijum - Roden 4,departure,2,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0
+Assen - Groningen 51,departure,2,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0
+Best Station - Eindhoven Station 9,return,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+Dokkum - Leeuwarden - Bolsward 355,departure,2,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0
+Assen - Leek 83,departure,2,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0
+Utrecht Centraal <-> Zwolle SPR5600 Sprinter,departure,2,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Veendam - Gieten - Assen 310,departure,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Tzum - Franeker Station 8082,departure,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Leeuwarden <-> Harlingen Haven ST37200 Stoptrein RS2,departure,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Makkum - Bolsward - Sneek - Heerenveen 390,departure,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Bolsward - Workum - Balk - Sneek 44,departure,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Maastricht via Gulpen - Aachen 350,departure,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity,return,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity,return,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+'s-Hertogenbosch <-> Deurne SPR4400 Sprinter,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+Annen - Haren - P+R Meerstad - Tersluis/Harkstede 5,departure,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sibrandahûs - Dokkum Busstation 7081,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Groningen - Middelstum - Uithuizen 61,departure,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Den Helder <-> Nijmegen IC3000 Intercity,return,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Alkmaar Station - Den Oever Busstation N50,return,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Groningen <-> Leeuwarden S37300 Sneltrein RE1,departure,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Harderwijk - Zeewolde 144,departure,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Zoutkamp - Groningen 65,departure,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Surhuisterveen - Groningen 39,departure,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Dordrecht CS - Rotterdam Zuidplein 166,departure,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Zuid-Beijerland - Heinenoord Busstation 164,departure,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Stadskanaal - Gieten - Groningen 312,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Mamelis via Vijlen - Vaals 59,departure,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Lichtaard - Dokkum Busstation 7101,departure,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Steenwijk - Blauwe Hand 270,departure,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Apeldoorn <-> Winterswijk S30400 Sneltrein RE30,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Vorden - Doetinchem 51,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Ferwoude - Workum Station 9361,departure,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Leeuwarden <-> Stavoren ST37100 Stoptrein RS3,departure,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+R'dam Kralingse Zoom - Papendrecht - Utrecht 388,departure,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Rotsterhaule - Heerenveen Busstation 8461,departure,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Zwolle - Nunspeet 305,departure,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Delfzijl - Appingedam - Groningen - P+R Haren 6,departure,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Oldenzaal via Ootmarsum - Almelo 64,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Dokkum - Holwert - Leeuwarden 60,departure,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Hoogeveen - Meppel 34,departure,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Wijchen <-> Zutphen SPR7600 Sprinter,departure,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Zwolle <-> Roosendaal IC3600 Intercity,departure,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Overdinkel - Almelo 66,departure,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Zutphen <-> Oldenzaal ST31200 Stoptrein RS24,departure,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Renesse - Spijkenisse Metro Centrum 104,departure,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Buurtbus Kreileroord - Schagen Station 416,departure,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Den Helder <-> Nijmegen IC3000 Intercity,departure,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Schiphol Airport <-> Groningen IC700 Intercity,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Drachten - Oosterwolde - Assen 380,departure,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Heerenveen - Drachten - Groningen 324,departure,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Zernike - HS - Martini - Eelde 9,departure,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Zwartsluis - Oldemarkt 70,departure,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Emmeloord - Zwolle 71,departure,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Gersloot - Heerenveen Busstation 6661,departure,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Groningen <-> Roodeschool ST37600 Stoptrein RS4,departure,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Bad Nieuweschans <-> Groningen ST37500 Stoptrein RS6,departure,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Emmen - Groningen 300,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Zwolle <-> Emmen S3800 Sneltrein RE20,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Wyns - Leeuwarden Busstation 7751,departure,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0

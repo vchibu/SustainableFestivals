@@ -47,6 +47,13 @@ class TripRequeryAnalyzer:
             attendee_id = row["attendee_id"]
             identifier = f"{attendee_id}_{label}"
             od_match = self.od_df[self.od_df["attendee_id"] == attendee_id]
+            filtered = od_match[od_match["direction"] == label]
+            if filtered.empty:
+                print(f"No matching direction '{label}' found.")
+                od_match = pd.Series()
+            else:
+                od_match = filtered.iloc[0]
+
 
             if od_match.empty:
                 print(f"⚠️ No OD match for {identifier}")
@@ -69,17 +76,23 @@ class TripRequeryAnalyzer:
                 print(f"⚠️ Invalid trip_option for {identifier}: {e}")
                 continue
 
-            od = od_match.iloc[0]
+            
             modes_block = self.otp.build_modes_block(direct_mode=mode, transit_modes=transit_modes)
 
+            if label == "departure":
+                dep_or_ret = True
+            else:
+                dep_or_ret = False
+
+
             query = self.otp.build_query(
-                origin_lat=od["origin_lat"],
-                origin_lng=od["origin_lng"],
-                destination_lat=od["destination_lat"],
-                destination_lng=od["destination_lng"],
-                time=od["departure_time"],
+                origin_lat=od_match["origin_lat"],
+                origin_lng=od_match["origin_lng"],
+                destination_lat=od_match["destination_lat"],
+                destination_lng=od_match["destination_lng"],
+                time=od_match["departure_time"],
                 modes_block=modes_block,
-                dep_or_ret=False,
+                dep_or_ret=dep_or_ret,
                 first=trip_option  
             )
 
