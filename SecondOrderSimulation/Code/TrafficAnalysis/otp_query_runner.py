@@ -118,11 +118,27 @@ class TripRequeryAnalyzer:
 
         road_counter = Counter()
         hour_counter = {}
+
         attendee_road_rows = []
+
+        def contains_mode(row, mode):
+            return any(str(row.get(f"leg{i}_mode", "")).strip().upper() == mode for i in range(1, 16))
+
+        results_df["has_car_leg"] = results_df.apply(lambda r: contains_mode(r, "CAR"), axis=1)
+        results_df["has_walk_leg"] = results_df.apply(lambda r: contains_mode(r, "WALK"), axis=1)
+        results_df["has_bicycle_leg"] = results_df.apply(lambda r: contains_mode(r, "BICYCLE"), axis=1)
+
+        def get_trip_modes(row):
+            modes = []
+            for mode in ["CAR", "BICYCLE", "WALK"]:
+                if row.get(f"has_{mode.lower()}_leg", False):
+                    modes.append(mode)
+            return modes or ["OTHER"]
 
         for _, row in results_df.iterrows():
             attendee_id = row["attendee_id"]
             direction = row["direction"]
+            trip_modes = get_trip_modes(row)
             roads_used = set()
 
             for i in range(1, 16):
@@ -139,12 +155,14 @@ class TripRequeryAnalyzer:
 
                 roads = [r.strip() for r in str(row[road_col]).split(',') if r.strip()]
                 unique_roads = set(r for r in roads if r.lower() not in generic_roads)
+
                 for road in unique_roads:
-                    key = (road, direction)
-                    road_counter[key] += 1
-                    if key not in hour_counter:
-                        hour_counter[key] = Counter()
-                    hour_counter[key][hour] += 1
+                    for mode in trip_modes:
+                        key = (road, direction, mode)
+                        road_counter[key] += 1
+                        if key not in hour_counter:
+                            hour_counter[key] = Counter()
+                        hour_counter[key][hour] += 1
                     roads_used.add(road)
 
             if roads_used:
@@ -158,19 +176,25 @@ class TripRequeryAnalyzer:
         attendee_road_df = pd.DataFrame(attendee_road_rows)
         attendee_road_df.sort_values(by=["attendee_id", "direction"]).to_csv(self.output_dir / "AttendeeUsage" / "AttendeeRoadUsage.csv", index=False)
 
-        # Aggregate with hourly usage per direction
+        # Aggregate with hourly usage per direction and mode
         all_hours = sorted({h for counts in hour_counter.values() for h in counts})
         rows = []
-        for (road, direction), total in road_counter.items():
-            row = {"road": road, "direction": direction, "total_uses": total}
+        for (road, direction, mode), total in road_counter.items():
+            row = {
+                "road": road,
+                "direction": direction,
+                "mode": mode,
+                "total_uses": total
+            }
             for hour in all_hours:
-                row[hour] = hour_counter[(road, direction)].get(hour, 0)
+                row[hour] = hour_counter[(road, direction, mode)].get(hour, 0)
             rows.append(row)
 
         road_usage_df = pd.DataFrame(rows)
-        road_usage_df.sort_values(by="total_uses", ascending=False).to_csv(self.output_dir / "MostUsed" / "MostUsedRoads.csv", index=False)
+        road_usage_df.sort_values(by="total_uses", ascending=False).to_csv(
+            self.output_dir / "MostUsed" / "MostUsedRoads_ByMode.csv", index=False)
 
-        print("✅ Saved road usage to AttendeeRoadUsage.csv and MostUsedRoads.csv")
+        print("✅ Saved road usage by mode to MostUsedRoads_ByMode.csv")
 
 
     def analyze_transit_usage(self):
