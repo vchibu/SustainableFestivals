@@ -27,3 +27,7 @@ The framework is divided into two main components. The **First Order Simulation*
 5. **Run the Second Order Simulation:**
     Make sure that results from the realistic scenario already exist.
     Then execute: SecondOrderSimulation/main.py
+
+
+NOTE: The OTP server could not be uploaded to GitHub due to its size. Thus, it can be accessed at the following Google Drive link, and downloaded:
+                  https://drive.google.com/drive/folders/1x2JRv-rryNuCMZR8hr2onmzw_-11zI87?usp=sharing
