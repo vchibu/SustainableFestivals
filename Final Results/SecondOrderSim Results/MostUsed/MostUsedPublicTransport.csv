@@ -1,0 +1,289 @@
+route_name,direction,total_uses,00:00–01:00,01:00–02:00,02:00–03:00,03:00–04:00,04:00–05:00,05:00–06:00,06:00–07:00,07:00–08:00,08:00–09:00,09:00–10:00,10:00–11:00,11:00–12:00,12:00–13:00,13:00–14:00,14:00–15:00,15:00–16:00,16:00–17:00,17:00–18:00,18:00–19:00,19:00–20:00,20:00–21:00,22:00–23:00,23:00–00:00
+Son - Ekkersrijt - Eindhoven Station 406,departure,336,0,0,0,0,0,0,0,0,0,0,0,7,26,86,80,55,37,19,13,13,0,0,0
+Best Station - Eindhoven Station 9,departure,236,0,0,0,0,0,0,0,0,0,0,0,0,6,32,41,50,32,34,14,14,13,0,0
+Dordrecht <-> Venlo IC3500 Intercity,departure,176,0,0,0,0,0,0,0,0,0,0,4,19,43,42,28,16,9,7,8,0,0,0,0
+Best Station - Eindhoven Station 9,return,133,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,27,83
+Enkhuizen <-> Maastricht IC2900 Intercity,departure,92,0,0,0,0,0,0,0,0,0,0,1,6,21,19,14,12,9,5,5,0,0,0,0
+Den Haag Centraal <-> Leeuwarden IC600 Intercity,departure,52,0,0,0,0,0,0,0,0,0,3,8,17,11,4,5,3,0,1,0,0,0,0,0
+Den Haag Centraal <-> Groningen IC500 Intercity,departure,51,0,0,0,0,0,0,0,0,0,2,6,12,10,9,3,3,5,1,0,0,0,0,0
+Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity,return,42,15,24,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity,departure,32,0,0,0,0,0,0,0,0,0,0,2,2,7,4,9,5,1,1,1,0,0,0,0
+Zwolle <-> Roosendaal IC3600 Intercity,departure,31,0,0,0,0,0,0,0,0,0,0,0,0,4,7,5,7,4,2,2,0,0,0,0
+Den Haag Centraal <-> Enschede IC1700 Intercity,departure,28,0,0,0,0,0,0,0,0,0,0,4,7,5,3,3,2,4,0,0,0,0,0,0
+Tilburg Universiteit <-> Weert SPR6400 Sprinter,departure,23,0,0,0,0,0,0,0,0,0,0,0,0,0,3,4,4,4,4,2,2,0,0,0
+Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity,return,22,0,12,7,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Den Helder <-> Nijmegen IC3000 Intercity,departure,18,0,0,0,0,0,0,0,0,0,1,2,5,2,4,3,0,1,0,0,0,0,0,0
+Breda <-> Amersfoort Schothorst ICD1800 Intercity direct,departure,18,0,0,0,0,0,0,0,0,0,0,0,0,1,4,3,4,2,2,2,0,0,0,0
+'s-Hertogenbosch <-> Deurne SPR4400 Sprinter,return,16,16,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Vlissingen <-> Amsterdam Centraal IC2200 Intercity,departure,15,0,0,0,0,0,0,0,0,0,0,2,2,2,1,2,2,3,1,0,0,0,0,0
+Schiphol Airport <-> Leeuwarden IC800 Intercity,departure,13,0,0,0,0,0,0,0,0,0,1,3,2,2,2,1,1,1,0,0,0,0,0,0
+Zwolle <-> Emmen ST8000 Stoptrein RS20,departure,13,0,0,0,0,0,0,0,0,1,1,2,2,5,0,2,0,0,0,0,0,0,0,0
+lijn D,departure,12,0,0,0,0,0,0,0,0,0,0,1,1,1,3,3,1,0,2,0,0,0,0,0
+Utrecht Centraal <-> Zwolle SPR5600 Sprinter,departure,12,0,0,0,0,0,0,0,0,0,0,1,2,4,3,0,1,0,1,0,0,0,0,0
+Enkhuizen <-> Heerlen IC3900 Intercity,departure,11,0,0,0,0,0,0,0,0,0,0,0,1,3,0,2,0,1,1,3,0,0,0,0
+Zwolle <-> Groningen SPR6100 Sprinter,departure,10,0,0,0,0,0,0,0,0,0,1,2,2,2,1,0,2,0,0,0,0,0,0,0
+Zwolle <-> Emmen S3800 Sneltrein RE20,departure,9,0,0,0,0,0,0,0,0,1,0,2,3,3,0,0,0,0,0,0,0,0,0,0
+Roermond <-> Maastricht Randwyck ST32400 Stoptrein RS12,departure,8,0,0,0,0,0,0,0,0,0,0,0,0,1,2,4,1,0,0,0,0,0,0,0
+Tilburg Universiteit <-> Weert SPR6400 Sprinter,return,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Assen - Dieverbrug - Steenwijk 20,departure,7,0,0,0,0,0,0,0,0,0,1,0,1,2,0,1,1,1,0,0,0,0,0,0
+Breukelen <-> Rhenen SPR7300 Sprinter,departure,7,0,0,0,0,0,0,0,0,0,0,1,1,1,3,0,0,0,1,0,0,0,0,0
+Eindhoven Achtse Barrier - Station 405,departure,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,3,0,0,0
+'s-Gravenzande via Naaldwijk en Delft - Zoetermeer 455,departure,6,0,0,0,0,0,0,0,0,0,0,1,2,0,1,1,0,0,1,0,0,0,0,0
+Bad Nieuweschans <-> Groningen ST37500 Stoptrein RS6,departure,6,0,0,0,0,0,0,0,0,0,1,0,0,3,0,1,1,0,0,0,0,0,0,0
+Enkhuizen <-> Maastricht IC2900 Intercity,return,5,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+Den Haag Centraal <-> 's-Hertogenbosch SPR6000 Sprinter,departure,5,0,0,0,0,0,0,0,0,0,0,0,1,2,0,0,0,1,1,0,0,0,0,0
+Groningen <-> Leeuwarden ST37400 Stoptrein RS1,departure,5,0,0,0,0,0,0,0,0,0,1,0,3,0,0,0,1,0,0,0,0,0,0,0
+Den Haag Centraal <-> Nijmegen IC3100 Intercity,departure,5,0,0,0,0,0,0,0,0,0,0,0,1,1,0,2,0,0,1,0,0,0,0,0
+lijn E,departure,5,0,0,0,0,0,0,0,0,0,0,0,1,1,0,2,1,0,0,0,0,0,0,0
+Schiphol Airport <-> Groningen IC700 Intercity,departure,5,0,0,0,0,0,0,0,0,0,0,3,1,0,1,0,0,0,0,0,0,0,0,0
+Arnhem Centraal <-> Dordrecht SPR6600 Sprinter,departure,5,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,2,0,0,0,0,0,0,0
+Amsterdam Amstelstation - Hilversum 320,departure,4,0,0,0,0,0,0,0,0,0,0,0,1,0,1,2,0,0,0,0,0,0,0,0
+Noordwijk - Katwijk - Den Haag 385,departure,4,0,0,0,0,0,0,0,0,0,0,1,1,0,2,0,0,0,0,0,0,0,0,0
+Amsterdam Noord via Edam - Hoorn 314,departure,4,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,2,0,0,0,0,0,0,0
+Buurtbus Heiloo 't Loo - Egmond aan Zee Busstation 408,departure,4,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,1,0,0,0,0,0,0
+Den Helder <-> Nijmegen IC3000 Intercity,return,4,0,1,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Ouddorp - Rotterdam Zuidplein 436,departure,4,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,1,0,0,0,0,0,0,0
+Arnhem Centraal <-> Winterswijk ST30900 Stoptrein RS32,departure,4,0,0,0,0,0,0,0,0,0,0,0,2,2,0,0,0,0,0,0,0,0,0,0
+Oldenzaal via Ootmarsum - Almelo 64,departure,4,0,0,0,0,0,0,0,0,0,1,2,0,0,0,0,1,0,0,0,0,0,0,0
+Leiden Centraal <-> Tiel SPR6700 Sprinter,departure,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,2,0,0,0,0,0
+lijn B,departure,4,0,0,0,0,0,0,0,0,0,0,0,1,0,2,1,0,0,0,0,0,0,0,0
+Maastricht via Epen - Gulpen 57,departure,4,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0,0,0
+Sittard via Susteren - Maaseik 35,departure,4,0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,0,0,0,0,0,0,0
+Renesse - Spijkenisse Metro Centrum 104,departure,4,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0
+Leeuwarden <-> Stavoren ST37100 Stoptrein RS3,departure,3,0,0,0,0,0,0,0,0,0,2,0,0,0,0,1,0,0,0,0,0,0,0,0
+Dedemsvaart - Zwolle 301,departure,3,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,1,0,0,0,0,0,0
+Hoorn Station - Den Helder Station via Den Oever 135,departure,3,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+Groningen <-> Roodeschool ST37600 Stoptrein RS4,departure,3,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0
+Emmeloord - Heerenveen - Groningen 315,departure,3,0,0,0,0,0,0,0,0,0,1,0,2,0,0,0,0,0,0,0,0,0,0,0
+IJmuiden Dennekoplaan - Amsterdam Bijlmer ArenA N30,return,3,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Amsterdam Centraal <-> Hoorn SPR4800 Sprinter,departure,3,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0
+Amsterdam Centraal <-> Frankfurt (M) Hbf ICE100 ICE International,departure,3,0,0,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0
+Emmen - Ter Apel - Veendam 73,departure,3,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Heerenveen - Sneek - Bolsward - Harlingen 99,departure,3,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0
+Stadskanaal - Emmen 74,departure,3,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0
+Den Helder Station - Schagen Station 30,return,3,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Emmeloord - Zwolle 71,departure,3,0,0,0,0,0,0,0,0,0,2,0,1,0,0,0,0,0,0,0,0,0,0,0
+Hulst - Goes 20,departure,3,0,0,0,0,0,0,0,0,0,1,0,2,0,0,0,0,0,0,0,0,0,0,0
+Heerenveen - Drachten - Groningen 324,departure,3,0,0,0,0,0,0,0,0,0,0,1,0,2,0,0,0,0,0,0,0,0,0,0
+Meppel - Hoogeveen 32,departure,3,0,0,0,0,0,0,0,0,0,0,1,0,0,0,2,0,0,0,0,0,0,0,0
+Hoogeveen - Emmen 27,departure,3,0,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0
+U-link Utrecht - Wageningen / Veenendaal 50,departure,3,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,0
+Sittard via NedCar/Holtum en Born - Sittard. 17,departure,3,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+Middelburg - Oude Tonge 133,departure,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,2,0,0,0,0,0,0,0,0
+Arnhem Geitenkamp - Rijkerswoerd 7,departure,3,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0
+Utrecht - Wageningen N8,return,3,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Overdinkel - Enschede 61,departure,3,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0
+Nunspeet - Harderwijk 111,departure,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0
+Den Haag Centraal <-> Dordrecht SPR5100 Sprinter,return,2,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Zwolle <-> Enschede SPR7900 Sprinter RS23,departure,2,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0
+Station Ede-Wageningen - Putten 107,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Borculo - Almelo 95,departure,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0
+Twello - Apeldoorn 15,departure,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0
+Wijk bij Duurstede - Utrecht CS 41,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
+Zweeloo - Assen 22,departure,2,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Zernike - HS - Martini - Eelde 9,departure,2,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Zwartsluis - Oldemarkt 70,departure,2,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+R'dam Kralingse Zoom - Papendrecht - Utrecht 388,departure,2,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+Nieuw-Vennep - Hillegom - Noordwijk - Leiden 22,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0
+Wijchen <-> Zutphen SPR7600 Sprinter,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+Heerenveen - Joure - Jirnsum - Leeuwarden 95,departure,2,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0
+Zelhem via Dinxperlo - Aalten 194,departure,2,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0
+Garderen - Horst 501,departure,2,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0
+Emmen - Assen 21,departure,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0
+Minnertsga - St-Annaparochie - Leeuwarden 70,departure,2,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Zaandam via Amsterdam Noord - Marken 111,departure,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0
+Amsterdam Centraal - Marken N11,return,2,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Stadskanaal - Winschoten 14,departure,2,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+Eindhoven Achtse Barrier - Station 405,return,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2
+Alkmaar - Afsluitdijk - Leeuwarden 350,departure,2,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0
+Borculo - Doetinchem 23,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Sittard Station via Baandert - Kemperkoul 1,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+Rockanje via Hellevoetsluis - Spijkenisse 404,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+Lauwersoog - Dokkum - Leeuwarden 51,departure,2,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0
+Ommen - Almelo 81,departure,2,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Emmen - Klazienaveen - Zwartemeer 93,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0
+Carnisselande - Rotterdam Centraal 5,departure,2,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0
+Leeuwarden - Drachten - Heerenveen 20,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0
+Schiphol Airport <-> Leeuwarden IC800 Intercity,return,2,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Utrecht Centraal <-> Zwolle SPR5600 Sprinter,return,2,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lijn 282 N82,return,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Tiel <-> Arnhem Centraal ST31100 Stoptrein RS33,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
+Nieuw-Vennep P+R Getsewoud Zuid - Amsterdam CS N97,return,2,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Venlo via Reuver - Roermond 66,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0
+Nijmegen <-> Roermond ST32200 Stoptrein RS11,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0
+Almere Centrum <-> Utrecht Centraal SPR4900 Sprinter,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
+Utrecht - Amerongen N50,return,2,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lijn 25,departure,2,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+Nijmegen - Venlo 83,departure,2,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0
+Zutphen <-> Oldenzaal ST31200 Stoptrein RS24,departure,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0
+Leiden Centraal <-> Utrecht Centraal SPR5700 Sprinter,departure,2,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0
+Zwolle <-> Kampen SPR8500 Sprinter RS22,departure,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0
+Emmen - Schoonebeek 44,departure,2,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Apeldoorn - Zwolle 304,departure,2,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0
+Den Haag Centraal <-> Lelystad Centrum SPR4300 Sprinter,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0
+Leeuwarden - Surhuisterveen - Drachten 13,departure,2,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0
+Roermond via Herkenbosch - Roermond. 62,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0
+Haarlem Station - Zandvoort Station 84,departure,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0
+Apeldoorn <-> Winterswijk S30400 Sneltrein RE30,departure,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0
+Lewenborg - Leek 3,departure,2,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+Bolsward - Workum - Balk - Sneek 44,departure,2,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0
+FLEX: Buitenkaag - Nieuw Vennep,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Hardenberg - Beerzerveld 597,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Oudega - Woudsend Centrum 9531,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Wijk bij Duurstede - Zeist - Amersfoort 56,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Groningen - Middelstum - Uithuizen 61,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Arnhem CS - Velp 8,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Heteren - Arnhem CS 56,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Liège-Guillemins <-> Aachen Hbf S18900 Sneltrein RE18,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Meerssen via Valkenburg - Eijsden 791,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Kampen - Urk 141,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Wijk bij Duurstede - Utrecht CS 41,return,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rotterdam Centraal <-> Utrecht Centraal IC2800 Intercity,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Alphen a/d Rijn <-> Gouda SPR8600 Sprinter,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Ferwoude - Workum Station 9361,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Vorden - Doetinchem 51,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Dordrecht CS - Rotterdam Zuidplein 166,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Zuid-Beijerland - Heinenoord Busstation 164,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Harderwijk - Zeewolde 144,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Maastricht via Gulpen - Aachen 350,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mamelis via Vijlen - Vaals 59,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lijn 50,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Lijn 281 N81,return,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Mijdrecht - Hilversum 121,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Meppel - Zwolle 40,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Delfzijl - Appingedam - Groningen - P+R Haren 6,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Wolvega - Noordwolde - Steenwijk 217,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Stavenisse - Bergen op Zoom 108,return,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Vlissingen <-> Amsterdam Centraal IC2200 Intercity,return,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Emmen - Groningen 300,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Exloo - Gieten 59,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Mijdrecht - Amsterdam Bijlmer 126,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Jouswier - Buitenpost Station 7413,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Hoogeveen - Meppel 34,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Buurtbus Tuitjenhorn - Schagen Station 411,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Alkmaar Station -  Egmond aan Zee Busstation 165,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Winschoten - Veendam 23,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Almere Centrum <-> Utrecht Centraal SPR4900 Sprinter,return,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bocholt - Aalten C11,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Harderwijk - Walibi Holland 247,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+De Esch -Woudhoek 11,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Overdinkel - Almelo 66,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Hindeloopen Museum - Station 9411,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Kerkrade Centrum <-> Maastricht Randwyck ST32000 Stoptrein RS18,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Amersfoort - Veenendaal-De Klomp 80,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Rockanje via Brielle - Spijkenisse 403,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Winsum - Leens 68,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Haarlem Station - Amsterdam Bijlmer ArenA 300,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Emmen - Emmercompascuum - Zwartemeer 92,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Winschoten - Bellingwolde (- Bad Nieuweschans) 12,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Rottevalle - Drachten Carpool Noord 6161,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Enschede <-> Dortmund Hbf ST20200 Stoptrein,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Maastricht Station - Kanne (B) 13,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Monnickendam via Purmerend - Amsterdam Sloterdijk 103,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Hengelo - Eibergen 53,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Stavenisse - Bergen op Zoom 108,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Drachten - Haulerwijk - Assen 84,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Almelo <-> Hardenberg ST31000 Stoptrein RS21,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Drachten - Oosterwolde - Assen 380,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Beverwaard - Rotterdam Centraal 3,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Zuidplein - Portland 82,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Lauwersoog - Groningen 163,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Alphen a/d Rijn- Uithoorn 147,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Amsterdam Centraal <-> Den Haag Centraal IC2100 Intercity,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Vogelenzang Henk Lensenlaan - Huis te Bennebroek 9,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Hulst - Roosendaal 19,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Zandvoort Centrum - Amsterdam Elandsgracht 80,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Zandvoort Centrum - Amsterdam Elandsgracht 80,return,1,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Oldenzaal - Enschede 60,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Nunspeet - Apeldoorn 112,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Den Haag - Lansingerland - Rotterdam Capelsebrug 383,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Leeuwarden <-> Harlingen Haven ST37200 Stoptrein RS2,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Firdgum - Franeker Station 7943,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Amsterdam Centraal via Edam - Hoorn N14,return,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+lijn C,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Leiden - Schiphol 365,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Sittard via Schinveld - Brunssum 36,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Enschede CS - Helmerhoek 5,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Leeuwarden - Drachten - Heerenveen 20,return,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Assen - Groningen 51,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Middelburg - Koudekerke - Vlissingen 56,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Vegelinsoord - Heerenveen Busstation 8411,departure,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lijn 330 (R-net) Almere Buiten - A'dam Bijlmer,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Sittard via Geleen en Beek / Stein - Sittard. 33,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Hoogeveen - Emmen 27,return,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Zwolle <-> Groningen SPR6100 Sprinter,return,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Twello - Apeldoorn 506,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Barneveld - Arnhem CS 105,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Roermond via Posterholt - Roermond. 63,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Veendam - Gieten - Assen 310,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Utrecht - Loenen a/d Vecht N20,return,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Utrecht - Amsterdam Bijlmer 120,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Emmen - Ter Apel - Veendam 73,return,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Zwolle <-> Emmen S3800 Sneltrein RE20,return,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Apeldoorn <-> Zutphen ST17800 Stoptrein RS30,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Stadskanaal - Emmen 75,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Den Haag Centraal via Wassenaar - Leiden Centraal 43,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Den Haag Leyenburg - Hoek van Holland 31,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Geilenkirchen - Sittard SB3,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Terneuzen - Zelzate 6,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Holwert Veerdam - Leeuwarden 66,return,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Den Haag Centraal <-> Leeuwarden IC600 Intercity,return,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Holwert Veerdam - Leeuwarden 66,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Hoge Vucht via CS - Haagse Beemden 2,return,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity,return,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Amsterdam Noord via Volendam - Edam 316,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Ilpendam via Monnickendam - Broek in Waterland 419,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Twijzel - Buitenpost Station 6021,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Amersfoort - Apeldoorn 102,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Enschede Stroinkslanden - 't Zwering 4,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Den Haag Centraal <-> Lelystad Centrum SPR4300 Sprinter,return,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Daarlerveen/Den Ham - Nijverdal 594,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Schagen Station - Callantsoog Stuyvezandeweg 152,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+U-flex Maarssen / Utrecht-Noordwest 913,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Sittard <-> Heerlen ST32500 Stoptrein RS15,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Buurtbus Egmond aan Zee - Schoorl 410,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Buurtbus Obdam - Heerhugowaard 409,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Wageningen Busstation - Arnhem CS 352,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Amsterdam Zuidoost - Purmerend Centrum 370,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Amsterdam Centraal <-> Amersfoort Vathorst SPR5800 Sprinter,return,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Uitgeest <-> Rotterdam Centraal SPR4000 Sprinter,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Noordwijk - Sassenheim - Lisse - Schiphol 361,return,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Assen - Groningen 50,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Zutphen <-> Winterswijk ST30800 Stoptrein RS31,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Nieuw-Heeten - Deventer 590,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+FlexRRReis Rijssen Holten 500,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Emmen - Ter Apel - Winschoten 72,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Katwijk-Centrum - Zoetermeer 401,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Staart/Papendrecht - Dordrecht CS - Centrum 14,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Boskoop - Leiden 187,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Utrecht Centraal <-> Baarn SPR5500 Sprinter,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Eemnes - Amersfoort Meander MC 573,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Buurtbus Wekerom - Overberg 505,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Princenhage via CS - Haagse Beemden 4,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Station - Zuidbroek 2,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Nachtlijn Utrecht - Bunnik - Wijk bij Duurstede 441,return,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Den Helder Station - Schagen Station 30,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Cityline Assen 8,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Zuidland - Spijkenisse 116,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Dronten - Harderwijk 147,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Surhuisterveen - Groningen 39,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Noorden - Breukelen 524,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Rozenburg - Spijkenisse 115,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+IJmuiden aan Zee - Amsterdam Sloterdijk 382,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Dokkum - Holwert - Leeuwarden 60,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Rotsterhaule - Heerenveen Busstation 8461,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Lijn 51,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Ubach over Worms via Heerlen - Zuyderland MC 7,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Lemmer - Balk - Joure - Heerenveen 41,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Bantega - Lemmer Busstation 9611,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rotterdam Centraal <-> Lelystad Centrum ICD2400 Intercity direct,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Lelystad - Kampen 143,departure,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Nieuwleusen - Dalfsen 591,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Heerlen via Simpelveld - Vaals 43,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Echt - Maria Hoop 60,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Buurtbus Kreileroord - Schagen Station 416,departure,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Bergen Plein - Alkmaar Station 166,departure,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Uithoorn Busstation - Amsterdam CS N47,return,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Station Centrum via Parkhaven - Station Centrum 9,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Haarlem - Hillegom - Lisse - Leiden 250,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+Nieuw-Vennep P+R Getsew - Amsterdam Elandsgracht 397,departure,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0

@@ -1,0 +1,714 @@
+attendee_id,direction,routes_used
+A00053,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A00054,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Maastricht via Gulpen - Aachen 350', 'Mamelis via Vijlen - Vaals 59']"
+A00070,departure,['Best Station - Eindhoven Station 9']
+A00111,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Harderwijk - Zeewolde 144', 'Son - Ekkersrijt - Eindhoven Station 406', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A00119,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A00130,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Dordrecht CS - Rotterdam Zuidplein 166', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zuid-Beijerland - Heinenoord Busstation 164', 'lijn D']"
+A00150,departure,"['Apeldoorn <-> Winterswijk S30400 Sneltrein RE30', 'Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Vorden - Doetinchem 51']"
+A00166,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Ferwoude - Workum Station 9361', 'Leeuwarden <-> Stavoren ST37100 Stoptrein RS3', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A00191,departure,"['Dordrecht <-> Venlo IC3500 Intercity', ""R'dam Kralingse Zoom - Papendrecht - Utrecht 388"", 'Son - Ekkersrijt - Eindhoven Station 406']"
+A00221,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A00235,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Rotsterhaule - Heerenveen Busstation 8461', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A00265,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dokkum - Holwert - Leeuwarden 60', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A00285,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Wijchen <-> Zutphen SPR7600 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A00298,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Renesse - Spijkenisse Metro Centrum 104', 'Son - Ekkersrijt - Eindhoven Station 406', 'lijn D']"
+A00310,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A00310,return,['Best Station - Eindhoven Station 9']
+A00348,departure,['Best Station - Eindhoven Station 9']
+A00399,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zernike - HS - Martini - Eelde 9']"
+A00404,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwartsluis - Oldemarkt 70']"
+A00417,departure,['Best Station - Eindhoven Station 9']
+A00515,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zweeloo - Assen 22', 'Zwolle <-> Groningen SPR6100 Sprinter']"
+A00616,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A00674,departure,"['Amsterdam Amstelstation - Hilversum 320', 'Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A00680,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A00699,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Nieuw-Vennep - Hillegom - Noordwijk - Leiden 22', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A00721,departure,['Best Station - Eindhoven Station 9']
+A00745,departure,"['Buurtbus Egmond aan Zee - Schoorl 410', ""Buurtbus Heiloo 't Loo - Egmond aan Zee Busstation 408"", 'Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A00774,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Heerlen IC3900 Intercity', 'Sittard <-> Heerlen ST32500 Stoptrein RS15']"
+A00785,departure,['Best Station - Eindhoven Station 9']
+A00785,return,['Best Station - Eindhoven Station 9']
+A00821,departure,['Eindhoven Achtse Barrier - Station 405']
+A00987,return,"['Best Station - Eindhoven Station 9', 'Den Helder <-> Nijmegen IC3000 Intercity', 'Den Helder Station - Schagen Station 30', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A01028,departure,"['Breukelen <-> Rhenen SPR7300 Sprinter', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'U-flex Maarssen / Utrecht-Noordwest 913']"
+A01050,departure,"[""Buurtbus Heiloo 't Loo - Egmond aan Zee Busstation 408"", 'Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A01075,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A01075,return,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Dordrecht SPR5100 Sprinter', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter']"
+A01195,departure,['Best Station - Eindhoven Station 9']
+A01219,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Heerlen IC3900 Intercity', 'Geilenkirchen - Sittard SB3']"
+A01230,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A01279,departure,['Best Station - Eindhoven Station 9']
+A01279,return,['Best Station - Eindhoven Station 9']
+A01293,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Roermond <-> Maastricht Randwyck ST32400 Stoptrein RS12', 'Sittard via Susteren - Maaseik 35']"
+A01299,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Noordwijk - Katwijk - Den Haag 385', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A01333,departure,"[""'s-Gravenzande via Naaldwijk en Delft - Zoetermeer 455"", 'Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Den Haag Leyenburg - Hoek van Holland 31', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A01386,departure,['Best Station - Eindhoven Station 9']
+A01386,return,['Best Station - Eindhoven Station 9']
+A01435,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Den Haag Centraal via Wassenaar - Leiden Centraal 43', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A01460,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A01462,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Roermond <-> Maastricht Randwyck ST32400 Stoptrein RS12']"
+A01474,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Stadskanaal - Emmen 75', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A01637,departure,"['Amsterdam Noord via Edam - Hoorn 314', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zaandam via Amsterdam Noord - Marken 111']"
+A01637,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Amsterdam Centraal - Marken N11', 'Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A01710,departure,"['Apeldoorn <-> Zutphen ST17800 Stoptrein RS30', 'Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity']"
+A01741,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity']"
+A01741,return,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A01767,departure,"['Dedemsvaart - Zwolle 301', 'Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A01810,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A01883,departure,"['Enkhuizen <-> Heerlen IC3900 Intercity', 'Sittard via Geleen en Beek / Stein - Sittard. 33', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A01908,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A01941,departure,['Best Station - Eindhoven Station 9']
+A01941,return,['Best Station - Eindhoven Station 9']
+A01966,departure,['Best Station - Eindhoven Station 9']
+A01978,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Maastricht via Epen - Gulpen 57', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A02009,departure,"['Assen - Dieverbrug - Steenwijk 20', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A02015,departure,['Best Station - Eindhoven Station 9']
+A02015,return,['Best Station - Eindhoven Station 9']
+A02038,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Stadskanaal - Emmen 74', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A02042,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Heerenveen - Sneek - Bolsward - Harlingen 99', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A02071,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Enschede SPR7900 Sprinter RS23']"
+A02084,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Station Ede-Wageningen - Putten 107', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A02121,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity']"
+A02215,departure,['Best Station - Eindhoven Station 9']
+A02224,departure,"['Amsterdam Amstelstation - Hilversum 320', 'Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A02251,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A02305,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Rockanje via Hellevoetsluis - Spijkenisse 404', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity', 'lijn D']"
+A02324,departure,['Best Station - Eindhoven Station 9']
+A02347,departure,['Best Station - Eindhoven Station 9']
+A02347,return,['Best Station - Eindhoven Station 9']
+A02354,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A02354,return,['Best Station - Eindhoven Station 9']
+A02360,departure,['Best Station - Eindhoven Station 9']
+A02370,departure,"['Amsterdam Amstelstation - Hilversum 320', 'Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', ""Lijn 330 (R-net) Almere Buiten - A'dam Bijlmer""]"
+A02403,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A02403,return,['Best Station - Eindhoven Station 9']
+A02447,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Heerlen IC3900 Intercity', 'Sittard Station via Baandert - Kemperkoul 1']"
+A02517,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Nieuw-Vennep - Hillegom - Noordwijk - Leiden 22', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A02676,departure,"['Apeldoorn <-> Winterswijk S30400 Sneltrein RE30', 'Best Station - Eindhoven Station 9', 'Borculo - Doetinchem 23', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity']"
+A02718,departure,['Best Station - Eindhoven Station 9']
+A02728,departure,['Best Station - Eindhoven Station 9']
+A02728,return,['Best Station - Eindhoven Station 9']
+A02760,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A02878,departure,['Best Station - Eindhoven Station 9']
+A02878,return,['Best Station - Eindhoven Station 9']
+A02888,departure,"[""'s-Gravenzande via Naaldwijk en Delft - Zoetermeer 455"", 'Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A02912,departure,['Best Station - Eindhoven Station 9']
+A02935,departure,['Best Station - Eindhoven Station 9']
+A02935,return,['Best Station - Eindhoven Station 9']
+A02966,departure,"['Alkmaar - Afsluitdijk - Leeuwarden 350', 'Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Hoorn Station - Den Helder Station via Den Oever 135']"
+A02976,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmen - Klazienaveen - Zwartemeer 93', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A02984,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Vegelinsoord - Heerenveen Busstation 8411']"
+A02986,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A02992,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Carnisselande - Rotterdam Centraal 5', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A03060,departure,"['Best Station - Eindhoven Station 9', 'Middelburg - Koudekerke - Vlissingen 56', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A03098,departure,"['Assen - Groningen 51', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03101,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Ommen - Almelo 81', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A03140,departure,"['Almere Centrum <-> Utrecht Centraal SPR4900 Sprinter', 'Amsterdam Amstelstation - Hilversum 320', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03144,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Overdinkel - Enschede 61', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03265,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A03265,return,['Best Station - Eindhoven Station 9']
+A03288,departure,['Best Station - Eindhoven Station 9']
+A03290,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Leeuwarden - Drachten - Heerenveen 20', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03290,return,"['Best Station - Eindhoven Station 9', 'Leeuwarden - Drachten - Heerenveen 20', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter']"
+A03381,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Enschede CS - Helmerhoek 5', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03383,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A03383,return,['Best Station - Eindhoven Station 9']
+A03440,departure,['Best Station - Eindhoven Station 9']
+A03440,return,['Best Station - Eindhoven Station 9']
+A03462,departure,['Best Station - Eindhoven Station 9']
+A03464,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Sittard via Schinveld - Brunssum 36', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03477,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Leiden - Schiphol 365', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03482,departure,['Best Station - Eindhoven Station 9']
+A03494,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity', 'lijn C']"
+A03513,departure,['Best Station - Eindhoven Station 9']
+A03578,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A03586,departure,"['Dordrecht <-> Venlo IC3500 Intercity', ""R'dam Kralingse Zoom - Papendrecht - Utrecht 388"", 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03631,departure,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Overdinkel - Enschede 61']"
+A03650,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity', 'Zwolle <-> Roosendaal IC3600 Intercity', 'lijn B']"
+A03688,departure,['Best Station - Eindhoven Station 9']
+A03688,return,['Best Station - Eindhoven Station 9']
+A03699,departure,"[""'s-Gravenzande via Naaldwijk en Delft - Zoetermeer 455"", 'Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03713,departure,"['Amsterdam Noord via Edam - Hoorn 314', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03713,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Amsterdam Centraal via Edam - Hoorn N14', 'Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A03719,departure,['Best Station - Eindhoven Station 9']
+A03743,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Hindeloopen Museum - Station 9411', 'Leeuwarden <-> Stavoren ST37100 Stoptrein RS3', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03756,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Nijmegen - Venlo 83', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03766,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Eindhoven Achtse Barrier - Station 405', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Overdinkel - Almelo 66']"
+A03773,departure,['Best Station - Eindhoven Station 9']
+A03776,return,"['Best Station - Eindhoven Station 9', 'Den Helder <-> Nijmegen IC3000 Intercity', 'Den Helder Station - Schagen Station 30', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A03802,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A03821,departure,"['Breukelen <-> Rhenen SPR7300 Sprinter', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'U-link Utrecht - Wageningen / Veenendaal 50']"
+A03821,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Utrecht - Amerongen N50']"
+A03860,departure,['Best Station - Eindhoven Station 9']
+A03860,return,['Best Station - Eindhoven Station 9']
+A03862,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Noordwijk - Katwijk - Den Haag 385', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A03944,departure,['Best Station - Eindhoven Station 9']
+A04038,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A04038,return,['Best Station - Eindhoven Station 9']
+A04052,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'De Esch -Woudhoek 11', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A04052,return,"['Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter']"
+A04087,departure,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Oldenzaal via Ootmarsum - Almelo 64']"
+A04202,departure,"[""'s-Gravenzande via Naaldwijk en Delft - Zoetermeer 455"", 'Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A04219,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Maastricht via Epen - Gulpen 57', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A04280,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Noordwijk - Katwijk - Den Haag 385', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A04368,departure,['Best Station - Eindhoven Station 9']
+A04368,return,['Best Station - Eindhoven Station 9']
+A04378,departure,['Best Station - Eindhoven Station 9']
+A04390,return,['Best Station - Eindhoven Station 9']
+A04407,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A04407,return,['Best Station - Eindhoven Station 9']
+A04437,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Sittard via NedCar/Holtum en Born - Sittard. 17']"
+A04524,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Lauwersoog - Dokkum - Leeuwarden 51', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A04564,departure,"['Arnhem Geitenkamp - Rijkerswoerd 7', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A04587,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Harderwijk - Walibi Holland 247', 'Son - Ekkersrijt - Eindhoven Station 406', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A04592,departure,"['Amsterdam Centraal <-> Hoorn SPR4800 Sprinter', 'Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A04592,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9', 'IJmuiden Dennekoplaan - Amsterdam Bijlmer ArenA N30', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A04671,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A04706,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A04706,return,['Best Station - Eindhoven Station 9']
+A04719,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A04730,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Renesse - Spijkenisse Metro Centrum 104', 'Son - Ekkersrijt - Eindhoven Station 406', 'lijn D']"
+A04733,departure,"['Amsterdam Centraal <-> Frankfurt (M) Hbf ICE100 ICE International', 'Arnhem Centraal <-> Winterswijk ST30900 Stoptrein RS32', 'Best Station - Eindhoven Station 9', 'Bocholt - Aalten C11', 'Enkhuizen <-> Maastricht IC2900 Intercity']"
+A04738,departure,['Best Station - Eindhoven Station 9']
+A04768,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Leiden Centraal <-> Utrecht Centraal SPR5700 Sprinter']"
+A04768,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Almere Centrum <-> Utrecht Centraal SPR4900 Sprinter', 'Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity']"
+A04807,departure,['Best Station - Eindhoven Station 9']
+A04845,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmen - Schoonebeek 44', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A04849,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Groningen <-> Leeuwarden ST37400 Stoptrein RS1', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A04851,departure,['Best Station - Eindhoven Station 9']
+A04877,departure,"['Bad Nieuweschans <-> Groningen ST37500 Stoptrein RS6', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Winschoten - Veendam 23']"
+A04920,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Meppel - Hoogeveen 32', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Groningen SPR6100 Sprinter']"
+A05101,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Hulst - Goes 20', 'Son - Ekkersrijt - Eindhoven Station 406', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity']"
+A05103,departure,"['Alkmaar Station -  Egmond aan Zee Busstation 165', 'Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A05124,departure,"['Buurtbus Tuitjenhorn - Schagen Station 411', 'Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A05247,departure,['Best Station - Eindhoven Station 9']
+A05249,departure,['Best Station - Eindhoven Station 9']
+A05249,return,['Best Station - Eindhoven Station 9']
+A05257,departure,"[""'s-Gravenzande via Naaldwijk en Delft - Zoetermeer 455"", 'Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A05388,departure,['Best Station - Eindhoven Station 9']
+A05412,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Hoogeveen - Meppel 34', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A05467,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Kampen SPR8500 Sprinter RS22']"
+A05475,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Groningen <-> Leeuwarden ST37400 Stoptrein RS1', 'Jouswier - Buitenpost Station 7413', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A05485,departure,['Best Station - Eindhoven Station 9']
+A05488,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A05494,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Mijdrecht - Amsterdam Bijlmer 126', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A05508,departure,['Best Station - Eindhoven Station 9']
+A05574,departure,['Best Station - Eindhoven Station 9']
+A05574,return,['Best Station - Eindhoven Station 9']
+A05581,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmen - Groningen 300', 'Exloo - Gieten 59', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A05676,departure,['Best Station - Eindhoven Station 9']
+A05844,departure,['Best Station - Eindhoven Station 9']
+A05844,return,['Best Station - Eindhoven Station 9']
+A05872,departure,['Best Station - Eindhoven Station 9']
+A05872,return,['Best Station - Eindhoven Station 9']
+A05897,departure,"['Den Haag Centraal <-> Nijmegen IC3100 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Station Ede-Wageningen - Putten 107']"
+A05898,return,"['Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Stavenisse - Bergen op Zoom 108', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity']"
+A05931,departure,['Best Station - Eindhoven Station 9']
+A05976,departure,['Best Station - Eindhoven Station 9']
+A06014,departure,['Best Station - Eindhoven Station 9']
+A06014,return,['Best Station - Eindhoven Station 9']
+A06040,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Den Haag Centraal <-> Lelystad Centrum SPR4300 Sprinter', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A06046,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Wolvega - Noordwolde - Steenwijk 217']"
+A06058,departure,"['Delfzijl - Appingedam - Groningen - P+R Haren 6', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A06076,departure,['Best Station - Eindhoven Station 9']
+A06076,return,['Best Station - Eindhoven Station 9']
+A06081,departure,['Best Station - Eindhoven Station 9']
+A06213,departure,['Best Station - Eindhoven Station 9']
+A06213,return,['Best Station - Eindhoven Station 9']
+A06260,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Meppel - Zwolle 40', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A06325,departure,"['Apeldoorn - Zwolle 304', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A06344,departure,['Best Station - Eindhoven Station 9']
+A06352,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Hoogeveen - Emmen 27', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A06426,departure,"['Almere Centrum <-> Utrecht Centraal SPR4900 Sprinter', 'Dordrecht <-> Venlo IC3500 Intercity', 'Mijdrecht - Hilversum 121', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A06461,departure,['Best Station - Eindhoven Station 9']
+A06461,return,['Best Station - Eindhoven Station 9']
+A06471,departure,['Best Station - Eindhoven Station 9']
+A06492,departure,['Best Station - Eindhoven Station 9']
+A06492,return,['Best Station - Eindhoven Station 9']
+A06514,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Heerlen IC3900 Intercity', 'Roermond via Herkenbosch - Roermond. 62']"
+A06556,departure,['Best Station - Eindhoven Station 9']
+A06568,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A06568,return,['Best Station - Eindhoven Station 9']
+A06618,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Haarlem Station - Zandvoort Station 84', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity']"
+A06640,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A06640,return,['Best Station - Eindhoven Station 9']
+A06665,return,['Best Station - Eindhoven Station 9']
+A06674,departure,"['Apeldoorn - Zwolle 304', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A06707,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Leeuwarden - Surhuisterveen - Drachten 13', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A06708,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'lijn B']"
+A06737,departure,['Best Station - Eindhoven Station 9']
+A06746,departure,['Best Station - Eindhoven Station 9']
+A06769,departure,"['Alkmaar - Afsluitdijk - Leeuwarden 350', 'Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Hoorn Station - Den Helder Station via Den Oever 135']"
+A06810,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity', 'lijn E']"
+A06960,departure,"['Eindhoven Achtse Barrier - Station 405', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Lijn 50']"
+A06960,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9', 'Lijn 281 N81', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A06966,departure,"['Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A06966,return,"['Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity']"
+A07040,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A07056,departure,"['Arnhem Centraal <-> Dordrecht SPR6600 Sprinter', 'Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A07076,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A07081,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmen - Emmercompascuum - Zwartemeer 92', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen S3800 Sneltrein RE20']"
+A07198,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A07198,return,['Best Station - Eindhoven Station 9']
+A07212,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Haarlem Station - Amsterdam Bijlmer ArenA 300', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A07212,return,"['Best Station - Eindhoven Station 9', 'IJmuiden Dennekoplaan - Amsterdam Bijlmer ArenA N30', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A07217,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmeloord - Heerenveen - Groningen 315', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A07288,departure,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Oldenzaal via Ootmarsum - Almelo 64']"
+A07335,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwartsluis - Oldemarkt 70']"
+A07340,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Groningen <-> Roodeschool ST37600 Stoptrein RS4', 'Schiphol Airport <-> Groningen IC700 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Winsum - Leens 68']"
+A07459,departure,"['Assen - Dieverbrug - Steenwijk 20', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A07469,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Middelburg - Oude Tonge 133', 'Ouddorp - Rotterdam Zuidplein 436', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity', 'lijn E']"
+A07496,departure,['Best Station - Eindhoven Station 9']
+A07558,departure,"[""Den Haag Centraal <-> 's-Hertogenbosch SPR6000 Sprinter"", 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A07607,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Rockanje via Brielle - Spijkenisse 403', 'Son - Ekkersrijt - Eindhoven Station 406', 'lijn D']"
+A07692,departure,['Best Station - Eindhoven Station 9']
+A07755,departure,"['Assen - Dieverbrug - Steenwijk 20', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A07764,departure,"['Amersfoort - Veenendaal-De Klomp 80', 'Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Nijmegen IC3100 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity']"
+A07773,departure,"['Enkhuizen <-> Heerlen IC3900 Intercity', 'Kerkrade Centrum <-> Maastricht Randwyck ST32000 Stoptrein RS18', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A07821,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A07943,departure,['Best Station - Eindhoven Station 9']
+A07956,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Groningen <-> Roodeschool ST37600 Stoptrein RS4', 'Schiphol Airport <-> Groningen IC700 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A07977,departure,"['Breukelen <-> Rhenen SPR7300 Sprinter', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A08030,departure,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Oldenzaal via Ootmarsum - Almelo 64', 'Zutphen <-> Oldenzaal ST31200 Stoptrein RS24']"
+A08066,departure,"['Den Haag Centraal <-> Nijmegen IC3100 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Lijn 25', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A08091,departure,['Best Station - Eindhoven Station 9']
+A08091,return,['Best Station - Eindhoven Station 9']
+A08160,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Drachten - Oosterwolde - Assen 380', 'Schiphol Airport <-> Groningen IC700 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A08188,departure,"['Almelo <-> Hardenberg ST31000 Stoptrein RS21', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A08195,departure,"[""Den Haag Centraal <-> 's-Hertogenbosch SPR6000 Sprinter"", 'Dordrecht <-> Venlo IC3500 Intercity', 'Leiden Centraal <-> Tiel SPR6700 Sprinter', 'Son - Ekkersrijt - Eindhoven Station 406', 'Tiel <-> Arnhem Centraal ST31100 Stoptrein RS33']"
+A08206,departure,['Best Station - Eindhoven Station 9']
+A08206,return,['Best Station - Eindhoven Station 9']
+A08220,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Drachten - Haulerwijk - Assen 84', 'Schiphol Airport <-> Groningen IC700 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A08287,departure,"['Best Station - Eindhoven Station 9', 'Stavenisse - Bergen op Zoom 108', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A08353,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Hengelo - Eibergen 53', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A08436,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A08539,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Monnickendam via Purmerend - Amsterdam Sloterdijk 103', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A08569,return,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Nieuw-Vennep P+R Getsewoud Zuid - Amsterdam CS N97']"
+A08570,departure,['Best Station - Eindhoven Station 9']
+A08637,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Nijmegen <-> Roermond ST32200 Stoptrein RS11', 'Venlo via Reuver - Roermond 66']"
+A08668,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A08683,departure,['Best Station - Eindhoven Station 9']
+A08698,departure,['Best Station - Eindhoven Station 9']
+A08698,return,['Best Station - Eindhoven Station 9']
+A08786,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Maastricht Station - Kanne (B) 13', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A08797,departure,['Best Station - Eindhoven Station 9']
+A08832,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Enschede <-> Dortmund Hbf ST20200 Stoptrein', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A08849,departure,['Best Station - Eindhoven Station 9']
+A08875,departure,['Best Station - Eindhoven Station 9']
+A08889,departure,"['Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A08930,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Leeuwarden - Drachten - Heerenveen 20', 'Rottevalle - Drachten Carpool Noord 6161', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A08976,departure,"['Bad Nieuweschans <-> Groningen ST37500 Stoptrein RS6', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Winschoten - Bellingwolde (- Bad Nieuweschans) 12']"
+A09004,departure,"['Assen - Dieverbrug - Steenwijk 20', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A09064,departure,"['Breukelen <-> Rhenen SPR7300 Sprinter', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'U-link Utrecht - Wageningen / Veenendaal 50']"
+A09064,return,"['Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Utrecht - Wageningen N8']"
+A09070,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Firdgum - Franeker Station 7943', 'Leeuwarden <-> Harlingen Haven ST37200 Stoptrein RS2', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A09139,departure,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Overdinkel - Enschede 61']"
+A09206,departure,"['Den Haag - Lansingerland - Rotterdam Capelsebrug 383', ""Den Haag Centraal <-> 's-Hertogenbosch SPR6000 Sprinter"", 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A09223,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A09373,departure,['Best Station - Eindhoven Station 9']
+A09373,return,['Best Station - Eindhoven Station 9']
+A09436,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A09436,return,['Best Station - Eindhoven Station 9']
+A09531,departure,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Oldenzaal via Ootmarsum - Almelo 64']"
+A09608,departure,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Nunspeet - Apeldoorn 112']"
+A09611,departure,['Best Station - Eindhoven Station 9']
+A09611,return,['Best Station - Eindhoven Station 9']
+A09629,departure,['Best Station - Eindhoven Station 9']
+A09629,return,['Best Station - Eindhoven Station 9']
+A09653,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A09653,return,['Best Station - Eindhoven Station 9']
+A09745,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'lijn D']"
+A09818,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Oldenzaal - Enschede 60', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A09870,departure,['Best Station - Eindhoven Station 9']
+A09911,departure,['Best Station - Eindhoven Station 9']
+A09927,departure,['Best Station - Eindhoven Station 9']
+A09927,return,['Best Station - Eindhoven Station 9']
+A10040,departure,['Best Station - Eindhoven Station 9']
+A10102,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A10134,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity', 'Zandvoort Centrum - Amsterdam Elandsgracht 80']"
+A10134,return,"['Best Station - Eindhoven Station 9', 'Lijn 282 N82', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity', 'Zandvoort Centrum - Amsterdam Elandsgracht 80']"
+A10145,departure,['Best Station - Eindhoven Station 9']
+A10226,departure,"['Best Station - Eindhoven Station 9', 'Hulst - Goes 20', 'Hulst - Roosendaal 19', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A10269,departure,"['Amsterdam Centraal <-> Den Haag Centraal IC2100 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Vogelenzang Henk Lensenlaan - Huis te Bennebroek 9']"
+A10290,departure,"['Alphen a/d Rijn- Uithoorn 147', 'Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Leiden Centraal <-> Tiel SPR6700 Sprinter']"
+A10342,departure,['Best Station - Eindhoven Station 9']
+A10342,return,['Best Station - Eindhoven Station 9']
+A10368,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A10393,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A10401,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Lauwersoog - Groningen 163', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Groningen SPR6100 Sprinter']"
+A10420,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A10501,departure,"['Amsterdam Centraal <-> Hoorn SPR4800 Sprinter', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A10543,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zuidplein - Portland 82', 'lijn D']"
+A10558,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Heerlen IC3900 Intercity', 'Sittard Station via Baandert - Kemperkoul 1']"
+A10564,departure,['Best Station - Eindhoven Station 9']
+A10612,departure,"['Best Station - Eindhoven Station 9', 'Beverwaard - Rotterdam Centraal 3', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A10622,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zernike - HS - Martini - Eelde 9']"
+A10689,departure,['Best Station - Eindhoven Station 9']
+A10734,departure,['Best Station - Eindhoven Station 9']
+A10734,return,['Best Station - Eindhoven Station 9']
+A10757,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Lauwersoog - Dokkum - Leeuwarden 51', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A10759,departure,['Best Station - Eindhoven Station 9']
+A10759,return,['Best Station - Eindhoven Station 9']
+A10814,departure,['Best Station - Eindhoven Station 9']
+A10814,return,['Best Station - Eindhoven Station 9']
+A10832,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A10832,return,['Best Station - Eindhoven Station 9']
+A10834,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmen - Ter Apel - Veendam 73', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen S3800 Sneltrein RE20']"
+A10834,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9', 'Emmen - Ter Apel - Veendam 73', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter', 'Zwolle <-> Emmen S3800 Sneltrein RE20']"
+A10851,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Utrecht - Amsterdam Bijlmer 120']"
+A10851,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Utrecht - Loenen a/d Vecht N20']"
+A10885,departure,['Best Station - Eindhoven Station 9']
+A10885,return,['Best Station - Eindhoven Station 9']
+A10896,departure,"['Bad Nieuweschans <-> Groningen ST37500 Stoptrein RS6', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Stadskanaal - Winschoten 14']"
+A10957,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A11027,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Roermond <-> Maastricht Randwyck ST32400 Stoptrein RS12', 'Sittard via Susteren - Maaseik 35']"
+A11058,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Leeuwarden - Surhuisterveen - Drachten 13', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A11059,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A11071,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Hoogeveen - Emmen 27', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Groningen SPR6100 Sprinter']"
+A11080,departure,['Best Station - Eindhoven Station 9']
+A11099,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Middelburg - Oude Tonge 133', 'Ouddorp - Rotterdam Zuidplein 436', 'Son - Ekkersrijt - Eindhoven Station 406', 'lijn E']"
+A11104,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A11104,return,['Eindhoven Achtse Barrier - Station 405']
+A11144,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A11145,departure,['Best Station - Eindhoven Station 9']
+A11149,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A11149,return,['Best Station - Eindhoven Station 9']
+A11188,departure,"['Borculo - Almelo 95', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zutphen <-> Oldenzaal ST31200 Stoptrein RS24', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A11214,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A11214,return,['Best Station - Eindhoven Station 9']
+A11220,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Veendam - Gieten - Assen 310', 'Zwolle <-> Groningen SPR6100 Sprinter']"
+A11246,departure,"['Enkhuizen <-> Heerlen IC3900 Intercity', 'Roermond via Posterholt - Roermond. 63', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A11249,departure,"['Arnhem Centraal <-> Dordrecht SPR6600 Sprinter', 'Barneveld - Arnhem CS 105', 'Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity']"
+A11270,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A11317,departure,['Best Station - Eindhoven Station 9']
+A11329,departure,['Best Station - Eindhoven Station 9']
+A11351,departure,"['Bad Nieuweschans <-> Groningen ST37500 Stoptrein RS6', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A11352,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Twello - Apeldoorn 15', 'Twello - Apeldoorn 506']"
+A11358,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A11423,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A11503,departure,"['Dedemsvaart - Zwolle 301', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A11508,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Heerlen IC3900 Intercity', 'Roermond via Herkenbosch - Roermond. 62']"
+A11536,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Hoogeveen - Emmen 27', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Groningen SPR6100 Sprinter']"
+A11536,return,"['Best Station - Eindhoven Station 9', 'Hoogeveen - Emmen 27', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Groningen SPR6100 Sprinter']"
+A11547,departure,['Best Station - Eindhoven Station 9']
+A11547,return,['Best Station - Eindhoven Station 9']
+A11592,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A11592,return,['Best Station - Eindhoven Station 9']
+A11696,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Nijmegen <-> Roermond ST32200 Stoptrein RS11', 'Venlo via Reuver - Roermond 66']"
+A11753,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Maastricht via Epen - Gulpen 57', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A11785,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Nunspeet - Harderwijk 111', 'Son - Ekkersrijt - Eindhoven Station 406', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A11800,departure,['Best Station - Eindhoven Station 9']
+A11838,departure,['Best Station - Eindhoven Station 9']
+A11860,departure,"['Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Schagen Station - Callantsoog Stuyvezandeweg 152', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A11868,departure,"['Daarlerveen/Den Ham - Nijverdal 594', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Enschede SPR7900 Sprinter RS23']"
+A11869,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A11969,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Den Haag Centraal <-> Lelystad Centrum SPR4300 Sprinter', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A11969,return,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Lelystad Centrum SPR4300 Sprinter', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter']"
+A12028,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Roermond <-> Maastricht Randwyck ST32400 Stoptrein RS12', 'Sittard via Susteren - Maaseik 35']"
+A12047,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A12077,departure,['Best Station - Eindhoven Station 9']
+A12077,return,['Best Station - Eindhoven Station 9']
+A12151,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Minnertsga - St-Annaparochie - Leeuwarden 70', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A12199,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A12224,departure,['Best Station - Eindhoven Station 9']
+A12240,departure,['Best Station - Eindhoven Station 9']
+A12249,departure,['Best Station - Eindhoven Station 9']
+A12285,departure,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Ommen - Almelo 81']"
+A12301,departure,['Best Station - Eindhoven Station 9']
+A12356,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmen - Assen 21', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A12357,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Roermond <-> Maastricht Randwyck ST32400 Stoptrein RS12', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A12390,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen S3800 Sneltrein RE20']"
+A12521,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Nijmegen - Venlo 83', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A12553,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity']"
+A12570,departure,['Best Station - Eindhoven Station 9']
+A12570,return,['Best Station - Eindhoven Station 9']
+A12595,departure,['Best Station - Eindhoven Station 9']
+A12598,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Eindhoven Achtse Barrier - Station 405', 'Enkhuizen <-> Maastricht IC2900 Intercity', ""Enschede Stroinkslanden - 't Zwering 4""]"
+A12609,departure,"['Amersfoort - Apeldoorn 102', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A12664,departure,['Best Station - Eindhoven Station 9']
+A12751,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Groningen <-> Leeuwarden ST37400 Stoptrein RS1', 'Son - Ekkersrijt - Eindhoven Station 406', 'Twijzel - Buitenpost Station 6021']"
+A12805,departure,['Best Station - Eindhoven Station 9']
+A12839,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A12947,departure,['Best Station - Eindhoven Station 9']
+A12947,return,['Best Station - Eindhoven Station 9']
+A12974,departure,"['Assen - Dieverbrug - Steenwijk 20', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A13001,departure,['Best Station - Eindhoven Station 9']
+A13027,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A13087,departure,"['Amsterdam Noord via Volendam - Edam 316', 'Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Ilpendam via Monnickendam - Broek in Waterland 419']"
+A13087,return,"['Amsterdam Centraal - Marken N11', 'Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A13094,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A13094,return,['Best Station - Eindhoven Station 9']
+A13098,departure,['Best Station - Eindhoven Station 9']
+A13120,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmen - Klazienaveen - Zwartemeer 93', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A13143,return,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Dordrecht SPR5100 Sprinter', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter']"
+A13180,departure,"['Arnhem Centraal <-> Dordrecht SPR6600 Sprinter', 'Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A13180,return,"['Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Hoge Vucht via CS - Haagse Beemden 2']"
+A13298,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Holwert Veerdam - Leeuwarden 66', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A13298,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9', 'Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Holwert Veerdam - Leeuwarden 66', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A13355,departure,['Best Station - Eindhoven Station 9']
+A13355,return,['Best Station - Eindhoven Station 9']
+A13444,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Hulst - Goes 20', 'Son - Ekkersrijt - Eindhoven Station 406', 'Terneuzen - Zelzate 6', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity']"
+A13501,departure,"['Arnhem Centraal <-> Dordrecht SPR6600 Sprinter', 'Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Staart/Papendrecht - Dordrecht CS - Centrum 14']"
+A13522,departure,"['Breukelen <-> Rhenen SPR7300 Sprinter', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A13522,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Utrecht - Wageningen N8']"
+A13566,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Katwijk-Centrum - Zoetermeer 401', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A13573,departure,"[""Buurtbus Heiloo 't Loo - Egmond aan Zee Busstation 408"", 'Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A13593,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A13595,departure,"['Bad Nieuweschans <-> Groningen ST37500 Stoptrein RS6', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmen - Ter Apel - Winschoten 72', 'Son - Ekkersrijt - Eindhoven Station 406', 'Stadskanaal - Winschoten 14']"
+A13623,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'FlexRRReis Rijssen Holten 500', 'Nieuw-Heeten - Deventer 590', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A13634,departure,['Best Station - Eindhoven Station 9']
+A13731,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen S3800 Sneltrein RE20']"
+A13767,departure,"['Borculo - Doetinchem 23', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zelhem via Dinxperlo - Aalten 194', 'Zutphen <-> Winterswijk ST30800 Stoptrein RS31', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A13791,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A13869,departure,"['Assen - Dieverbrug - Steenwijk 20', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A13913,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A13956,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Stadskanaal - Emmen 74', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A13998,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmeloord - Zwolle 71', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A14064,departure,['Best Station - Eindhoven Station 9']
+A14066,departure,"['Assen - Groningen 50', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A14079,departure,"['Arnhem Centraal <-> Winterswijk ST30900 Stoptrein RS32', 'Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zelhem via Dinxperlo - Aalten 194']"
+A14092,departure,['Best Station - Eindhoven Station 9']
+A14106,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A14126,departure,['Best Station - Eindhoven Station 9']
+A14183,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A14183,return,['Best Station - Eindhoven Station 9']
+A14216,departure,['Best Station - Eindhoven Station 9']
+A14257,departure,['Best Station - Eindhoven Station 9']
+A14262,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Garderen - Horst 501', 'Son - Ekkersrijt - Eindhoven Station 406', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A14267,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A14268,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Roermond <-> Maastricht Randwyck ST32400 Stoptrein RS12', 'Sittard via Susteren - Maaseik 35']"
+A14321,return,"['Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity', 'Noordwijk - Sassenheim - Lisse - Schiphol 361']"
+A14375,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Uitgeest <-> Rotterdam Centraal SPR4000 Sprinter']"
+A14375,return,"['Best Station - Eindhoven Station 9', 'Den Helder <-> Nijmegen IC3000 Intercity', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A14446,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmeloord - Zwolle 71', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A14465,departure,['Best Station - Eindhoven Station 9']
+A14465,return,['Eindhoven Achtse Barrier - Station 405']
+A14476,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Leiden Centraal <-> Utrecht Centraal SPR5700 Sprinter', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A14476,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Amsterdam Centraal <-> Amersfoort Vathorst SPR5800 Sprinter', 'Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity']"
+A14503,departure,"['Borculo - Almelo 95', 'Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A14517,departure,"['Amsterdam Zuidoost - Purmerend Centrum 370', 'Den Haag Centraal <-> Nijmegen IC3100 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A14537,return,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A14549,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Wageningen Busstation - Arnhem CS 352', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A14552,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A14606,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Middelburg - Oude Tonge 133', 'Ouddorp - Rotterdam Zuidplein 436', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity', 'lijn E']"
+A14614,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A14634,departure,"['Amsterdam Centraal <-> Hoorn SPR4800 Sprinter', 'Best Station - Eindhoven Station 9', 'Buurtbus Obdam - Heerhugowaard 409', 'Enkhuizen <-> Maastricht IC2900 Intercity']"
+A14637,departure,"[""Buurtbus Heiloo 't Loo - Egmond aan Zee Busstation 408"", 'Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A14640,departure,['Best Station - Eindhoven Station 9']
+A14647,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'IJmuiden aan Zee - Amsterdam Sloterdijk 382']"
+A14665,departure,['Best Station - Eindhoven Station 9']
+A14709,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zweeloo - Assen 22', 'Zwolle <-> Groningen SPR6100 Sprinter']"
+A14785,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A14785,return,['Best Station - Eindhoven Station 9']
+A14789,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Rozenburg - Spijkenisse 115', 'Son - Ekkersrijt - Eindhoven Station 406', 'lijn D']"
+A14817,departure,['Best Station - Eindhoven Station 9']
+A14834,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Sittard via NedCar/Holtum en Born - Sittard. 17']"
+A14868,departure,['Best Station - Eindhoven Station 9']
+A14917,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A14917,return,['Best Station - Eindhoven Station 9']
+A15084,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Garderen - Horst 501', 'Son - Ekkersrijt - Eindhoven Station 406', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A15195,departure,"['Eindhoven Achtse Barrier - Station 405', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Leiden Centraal <-> Tiel SPR6700 Sprinter', 'Noorden - Breukelen 524']"
+A15244,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Groningen <-> Leeuwarden ST37400 Stoptrein RS1', 'Son - Ekkersrijt - Eindhoven Station 406', 'Surhuisterveen - Groningen 39']"
+A15255,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A15255,return,['Best Station - Eindhoven Station 9']
+A15278,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmeloord - Heerenveen - Groningen 315', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A15282,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Dronten - Harderwijk 147', 'Son - Ekkersrijt - Eindhoven Station 406', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A15288,departure,['Best Station - Eindhoven Station 9']
+A15303,departure,"[""Den Haag Centraal <-> 's-Hertogenbosch SPR6000 Sprinter"", 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A15305,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A15309,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Renesse - Spijkenisse Metro Centrum 104', 'Son - Ekkersrijt - Eindhoven Station 406', 'lijn D']"
+A15404,departure,['Best Station - Eindhoven Station 9']
+A15445,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zuidland - Spijkenisse 116', 'lijn D']"
+A15446,departure,['Best Station - Eindhoven Station 9']
+A15446,return,['Best Station - Eindhoven Station 9']
+A15513,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Haarlem Station - Zandvoort Station 84', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity']"
+A15572,departure,['Best Station - Eindhoven Station 9']
+A15572,return,['Best Station - Eindhoven Station 9']
+A15708,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A15725,departure,"['Assen - Dieverbrug - Steenwijk 20', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A15754,departure,"[""Den Haag Centraal <-> 's-Hertogenbosch SPR6000 Sprinter"", 'Dordrecht <-> Venlo IC3500 Intercity', 'Leiden Centraal <-> Tiel SPR6700 Sprinter', 'Son - Ekkersrijt - Eindhoven Station 406', 'Tiel <-> Arnhem Centraal ST31100 Stoptrein RS33']"
+A15814,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Rockanje via Hellevoetsluis - Spijkenisse 404', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity', 'lijn D']"
+A15825,departure,['Best Station - Eindhoven Station 9']
+A15839,departure,"['Cityline Assen 8', 'Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Groningen SPR6100 Sprinter']"
+A15849,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A15852,departure,"['Arnhem Geitenkamp - Rijkerswoerd 7', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A15854,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A15868,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A15907,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Twello - Apeldoorn 15']"
+A15916,departure,"['Den Helder <-> Nijmegen IC3000 Intercity', 'Den Helder Station - Schagen Station 30', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A15916,return,"['Best Station - Eindhoven Station 9', 'Den Helder <-> Nijmegen IC3000 Intercity', 'Den Helder Station - Schagen Station 30', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A15927,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Wijk bij Duurstede - Utrecht CS 41']"
+A15927,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9', 'Nachtlijn Utrecht - Bunnik - Wijk bij Duurstede 441', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity']"
+A15940,departure,['Best Station - Eindhoven Station 9']
+A15959,departure,"['Amsterdam Noord via Edam - Hoorn 314', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A16015,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A16041,departure,"['Den Haag Centraal <-> Enschede IC1700 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Station - Zuidbroek 2']"
+A16050,departure,['Best Station - Eindhoven Station 9']
+A16085,departure,['Best Station - Eindhoven Station 9']
+A16085,return,['Best Station - Eindhoven Station 9']
+A16102,departure,"['Best Station - Eindhoven Station 9', 'Princenhage via CS - Haagse Beemden 4', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A16117,departure,['Best Station - Eindhoven Station 9']
+A16128,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity', 'Zwolle <-> Roosendaal IC3600 Intercity', 'lijn B']"
+A16257,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Wijchen <-> Zutphen SPR7600 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A16353,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A16358,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A16499,departure,['Best Station - Eindhoven Station 9']
+A16525,departure,"['Breukelen <-> Rhenen SPR7300 Sprinter', 'Buurtbus Wekerom - Overberg 505', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A16560,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A16560,return,['Best Station - Eindhoven Station 9']
+A16580,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A16586,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A16586,return,['Best Station - Eindhoven Station 9']
+A16661,departure,['Best Station - Eindhoven Station 9']
+A16661,return,['Best Station - Eindhoven Station 9']
+A16742,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Noordwijk - Katwijk - Den Haag 385', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A16749,departure,"['Eemnes - Amersfoort Meander MC 573', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Utrecht Centraal <-> Baarn SPR5500 Sprinter']"
+A16810,departure,['Best Station - Eindhoven Station 9']
+A16832,departure,"['Alphen a/d Rijn <-> Gouda SPR8600 Sprinter', 'Best Station - Eindhoven Station 9', 'Boskoop - Leiden 187', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Rotterdam Centraal <-> Utrecht Centraal IC2800 Intercity']"
+A16845,departure,"['Amsterdam Centraal <-> Frankfurt (M) Hbf ICE100 ICE International', 'Arnhem Centraal <-> Winterswijk ST30900 Stoptrein RS32', 'Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity']"
+A17003,departure,['Best Station - Eindhoven Station 9']
+A17003,return,['Best Station - Eindhoven Station 9']
+A17030,departure,['Best Station - Eindhoven Station 9']
+A17036,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Wijk bij Duurstede - Utrecht CS 41']"
+A17036,return,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Wijk bij Duurstede - Utrecht CS 41']"
+A17039,departure,['Best Station - Eindhoven Station 9']
+A17039,return,['Best Station - Eindhoven Station 9']
+A17044,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Kampen - Urk 141', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Kampen SPR8500 Sprinter RS22']"
+A17062,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A17062,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9', 'Lijn 282 N82', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A17108,departure,['Best Station - Eindhoven Station 9']
+A17108,return,['Best Station - Eindhoven Station 9']
+A17122,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Liège-Guillemins <-> Aachen Hbf S18900 Sneltrein RE18', 'Meerssen via Valkenburg - Eijsden 791']"
+A17140,departure,['Best Station - Eindhoven Station 9']
+A17140,return,['Best Station - Eindhoven Station 9']
+A17187,departure,['Best Station - Eindhoven Station 9']
+A17196,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A17235,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A17235,return,['Best Station - Eindhoven Station 9']
+A17296,departure,['Best Station - Eindhoven Station 9']
+A17333,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Nunspeet - Harderwijk 111', 'Son - Ekkersrijt - Eindhoven Station 406', 'Utrecht Centraal <-> Zwolle SPR5600 Sprinter']"
+A17463,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'lijn B']"
+A17466,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Meppel - Hoogeveen 32', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Groningen SPR6100 Sprinter']"
+A17501,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmen - Ter Apel - Veendam 73', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen S3800 Sneltrein RE20']"
+A17506,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A17516,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A17516,return,['Best Station - Eindhoven Station 9']
+A17570,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity']"
+A17570,return,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A17572,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Maastricht via Epen - Gulpen 57', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A17673,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A17673,return,['Best Station - Eindhoven Station 9']
+A17674,departure,"['Best Station - Eindhoven Station 9', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A17695,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A17706,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A17706,return,['Best Station - Eindhoven Station 9']
+A17727,departure,['Best Station - Eindhoven Station 9']
+A17761,departure,['Best Station - Eindhoven Station 9']
+A17801,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Heerenveen - Drachten - Groningen 324', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A17886,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A17886,return,['Best Station - Eindhoven Station 9']
+A17903,departure,['Best Station - Eindhoven Station 9']
+A17908,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Heerenveen - Drachten - Groningen 324', 'Lewenborg - Leek 3', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A17930,departure,"['Arnhem Centraal <-> Dordrecht SPR6600 Sprinter', 'Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Heteren - Arnhem CS 56']"
+A17976,departure,['Best Station - Eindhoven Station 9']
+A17996,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A17998,departure,"['Bad Nieuweschans <-> Groningen ST37500 Stoptrein RS6', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18016,departure,['Best Station - Eindhoven Station 9']
+A18016,return,['Best Station - Eindhoven Station 9']
+A18026,departure,"['Arnhem CS - Velp 8', 'Arnhem Geitenkamp - Rijkerswoerd 7', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A18029,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Groningen - Middelstum - Uithuizen 61', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18036,departure,['Best Station - Eindhoven Station 9']
+A18036,return,['Best Station - Eindhoven Station 9']
+A18052,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Groningen <-> Roodeschool ST37600 Stoptrein RS4', 'Schiphol Airport <-> Groningen IC700 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18095,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Leeuwarden <-> Stavoren ST37100 Stoptrein RS3', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18099,departure,"['Breukelen <-> Rhenen SPR7300 Sprinter', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'U-link Utrecht - Wageningen / Veenendaal 50']"
+A18099,return,"['Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Utrecht - Wageningen N8']"
+A18102,departure,"['Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Wijk bij Duurstede - Zeist - Amersfoort 56']"
+A18102,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Utrecht - Amerongen N50']"
+A18120,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Stadskanaal - Emmen 74', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A18165,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Minnertsga - St-Annaparochie - Leeuwarden 70', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18168,departure,"['Carnisselande - Rotterdam Centraal 5', 'Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18169,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmen - Schoonebeek 44', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen S3800 Sneltrein RE20']"
+A18204,departure,"['Bolsward - Workum - Balk - Sneek 44', 'Dordrecht <-> Venlo IC3500 Intercity', 'Heerenveen - Sneek - Bolsward - Harlingen 99', 'Oudega - Woudsend Centrum 9531', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18279,departure,['Best Station - Eindhoven Station 9']
+A18279,return,['Best Station - Eindhoven Station 9']
+A18287,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A18326,departure,['Best Station - Eindhoven Station 9']
+A18369,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A18369,return,['Best Station - Eindhoven Station 9']
+A18378,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Hardenberg - Beerzerveld 597', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen S3800 Sneltrein RE20']"
+A18416,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'FLEX: Buitenkaag - Nieuw Vennep', 'Nieuw-Vennep P+R Getsew - Amsterdam Elandsgracht 397', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18417,departure,['Best Station - Eindhoven Station 9']
+A18463,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmen - Assen 21', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18465,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Haarlem - Hillegom - Lisse - Leiden 250', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Vlissingen <-> Amsterdam Centraal IC2200 Intercity', 'Zwolle <-> Roosendaal IC3600 Intercity']"
+A18478,departure,"['Bolsward - Workum - Balk - Sneek 44', 'Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Heerenveen - Sneek - Bolsward - Harlingen 99', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18479,departure,['Best Station - Eindhoven Station 9']
+A18483,departure,['Best Station - Eindhoven Station 9']
+A18483,return,['Best Station - Eindhoven Station 9']
+A18488,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Schiphol Airport <-> Leeuwarden IC800 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Station Centrum via Parkhaven - Station Centrum 9']"
+A18511,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A18607,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A18622,departure,"['Den Haag Centraal <-> Nijmegen IC3100 Intercity', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Lijn 25', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18622,return,"['Best Station - Eindhoven Station 9', 'IJmuiden Dennekoplaan - Amsterdam Bijlmer ArenA N30', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity', 'Uithoorn Busstation - Amsterdam CS N47']"
+A18756,departure,"['Bergen Plein - Alkmaar Station 166', 'Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18758,departure,['Best Station - Eindhoven Station 9']
+A18758,return,['Best Station - Eindhoven Station 9']
+A18759,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A18759,return,['Best Station - Eindhoven Station 9']
+A18774,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A18774,return,['Best Station - Eindhoven Station 9']
+A18779,departure,['Best Station - Eindhoven Station 9']
+A18813,departure,['Best Station - Eindhoven Station 9']
+A18813,return,['Best Station - Eindhoven Station 9']
+A18844,departure,['Best Station - Eindhoven Station 9']
+A18844,return,['Best Station - Eindhoven Station 9']
+A18936,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Heerenveen - Drachten - Groningen 324', 'Lewenborg - Leek 3', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A18955,departure,['Best Station - Eindhoven Station 9']
+A18974,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmeloord - Zwolle 71', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19010,departure,"['Amsterdam Noord via Edam - Hoorn 314', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zaandam via Amsterdam Noord - Marken 111']"
+A19015,departure,"['Buurtbus Kreileroord - Schagen Station 416', 'Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19037,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19062,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A19065,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19065,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity']"
+A19071,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19088,departure,"['Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Renesse - Spijkenisse Metro Centrum 104', 'Son - Ekkersrijt - Eindhoven Station 406', 'lijn D']"
+A19117,departure,"['Best Station - Eindhoven Station 9', 'Dedemsvaart - Zwolle 301', 'Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity']"
+A19163,departure,"['Amsterdam Centraal <-> Frankfurt (M) Hbf ICE100 ICE International', 'Arnhem Centraal <-> Winterswijk ST30900 Stoptrein RS32', 'Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity']"
+A19173,departure,['Best Station - Eindhoven Station 9']
+A19203,departure,['Best Station - Eindhoven Station 9']
+A19215,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Roermond <-> Maastricht Randwyck ST32400 Stoptrein RS12']"
+A19224,departure,['Best Station - Eindhoven Station 9']
+A19230,departure,['Best Station - Eindhoven Station 9']
+A19238,departure,"['Echt - Maria Hoop 60', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Roermond <-> Maastricht Randwyck ST32400 Stoptrein RS12', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19241,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Groningen <-> Leeuwarden ST37400 Stoptrein RS1', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19254,departure,"['Enkhuizen <-> Heerlen IC3900 Intercity', 'Heerlen via Simpelveld - Vaals 43', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19258,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Nieuwleusen - Dalfsen 591', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen ST8000 Stoptrein RS20']"
+A19271,departure,"['Dordrecht <-> Venlo IC3500 Intercity', 'Lelystad - Kampen 143', 'Rotterdam Centraal <-> Lelystad Centrum ICD2400 Intercity direct', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19282,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Heerenveen - Joure - Jirnsum - Leeuwarden 95', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19285,departure,"[""'s-Gravenzande via Naaldwijk en Delft - Zoetermeer 455"", 'Den Haag Centraal <-> Eindhoven Centraal IC1100 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19294,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Meppel - Hoogeveen 32', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Groningen SPR6100 Sprinter']"
+A19311,departure,['Best Station - Eindhoven Station 9']
+A19311,return,['Best Station - Eindhoven Station 9']
+A19357,departure,['Best Station - Eindhoven Station 9']
+A19357,return,['Best Station - Eindhoven Station 9']
+A19380,departure,"['Bantega - Lemmer Busstation 9611', 'Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmeloord - Heerenveen - Groningen 315', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19467,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Emmen - Ter Apel - Veendam 73', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen S3800 Sneltrein RE20']"
+A19515,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Lemmer - Balk - Joure - Heerenveen 41', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19543,departure,"['Eindhoven Achtse Barrier - Station 405', 'Enkhuizen <-> Heerlen IC3900 Intercity', 'Ubach over Worms via Heerlen - Zuyderland MC 7']"
+A19551,departure,['Best Station - Eindhoven Station 9']
+A19551,return,['Best Station - Eindhoven Station 9']
+A19612,departure,['Best Station - Eindhoven Station 9']
+A19619,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A19638,departure,"['Enkhuizen <-> Maastricht IC2900 Intercity', 'Lijn 51', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19638,return,"[""'s-Hertogenbosch <-> Deurne SPR4400 Sprinter"", 'Best Station - Eindhoven Station 9', 'Nachtnettrein Utrecht Centraal <-> Eindhoven Centraal Intercity', 'Nachtnettrein Utrecht Centraal <-> Rotterdam Centraal Intercity', 'Nieuw-Vennep P+R Getsewoud Zuid - Amsterdam CS N97']"
+A19781,departure,"['Best Station - Eindhoven Station 9', 'Breda <-> Amersfoort Schothorst ICD1800 Intercity direct', 'Ouddorp - Rotterdam Zuidplein 436', 'Tilburg Universiteit <-> Weert SPR6400 Sprinter', 'Zwolle <-> Roosendaal IC3600 Intercity', 'lijn E']"
+A19825,departure,['Son - Ekkersrijt - Eindhoven Station 406']
+A19825,return,['Best Station - Eindhoven Station 9']
+A19899,departure,['Best Station - Eindhoven Station 9']
+A19916,departure,"['Den Haag Centraal <-> Leeuwarden IC600 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Heerenveen - Joure - Jirnsum - Leeuwarden 95', 'Son - Ekkersrijt - Eindhoven Station 406']"
+A19923,departure,"['Best Station - Eindhoven Station 9', 'Enkhuizen <-> Maastricht IC2900 Intercity', 'Sittard via NedCar/Holtum en Born - Sittard. 17']"
+A19947,departure,['Best Station - Eindhoven Station 9']
+A19960,departure,"['Den Haag Centraal <-> Groningen IC500 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Son - Ekkersrijt - Eindhoven Station 406', 'Zwolle <-> Emmen S3800 Sneltrein RE20']"
+A19980,departure,"['Den Helder <-> Nijmegen IC3000 Intercity', 'Dordrecht <-> Venlo IC3500 Intercity', 'Hoorn Station - Den Helder Station via Den Oever 135', 'Son - Ekkersrijt - Eindhoven Station 406']"
